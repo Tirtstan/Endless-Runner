@@ -182,7 +182,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  speed: 10
-  speedTime: 100
+  moveOffset: 2.5
+  speedTime: 20
   jumpForce: 10
   gravityScaleMultiplier: 2

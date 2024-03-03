@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,10 +12,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Configs")]
     [SerializeField]
-    private float speed = 15f;
+    private float moveOffset = 2.5f;
 
     [SerializeField]
-    private float speedTime = 50f;
+    private float speedTime = 5f;
 
     [SerializeField]
     private float jumpForce = 10f;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float gravityScaleMultiplier = 2f;
     private const float Gravity = -9.81f;
+    private float targetX;
     private Rigidbody rb;
 
     private void Awake()
@@ -32,14 +34,22 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            targetX -= moveOffset;
+            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            targetX += moveOffset;
+            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+        }
 
-        float xMove = Mathf.MoveTowards(
-            rb.velocity.x,
-            speed * horizontalInput,
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            new Vector3(targetX, transform.position.y, transform.position.z),
             speedTime * Time.deltaTime
         );
-        rb.velocity = new Vector3(xMove, rb.velocity.y, rb.velocity.z);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -54,6 +64,6 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return rb.velocity.y.CompareTo(0) == 0;
+        return Mathf.Approximately(rb.velocity.y, 0);
     }
 }

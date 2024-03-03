@@ -4,6 +4,7 @@ public class LevelTrigger : MonoBehaviour
 {
     [SerializeField]
     private GameObject parent;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -12,5 +13,4 @@ public class LevelTrigger : MonoBehaviour
             Destroy(parent, 3);
         }
     }
-
 }

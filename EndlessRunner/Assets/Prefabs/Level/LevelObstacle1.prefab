@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1959928870404870669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1, z: 14}
+  m_LocalPosition: {x: 3, y: 1, z: 14}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 4755622401330812529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1, z: 24}
+  m_LocalPosition: {x: 0, y: 1, z: 24}
   m_LocalScale: {x: 9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -238,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 6057484877129578291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1, z: 45}
+  m_LocalPosition: {x: 0, y: 1, z: 45}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 6243160858886930741}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 9, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +448,7 @@ Transform:
   m_GameObject: {fileID: 6692581011907926315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 1, z: 5}
+  m_LocalPosition: {x: -3, y: 1, z: 5}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -553,7 +553,7 @@ Transform:
   m_GameObject: {fileID: 7299018646039602332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 2, z: 36}
+  m_LocalPosition: {x: 0, y: 2, z: 36}
   m_LocalScale: {x: 9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -708,7 +708,7 @@ Transform:
   m_GameObject: {fileID: 8713401313096990451}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72, y: -0.2, z: 49.6}
+  m_LocalPosition: {x: 0, y: -0.2, z: 49.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -733,8 +733,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.13, y: 7, z: 1}
-  m_Center: {x: 0.22423816, y: 3.8394856, z: 0}
+  m_Size: {x: 9, y: 7, z: 1}
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!114 &525286895385140221
 MonoBehaviour:
   m_ObjectHideFlags: 0
