@@ -9,7 +9,7 @@ public class LevelTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LevelManager.Instance.SpawnObstacle();
+            LevelManager.Instance.SpawnObstacle(new Vector3(0, 0, 100));
             Destroy(parent, 3);
         }
     }

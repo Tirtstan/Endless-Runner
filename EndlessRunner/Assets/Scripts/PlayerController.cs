@@ -1,15 +1,7 @@
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Components")]
-    [SerializeField]
-    private Transform groundCheck;
-
-    [SerializeField]
-    private LayerMask groundLayer;
-
     [Header("Configs")]
     [SerializeField]
     private float moveOffset = 2.5f;
@@ -45,12 +37,6 @@ public class PlayerController : MonoBehaviour
             targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
         }
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            new Vector3(targetX, transform.position.y, transform.position.z),
-            speedTime * Time.deltaTime
-        );
-
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
@@ -59,11 +45,26 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 pos = Vector3.MoveTowards(
+            rb.position,
+            new Vector3(targetX, rb.position.y, rb.position.z),
+            speedTime * Time.fixedDeltaTime
+        );
+        rb.MovePosition(pos);
+
         rb.AddForce(Gravity * gravityScaleMultiplier * Vector3.up, ForceMode.Acceleration);
     }
 
     private bool IsGrounded()
     {
         return Mathf.Approximately(rb.velocity.y, 0);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            GameManager.Instance.RestartGame();
+        }
     }
 }

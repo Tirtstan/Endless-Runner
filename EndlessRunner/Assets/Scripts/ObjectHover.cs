@@ -12,11 +12,11 @@ public class ObjectHover : MonoBehaviour
     private float maxSpeed = 1.5f;
 
     [SerializeField]
-    [Range(30, 60)]
-    private int minRotationSpeed = 30;
+    [Range(10, 60)]
+    private int minRotationSpeed = 10;
 
     [SerializeField]
-    [Range(30, 60)]
+    [Range(10, 60)]
     private int maxRotationSpeed = 60;
     private float speed;
     private float amplitude;

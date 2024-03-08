@@ -7,9 +7,11 @@ public class LevelManager : MonoBehaviour
     [Header("Components")]
     [SerializeField]
     private GameObject[] levelPrefabs;
+
     [SerializeField]
     private Transform level;
     public float currentLevelSpeed = 10f;
+    private const int ObstacleAmount = 3;
 
     private void Awake()
     {
@@ -24,10 +26,18 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void SpawnObstacle()
+    public void SpawnObstacle(Vector3 pos)
     {
         int index = Random.Range(0, levelPrefabs.Length);
-        GameObject obj = Instantiate(levelPrefabs[index], new Vector3(0, 0, 100), Quaternion.identity);
+        GameObject obj = Instantiate(levelPrefabs[index], pos, Quaternion.identity);
         obj.transform.SetParent(level);
+    }
+
+    public void DestroyAllObstacles()
+    {
+        for (int i = 0; i < level.childCount; i++)
+        {
+            Destroy(level.GetChild(i).gameObject);
+        }
     }
 }
