@@ -178,11 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615745865f2ca934986c4381ef62ed7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 4586453982527949316}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
   moveOffset: 2.5
   speedTime: 20
-  jumpForce: 10
-  gravityScaleMultiplier: 2
+  jumpForce: 15
+  gravityScaleMultiplier: 3

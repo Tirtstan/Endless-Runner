@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Transform level;
     public float currentLevelSpeed = 10f;
-    private const int ObstacleAmount = 3;
 
     private void Awake()
     {

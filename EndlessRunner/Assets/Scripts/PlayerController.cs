@@ -3,17 +3,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Configs")]
+    [Header("Pacing")]
     [SerializeField]
     private float moveOffset = 2.5f;
 
     [SerializeField]
-    private float speedTime = 5f;
+    private float speedTime = 20f;
+
+    [Header("Jump")]
+    [SerializeField]
+    private float jumpForce = 15f;
 
     [SerializeField]
-    private float jumpForce = 10f;
+    private float downForce = -30f;
 
     [SerializeField]
-    private float gravityScaleMultiplier = 2f;
+    private float gravityScaleMultiplier = 3f;
     private const float Gravity = -9.81f;
     private float targetX;
     private Rigidbody rb;
@@ -40,6 +45,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (!IsGrounded())
+            {
+                rb.velocity = new Vector3(rb.velocity.x, downForce, rb.velocity.z);
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 0.8f, 1);
+            }
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 2, 1);
         }
     }
 
