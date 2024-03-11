@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveOffset: 2.5
-  speedTime: 20
+  speedTime: 15
   jumpForce: 15
+  downForce: -30
   gravityScaleMultiplier: 3
