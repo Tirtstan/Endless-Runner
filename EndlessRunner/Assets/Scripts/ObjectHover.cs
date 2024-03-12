@@ -12,12 +12,20 @@ public class ObjectHover : MonoBehaviour
     private float maxSpeed = 1.5f;
 
     [SerializeField]
+    [Range(0.5f, 2f)]
+    private float minAmplitude = 0.5f;
+
+    [SerializeField]
+    [Range(0.5f, 2f)]
+    private float maxAmplitude = 1.5f;
+
+    [SerializeField]
     [Range(10, 60)]
     private int minRotationSpeed = 10;
 
     [SerializeField]
     [Range(10, 60)]
-    private int maxRotationSpeed = 60;
+    private int maxRotationSpeed = 30;
     private float speed;
     private float amplitude;
     private Vector3 originalTransform;
@@ -27,7 +35,7 @@ public class ObjectHover : MonoBehaviour
     {
         originalTransform = transform.position;
         speed = Random.Range(minSpeed, maxSpeed);
-        amplitude = Random.Range(0.5f, 1.5f);
+        amplitude = Random.Range(minAmplitude, maxAmplitude);
 
         int[] randoms = new int[3];
         for (int i = 0; i < randoms.Length; i++)

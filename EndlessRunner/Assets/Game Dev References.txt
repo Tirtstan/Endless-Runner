@@ -1,0 +1,11 @@
+Game Dev References:
+
+Skybox rotation: 
+
+- https://youtu.be/cqGq__JjhMM
+
+Assets:
+
+- https://github.com/KenneyNL/Starter-Kit-3D-Platformer
+- https://kenney.nl/assets/graveyard-kit
+- https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-lite-116333

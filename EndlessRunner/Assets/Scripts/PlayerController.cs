@@ -15,10 +15,15 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 15f;
 
     [SerializeField]
-    private float downForce = -30f;
+    private float gravityScaleMultiplier = 3f;
+
+    [Header("Crouch")]
+    [SerializeField]
+    private float scaleMultiplier = 0.4f;
 
     [SerializeField]
-    private float gravityScaleMultiplier = 3f;
+    private float downForce = 20f;
+    private Vector3 originalScale;
     private const float Gravity = -9.81f;
     private float targetX;
     private Rigidbody rb;
@@ -27,6 +32,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
+
+        originalScale = transform.localScale;
     }
 
     private void Update()
@@ -51,16 +58,20 @@ public class PlayerController : MonoBehaviour
         {
             if (!IsGrounded())
             {
-                rb.velocity = new Vector3(rb.velocity.x, downForce, rb.velocity.z);
+                rb.AddForce(downForce * Vector3.down, ForceMode.Impulse);
             }
             else
             {
-                transform.localScale = new Vector3(1, 0.8f, 1);
+                transform.localScale = new Vector3(
+                    transform.localScale.x,
+                    originalScale.y * scaleMultiplier,
+                    transform.localScale.z
+                );
             }
         }
         else
         {
-            transform.localScale = new Vector3(1, 2, 1);
+            transform.localScale = originalScale;
         }
     }
 
