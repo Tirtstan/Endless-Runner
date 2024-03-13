@@ -46,10 +46,10 @@ public class ObjectHover : MonoBehaviour
 
     private void Update()
     {
+        float newX = originalTransform.x + Mathf.Sin(Time.time * speed * 0.5f) * amplitude;
         float newY = originalTransform.y + Mathf.Sin(Time.time * speed) * amplitude;
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
-        Vector3 rotation = randomRotation * Time.deltaTime;
-        transform.Rotate(rotation);
+        transform.position = new Vector3(newX, newY, transform.position.z);
+        transform.Rotate(randomRotation * Time.deltaTime);
     }
 }

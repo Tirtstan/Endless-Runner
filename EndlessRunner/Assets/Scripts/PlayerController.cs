@@ -73,16 +73,21 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = originalScale;
         }
+
+        if (rb.velocity.y < -20f) // for if the player falls
+        {
+            GameManager.Instance.RestartGame();
+        }
     }
 
     private void FixedUpdate()
     {
-        Vector3 pos = Vector3.MoveTowards(
+        Vector3 targetPos = Vector3.MoveTowards(
             rb.position,
             new Vector3(targetX, rb.position.y, rb.position.z),
             speedTime * Time.fixedDeltaTime
         );
-        rb.MovePosition(pos);
+        rb.MovePosition(targetPos);
 
         rb.AddForce(Gravity * gravityScaleMultiplier * Vector3.up, ForceMode.Acceleration);
     }
