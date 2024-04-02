@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = originalScale;
         }
 
-        if (rb.velocity.y < -20f) // for if the player falls
+        if (transform.position.y < -20f) // for if the player falls
         {
             GameManager.Instance.RestartGame();
         }
