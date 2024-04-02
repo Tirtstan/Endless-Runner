@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,8 +13,14 @@ public class PickupManager : MonoBehaviour
 
     [SerializeField]
     private float yOffset = 10f;
+
+    [SerializeField]
+    private float upwardSpeed = 40f;
+    public static event Action<float> OnJetpackTime;
     private Vector3 originalPosition;
     private WaitForSeconds waitForSeconds;
+    private Collider playerCollider;
+    private bool isJetpackActive;
 
     private void Awake()
     {
@@ -30,28 +37,43 @@ public class PickupManager : MonoBehaviour
         waitForSeconds = new WaitForSeconds(1);
     }
 
-    public void ActivateJetpack(Collider other)
+    private void Update()
     {
-        originalPosition = other.transform.position;
-        StartCoroutine(StartJetpack(other));
+        if (isJetpackActive)
+        {
+            playerCollider.transform.position = Vector3.MoveTowards(
+                playerCollider.transform.position,
+                new Vector3(
+                    playerCollider.transform.position.x,
+                    originalPosition.y + yOffset,
+                    playerCollider.transform.position.z
+                ),
+                upwardSpeed * Time.deltaTime
+            );
+        }
     }
 
-    private IEnumerator StartJetpack(Collider other)
+    public void ActivateJetpack(Collider other)
     {
-        PlayerController playerController = other.GetComponent<PlayerController>();
+        playerCollider = other;
+        originalPosition = playerCollider.transform.position;
+        StartCoroutine(StartJetpack());
+    }
+
+    private IEnumerator StartJetpack() // add particles
+    {
+        PlayerController playerController = playerCollider.GetComponent<PlayerController>();
         playerController.SwitchGravity(false);
-        other.transform.position = new Vector3(
-            originalPosition.x,
-            originalPosition.y + yOffset,
-            originalPosition.z
-        );
+        isJetpackActive = true;
 
         for (int i = 0; i < jetpackTime; i++)
         {
-            Debug.Log($"Jetpack time left: {jetpackTime - i}");
+            OnJetpackTime?.Invoke(jetpackTime - i);
             yield return waitForSeconds;
         }
+        OnJetpackTime?.Invoke(0);
 
+        isJetpackActive = false;
         playerController.SwitchGravity(true);
     }
 }

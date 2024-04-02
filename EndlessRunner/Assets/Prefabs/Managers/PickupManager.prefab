@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jetpackTime: 8
   yOffset: 10
+  upwardSpeed: 80
