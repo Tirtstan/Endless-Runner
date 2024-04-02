@@ -1,37 +1,46 @@
 using System.Collections;
 using UnityEngine;
 
-public class JetpackPickup : ItemPickup
+public class PickupManager : MonoBehaviour
 {
+    public static PickupManager Instance { get; private set; }
+
     [Header("Configs")]
+    [Header("Jetpack")]
     [SerializeField]
     private float jetpackTime = 8f;
 
     [SerializeField]
     private float yOffset = 10f;
-    private Collider playerCollider;
     private Vector3 originalPosition;
     private WaitForSeconds waitForSeconds;
 
     private void Awake()
     {
-        waitForSeconds = new WaitForSeconds(1f);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        waitForSeconds = new WaitForSeconds(1);
     }
 
-    protected override void OnPickup(Collider collider)
+    public void ActivateJetpack(Collider other)
     {
-        playerCollider = collider;
-        originalPosition = playerCollider.transform.position;
-        StartCoroutine(StartJetpack());
+        originalPosition = other.transform.position;
+        StartCoroutine(StartJetpack(other));
     }
 
-    private IEnumerator StartJetpack()
+    private IEnumerator StartJetpack(Collider other)
     {
-        Debug.Log("Jetpack activated");
-
-        PlayerController playerController = playerCollider.GetComponent<PlayerController>();
+        PlayerController playerController = other.GetComponent<PlayerController>();
         playerController.SwitchGravity(false);
-        playerCollider.transform.position = new Vector3(
+        other.transform.position = new Vector3(
             originalPosition.x,
             originalPosition.y + yOffset,
             originalPosition.z
@@ -42,9 +51,7 @@ public class JetpackPickup : ItemPickup
             Debug.Log($"Jetpack time left: {jetpackTime - i}");
             yield return waitForSeconds;
         }
-        Debug.Log("Jetpack deactivated");
 
         playerController.SwitchGravity(true);
-        Destroy(gameObject);
     }
 }

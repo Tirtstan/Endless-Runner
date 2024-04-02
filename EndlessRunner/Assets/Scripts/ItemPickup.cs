@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public abstract class ItemPickup : MonoBehaviour
+public class ItemPickup : MonoBehaviour
 {
-    protected abstract void OnPickup(Collider collider);
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            OnPickup(other);
+            PickupManager.Instance.ActivateJetpack(other);
+            Destroy(gameObject);
         }
     }
 }
