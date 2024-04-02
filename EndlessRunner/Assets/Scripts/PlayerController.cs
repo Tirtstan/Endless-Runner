@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && useGravity) // press s and not flying
         {
             if (!IsGrounded())
             {
