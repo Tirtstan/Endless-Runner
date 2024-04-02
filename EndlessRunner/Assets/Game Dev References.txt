@@ -2,7 +2,7 @@ Game Dev References:
 
 Skybox rotation:
 
-- https://youtu.be/cqGq__JjhMM
+- https://youtu.be/cqGq__JjhMM - done
 
 Building Assets:
 
@@ -11,4 +11,4 @@ Building Assets:
 
 Curved Shader:
 
-- https://www.youtube.com/watch?v=GF0_1-8NWBs
+- https://www.youtube.com/watch?v=GF0_1-8NWBs - not yet needed

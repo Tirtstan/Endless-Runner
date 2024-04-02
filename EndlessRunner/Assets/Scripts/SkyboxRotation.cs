@@ -6,7 +6,7 @@ public class SkyboxRotation : MonoBehaviour
     [SerializeField]
     private float rotationTime = 0.4f;
 
-    // in-text here
+    // (see Mini Unity Tutorial - How To Rotate The Skybox In Realtime, 2017)
     private void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * rotationTime);
@@ -15,7 +15,9 @@ public class SkyboxRotation : MonoBehaviour
     #region References
     /*
 
-    https://youtu.be/cqGq__JjhMM
+    Mini Unity Tutorial - How To Rotate The Skybox In Realtime. 2017.
+    YouTube video, added by Jimmy Vegas. [Online].
+    Available at: https://youtu.be/cqGq__JjhMM [Accessed 14 March 2024]
 
     */
     #endregion
