@@ -102,6 +102,11 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.RestartGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu.Instance.TogglePauseMenu();
+        }
     }
 
     private void FixedUpdate()
