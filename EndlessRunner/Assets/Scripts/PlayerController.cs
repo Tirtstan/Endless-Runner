@@ -156,7 +156,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             OnPlayerDeath?.Invoke();
-            // GameManager.Instance.RestartGame();
         }
     }
 
