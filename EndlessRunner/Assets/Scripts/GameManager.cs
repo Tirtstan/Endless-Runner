@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        QualitySettings.vSyncCount = 1;
     }
 
     public void RestartGame()
