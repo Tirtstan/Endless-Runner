@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
+
     [Header("Components")]
     [SerializeField]
     private Transform groundCheck;
@@ -152,7 +155,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            GameManager.Instance.RestartGame();
+            OnPlayerDeath?.Invoke();
+            // GameManager.Instance.RestartGame();
         }
     }
 

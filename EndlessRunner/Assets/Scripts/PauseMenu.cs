@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private Button exitButton;
+
+    [SerializeField]
+    private TextMeshProUGUI controlsText;
 
     private void Awake()
     {
@@ -45,11 +49,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (menu.activeSelf)
         {
+            controlsText.gameObject.SetActive(true);
             menu.SetActive(false);
             Time.timeScale = 1;
         }
         else
         {
+            controlsText.gameObject.SetActive(false);
             menu.SetActive(true);
             Time.timeScale = 0;
         }
@@ -64,11 +70,13 @@ public class PauseMenu : MonoBehaviour
     {
         TogglePauseMenu();
         GameManager.Instance.RestartGame();
+        Time.timeScale = 1;
     }
 
     private void OnMenuClick()
     {
         SceneManager.LoadSceneAsync(0);
+        Time.timeScale = 1;
     }
 
     private void OnExitClick()

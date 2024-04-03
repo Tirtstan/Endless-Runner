@@ -6,7 +6,6 @@ public class ScoreDisplay : MonoBehaviour
     [Header("Components")]
     [SerializeField]
     private TextMeshProUGUI scoreText;
-    private int score;
 
     private void Start()
     {
@@ -15,8 +14,8 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnObstaclePass()
     {
-        score++;
-        scoreText.text = $"Score: {score}";
+        GameManager.Instance.IncreaseScore();
+        scoreText.SetText($"Score: {GameManager.Instance.GetScore()}");
     }
 
     private void OnDestroy()
