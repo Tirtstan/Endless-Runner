@@ -10,7 +10,10 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private Transform level;
-    public float currentLevelSpeed = 10f;
+
+    [SerializeField]
+    private float difficultyIncreaseRate = 0.1f;
+    public float CurrentLevelSpeed { get; set; } = 10f;
 
     private void Awake()
     {
@@ -23,6 +26,11 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+    }
+
+    private void Update()
+    {
+        CurrentLevelSpeed += Time.deltaTime * difficultyIncreaseRate;
     }
 
     public void SpawnObstacle(Vector3 pos)

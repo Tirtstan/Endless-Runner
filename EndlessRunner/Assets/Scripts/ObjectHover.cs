@@ -3,6 +3,7 @@ using UnityEngine;
 public class ObjectHover : MonoBehaviour
 {
     [Header("Configs")]
+    [Header("Speed")]
     [SerializeField]
     [Range(0.5f, 2f)]
     private float minSpeed = 0.5f;
@@ -11,6 +12,7 @@ public class ObjectHover : MonoBehaviour
     [Range(0.5f, 2f)]
     private float maxSpeed = 1.5f;
 
+    [Header("Amplitude")]
     [SerializeField]
     [Range(0.5f, 2f)]
     private float minAmplitude = 0.5f;
@@ -19,6 +21,7 @@ public class ObjectHover : MonoBehaviour
     [Range(0.5f, 2f)]
     private float maxAmplitude = 1.5f;
 
+    [Header("Rotation Speed")]
     [SerializeField]
     [Range(10, 60)]
     private int minRotationSpeed = 10;

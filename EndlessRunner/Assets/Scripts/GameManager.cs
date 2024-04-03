@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    private int score;
 
     private void Awake()
     {
@@ -16,10 +17,22 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        QualitySettings.vSyncCount = 1;
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void IncreaseScore()
+    {
+        score++;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }
