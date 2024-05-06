@@ -9,11 +9,12 @@ public class LevelManager : MonoBehaviour
     private GameObject[] levelPrefabs;
 
     [SerializeField]
-    private Transform level;
+    private Transform levelParent;
 
+    [Header("Config")]
     [SerializeField]
-    private float difficultyIncreaseRate = 0.1f;
-    public float CurrentLevelSpeed { get; set; } = 10f;
+    private float difficultyIncreaseRate = 0.05f;
+    public float CurrentLevelSpeed { get; private set; } = 10f;
 
     private void Awake()
     {
@@ -37,14 +38,14 @@ public class LevelManager : MonoBehaviour
     {
         int index = Random.Range(0, levelPrefabs.Length);
         GameObject obj = Instantiate(levelPrefabs[index], pos, Quaternion.identity);
-        obj.transform.SetParent(level);
+        obj.transform.SetParent(levelParent);
     }
 
     public void DestroyAllObstacles()
     {
-        for (int i = 0; i < level.childCount; i++)
+        for (int i = 0; i < levelParent.childCount; i++)
         {
-            Destroy(level.GetChild(i).gameObject);
+            Destroy(levelParent.GetChild(i).gameObject);
         }
     }
 }

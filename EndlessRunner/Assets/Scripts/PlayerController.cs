@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         jumpBufferCounter = 0f;
     }
 
-    public void SwitchGravity(bool value)
+    public void ToggleGravity(bool value)
     {
         useGravity = value;
     }

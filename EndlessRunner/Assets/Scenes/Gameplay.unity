@@ -3868,6 +3868,11 @@ PrefabInstance:
       objectReference: {fileID: 1078297984}
     - target: {fileID: 6580633206238686884, guid: 95f61cbd6221ab947827070169aeea37,
         type: 3}
+      propertyPath: levelParent
+      value: 
+      objectReference: {fileID: 1078297984}
+    - target: {fileID: 6580633206238686884, guid: 95f61cbd6221ab947827070169aeea37,
+        type: 3}
       propertyPath: exitCollider
       value: 
       objectReference: {fileID: 0}
