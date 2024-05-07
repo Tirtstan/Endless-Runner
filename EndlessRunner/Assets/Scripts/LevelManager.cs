@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     [Header("Config")]
     [SerializeField]
     private float difficultyIncreaseRate = 0.05f;
+
+    [field: SerializeField]
     public float CurrentLevelSpeed { get; private set; } = 10f;
 
     private void Awake()

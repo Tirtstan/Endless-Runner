@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f3c4f5c1ad41f4db27e673263d1e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPercentage: 20
   jetpackTime: 8
-  yOffset: 10
-  upwardSpeed: 80
+  yPos: 10
+  upwardSpeed: 60

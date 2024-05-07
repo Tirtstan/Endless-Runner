@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 8502656419886144226, guid: e197b668a30dab84f96dd57707fa1bfa, type: 3}
-  - {fileID: 8502656419886144226, guid: 3b1ba1d9f75817d45a9752d5161fdfaf, type: 3}
-  - {fileID: 8502656419886144226, guid: a4a1e98ca7e61d64fa7f305641158313, type: 3}
-  level: {fileID: 0}
+  - {fileID: 8502656419886144226, guid: d53b6dbfcfcd10c479ef6cdab20cffcb, type: 3}
+  - {fileID: 8502656419886144226, guid: b804041bf399d864788f340e08c7613b, type: 3}
+  levelParent: {fileID: 0}
   difficultyIncreaseRate: 0.05

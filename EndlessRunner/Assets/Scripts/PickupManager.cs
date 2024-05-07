@@ -7,6 +7,8 @@ public class PickupManager : MonoBehaviour
     public static PickupManager Instance { get; private set; }
 
     [Header("Configs")]
+    public float SpawnPercentage = 20f;
+
     [Header("Jetpack")]
     [SerializeField]
     private float jetpackTime = 8f;

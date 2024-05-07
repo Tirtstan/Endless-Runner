@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
 
+    [SerializeField]
+    private Transform shadow;
+
     [Header("Configs")]
     [Header("Pacing")]
     [SerializeField]
@@ -45,7 +48,7 @@ public class PlayerController : MonoBehaviour
     private const float Gravity = -9.81f;
     private float targetX;
     private Rigidbody rb;
-    private bool useGravity = true;
+    private bool usingGravity = true;
 
     private void Awake()
     {
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         }
 
-        if (Input.GetKey(KeyCode.S) && useGravity) // press s and not flying
+        if (Input.GetKey(KeyCode.S) && usingGravity) // press s and not flying
         {
             if (!IsGrounded())
             {
@@ -101,7 +104,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = originalScale;
         }
 
-        if (transform.position.y < -20f) // for if the player falls
+        if (transform.position.y < -20f) // for if the player falls off map
         {
             GameManager.Instance.RestartGame();
         }
@@ -110,6 +113,8 @@ public class PlayerController : MonoBehaviour
         {
             PauseMenu.Instance.TogglePauseMenu();
         }
+
+        AdjustPlayerShadow();
     }
 
     private void FixedUpdate()
@@ -121,7 +126,7 @@ public class PlayerController : MonoBehaviour
         );
         rb.MovePosition(targetPos);
 
-        if (useGravity)
+        if (usingGravity)
         {
             currentGravityScale =
                 rb.velocity.y < 0
@@ -142,7 +147,7 @@ public class PlayerController : MonoBehaviour
 
     public void ToggleGravity(bool value)
     {
-        useGravity = value;
+        usingGravity = value;
     }
 
     //  ChunderSon2 (2021) demonstrates...
@@ -157,6 +162,14 @@ public class PlayerController : MonoBehaviour
         {
             OnPlayerDeath?.Invoke();
         }
+    }
+
+    private void AdjustPlayerShadow()
+    {
+        shadow.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
+
+        float shadowScale = Mathf.Lerp(0.125f, 0.05f, transform.position.y / 5f);
+        shadow.localScale = Vector3.one * shadowScale;
     }
 
     #region References

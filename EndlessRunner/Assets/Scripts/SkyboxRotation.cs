@@ -4,6 +4,7 @@ public class SkyboxRotation : MonoBehaviour
 {
     [Header("Configs")]
     [SerializeField]
+    [Range(0f, 1f)]
     private float rotationTime = 0.4f;
 
     // (see Mini Unity Tutorial - How To Rotate The Skybox In Realtime, 2017)
