@@ -22,7 +22,7 @@ public class PickupSpawner : MonoBehaviour
     private void Start()
     {
         int spawnChance = Random.Range(0, 101);
-        if (spawnChance <= PickupManager.Instance.SpawnPercentage) // 10% chance to spawn a pickup
+        if (spawnChance <= PickupManager.Instance.SpawnPercentage) // certain chance to spawn a pickup
         {
             SpawnPickup();
         }
@@ -30,20 +30,17 @@ public class PickupSpawner : MonoBehaviour
 
     private void SpawnPickup()
     {
-        if (pickupSpawnPoints.Length == 0)
-        {
-            Debug.LogWarning("Pickup spawn points are not placed in prefab!");
+        if (pickupSpawnPoints.Length <= 0)
             return;
-        }
 
         int pickupIndex = Random.Range(0, pickupPrefabs.Length);
         int spawnIndex = Random.Range(0, pickupSpawnPoints.Length);
+
         GameObject obj = Instantiate(
             pickupPrefabs[pickupIndex],
             pickupSpawnPoints[spawnIndex].transform.position,
             Quaternion.identity
         );
-
         obj.transform.SetParent(transform);
     }
 }

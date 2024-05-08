@@ -119,12 +119,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 targetPos = Vector3.MoveTowards(
+        rb.position = Vector3.MoveTowards(
             rb.position,
             new Vector3(targetX, rb.position.y, rb.position.z),
             speedTime * Time.fixedDeltaTime
         );
-        rb.MovePosition(targetPos);
 
         if (usingGravity)
         {
