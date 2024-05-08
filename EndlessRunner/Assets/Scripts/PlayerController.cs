@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
     {
         shadow.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
 
-        float shadowScale = Mathf.Lerp(0.125f, 0.05f, transform.position.y / 5f);
+        float shadowScale = Mathf.Lerp(0.125f, 0.05f, transform.position.y / 3f);
         shadow.localScale = Vector3.one * shadowScale;
     }
 

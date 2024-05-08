@@ -49,3 +49,4 @@ MonoBehaviour:
   - {fileID: 8502656419886144226, guid: b804041bf399d864788f340e08c7613b, type: 3}
   levelParent: {fileID: 0}
   difficultyIncreaseRate: 0.05
+  <CurrentLevelSpeed>k__BackingField: 10

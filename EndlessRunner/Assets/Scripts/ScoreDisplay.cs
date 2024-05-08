@@ -14,7 +14,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnObstaclePass()
     {
-        GameManager.Instance.IncreaseScore();
         scoreText.SetText($"Score: {GameManager.Instance.GetScore()}");
     }
 

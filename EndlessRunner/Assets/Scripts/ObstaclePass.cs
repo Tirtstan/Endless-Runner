@@ -9,6 +9,7 @@ public class ObstaclePass : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.IncreaseScore();
             OnObstaclePass?.Invoke();
         }
     }

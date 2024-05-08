@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3613813042151353231
+--- !u!1 &4833760902575910939
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8108179417268574459}
-  - component: {fileID: 1256932905322959587}
+  - component: {fileID: 6880897153966680394}
+  - component: {fileID: 2513305351743869961}
   m_Layer: 0
-  m_Name: PickupManager
+  m_Name: ObstacleDatabase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8108179417268574459
+--- !u!4 &6880897153966680394
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613813042151353231}
+  m_GameObject: {fileID: 4833760902575910939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,19 +32,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1256932905322959587
+--- !u!114 &2513305351743869961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613813042151353231}
+  m_GameObject: {fileID: 4833760902575910939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f3c4f5c1ad41f4db27e673263d1e4e, type: 3}
+  m_Script: {fileID: 11500000, guid: b9d478a350060f441bd5ff2ef85ea5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPercentage: 20
-  jetpackTime: 8
-  yPos: 6
-  upwardSpeed: 40
+  lanePrefabs:
+  - {fileID: 1346533959201849216, guid: d97fc6781b817964db8a5cc3822c86ac, type: 3}
+  - {fileID: 1346533959201849216, guid: 9792344193bf27248ba9800533402ab4, type: 3}
+  - {fileID: 1346533959201849216, guid: 9f1b1a861cca265458b3ac50e15bd143, type: 3}
+  - {fileID: 1346533959201849216, guid: f2ef9194bc2da324381ed2e912f7c25f, type: 3}
+  - {fileID: 1346533959201849216, guid: 2ef47b99f5b2ad34791e13d889939b15, type: 3}
+  - {fileID: 1346533959201849216, guid: ce8a263393f34024ea83626d6334e678, type: 3}

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1394870190707946955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -145,7 +145,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4586453982527949316}
@@ -267,11 +267,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   shadow: {fileID: 7060972994429801530}
-  moveOffset: 2
-  speedTime: 15
-  jumpForce: 12
-  gravityScaleMultiplier: 3
-  gravityFallMultiplier: 2.5
+  moveOffset: 1.5
+  speedTime: 10
+  jumpForce: 6.5
+  gravityScaleMultiplier: 2
+  gravityFallMultiplier: 2
   jumpBufferTime: 0.15
   scaleMultiplier: 0.4
-  downForce: 15
+  downForce: 8
