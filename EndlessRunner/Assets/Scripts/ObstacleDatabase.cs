@@ -26,7 +26,7 @@ public class ObstacleDatabase : MonoBehaviour
         do
         {
             index = Random.Range(0, lanePrefabs.Length);
-        } while (previousIndex == index);
+        } while (previousIndex == index); // Prevents the same lane from spawning twice in a row
 
         previousIndex = index;
         return lanePrefabs[index];

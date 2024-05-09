@@ -33,16 +33,20 @@ public class ObstacleSpawner : MonoBehaviour
         int chance = Random.Range(0, 100);
         for (int i = 0; i < laneSpawns.Length; i++)
         {
-            if (chance <= 10)
+            if (chance <= 10) // leaves a space
             {
                 chance = 99;
                 continue;
             }
 
+            int rotationChance = Random.Range(0, 100);
+            Quaternion rotation =
+                rotationChance < 50 ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
+
             GameObject obj = Instantiate(
                 ObstacleDatabase.Instance.GetRandomLanePrefab(),
                 laneSpawns[i].transform.position,
-                Quaternion.identity
+                rotation
             );
             obj.transform.SetParent(laneSpawns[i].transform);
         }
