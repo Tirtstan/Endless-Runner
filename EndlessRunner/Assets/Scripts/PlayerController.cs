@@ -41,19 +41,28 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float downForce = 20f;
-    private Vector3 originalScale;
+    private Rigidbody rb;
+    private BoxCollider boxCollider;
+    private Animator animator;
     private const float Gravity = -9.81f;
     private float targetX;
-    private Rigidbody rb;
     private bool usingGravity = true;
     private float originalGravityScale;
+    private Vector3 originalShadowScale;
+    private Vector3 originalColliderCenter;
+    private Vector3 originalColliderSize;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
+        animator = GetComponent<Animator>();
         rb.useGravity = false;
 
-        originalScale = transform.localScale;
+        originalColliderCenter = boxCollider.center;
+        originalColliderSize = boxCollider.size;
+
+        originalShadowScale = shadow.localScale;
         currentGravityScale = gravityScaleMultiplier;
         originalGravityScale = gravityFallMultiplier;
     }
@@ -83,30 +92,43 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         }
 
+        animator.SetBool("IsJumping", !IsGrounded());
+
         if (Input.GetKey(KeyCode.S) && usingGravity) // press s and not flying
         {
+            animator.SetBool("IsCrouching", true);
             if (!IsGrounded())
             {
                 rb.AddForce(downForce * Vector3.down, ForceMode.Impulse);
             }
             else
             {
-                transform.localScale = new Vector3(
-                    transform.localScale.x,
-                    originalScale.y * scaleMultiplier,
-                    transform.localScale.z
+                boxCollider.center = new Vector3(
+                    boxCollider.size.x,
+                    originalColliderCenter.y * scaleMultiplier,
+                    boxCollider.size.z
+                );
+                boxCollider.size = new Vector3(
+                    boxCollider.size.x,
+                    originalColliderSize.y * scaleMultiplier,
+                    boxCollider.size.z
                 );
             }
         }
-        else
+
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            transform.localScale = originalScale;
+            animator.SetBool("IsCrouching", false);
+            boxCollider.center = originalColliderCenter;
+            boxCollider.size = originalColliderSize;
         }
 
         if (transform.position.y < -20f) // for if the player falls off map
         {
             GameManager.Instance.RestartGame();
         }
+
+        // animator.SetBool("IsFalling", rb.velocity.y < -2f);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -139,6 +161,7 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded())
             return;
 
+        // animator.SetBool("IsJumping", true);
         rb.velocity = new Vector3(rb.velocity.x, power, rb.velocity.z);
         jumpBufferCounter = 0f;
     }
@@ -153,8 +176,12 @@ public class PlayerController : MonoBehaviour
     {
         shadow.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
 
-        float shadowScale = Mathf.Lerp(0.125f, 0.05f, transform.position.y / 2f);
-        shadow.localScale = Vector3.one * shadowScale;
+        float shadowScale = Mathf.Lerp(
+            originalShadowScale.x,
+            originalShadowScale.x * 0.8f,
+            transform.position.y
+        );
+        shadow.localScale = new Vector3(shadowScale, originalShadowScale.y, shadowScale);
     }
 
     public void ToggleGravity(bool value)

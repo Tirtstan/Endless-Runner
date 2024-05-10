@@ -1,0 +1,7 @@
+Game Dev References:
+
+Assets:
+
+- https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-lite-116333
+- https://kaylousberg.itch.io/space-base-bits
+- https://kenney.nl/assets/mini-skate

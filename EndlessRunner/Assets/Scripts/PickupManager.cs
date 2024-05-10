@@ -32,10 +32,11 @@ public class PickupManager : MonoBehaviour
     [Header("Speed Boots")]
     [SerializeField]
     private int healAmount = 1;
-    public static event System.Action<float> OnPickupTime;
+    public static event System.Action<ItemPickup.Type, float> OnPickupTime;
     private readonly WaitForSeconds waitForOneSec = new(1);
     private Rigidbody playerRb;
     private PlayerController playerController;
+    private ItemPickup.Type currentPickupType;
     private bool isJetpackActive;
 
     private void Awake()
@@ -66,6 +67,9 @@ public class PickupManager : MonoBehaviour
     {
         playerRb = other.gameObject.GetComponent<Rigidbody>();
         playerController = other.gameObject.GetComponent<PlayerController>();
+        currentPickupType = pickupType;
+
+        StopAllCoroutines();
         switch (pickupType)
         {
             default:
@@ -88,10 +92,10 @@ public class PickupManager : MonoBehaviour
 
         for (int i = 0; i < jetpackTime; i++)
         {
-            OnPickupTime?.Invoke(jetpackTime - i);
+            OnPickupTime?.Invoke(currentPickupType, jetpackTime - i);
             yield return waitForOneSec;
         }
-        OnPickupTime?.Invoke(0);
+        OnPickupTime?.Invoke(currentPickupType, 0);
 
         isJetpackActive = false;
         playerController.ToggleGravity(true);
@@ -103,10 +107,10 @@ public class PickupManager : MonoBehaviour
 
         for (int i = 0; i < lowGravityTime; i++)
         {
-            OnPickupTime?.Invoke(lowGravityTime - i);
+            OnPickupTime?.Invoke(currentPickupType, lowGravityTime - i);
             yield return waitForOneSec;
         }
-        OnPickupTime?.Invoke(0);
+        OnPickupTime?.Invoke(currentPickupType, 0);
 
         playerController.ResetGravityMultiplier();
     }

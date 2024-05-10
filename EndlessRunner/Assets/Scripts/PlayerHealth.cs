@@ -4,6 +4,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 {
     public static event System.Action<int> OnPlayerHealth;
     private Rigidbody rb;
+    private Animator animator;
     private CameraShake cameraShake;
 
     [Header("Configs")]
@@ -20,11 +21,15 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
         CurrentHealth = MaxHealth;
     }
 
-    public void Death() { }
+    public void Death()
+    {
+        animator.SetTrigger("Death");
+    }
 
     public void Heal(int healAmount)
     {
