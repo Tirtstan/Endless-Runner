@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     private float targetX;
     private Rigidbody rb;
     private bool usingGravity = true;
+    private float originalGravityScale;
 
     private void Awake()
     {
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
 
         originalScale = transform.localScale;
         currentGravityScale = gravityScaleMultiplier;
+        originalGravityScale = gravityFallMultiplier;
     }
 
     private void Update()
@@ -158,6 +160,16 @@ public class PlayerController : MonoBehaviour
     public void ToggleGravity(bool value)
     {
         usingGravity = value;
+    }
+
+    public void ChangeGravity(float value)
+    {
+        gravityScaleMultiplier = value;
+    }
+
+    public void ResetGravityMultiplier()
+    {
+        gravityScaleMultiplier = originalGravityScale;
     }
 
     #region References

@@ -26,7 +26,7 @@ public class DeathDisplay : MonoBehaviour
 
     private void Start()
     {
-        PlayerHealth.OnPlayerHit += OnPlayerHit;
+        PlayerHealth.OnPlayerHealth += OnPlayerHit;
         restartButton.onClick.AddListener(OnRestartClick);
         menuButton.onClick.AddListener(OnMenuClick);
         exitButton.onClick.AddListener(OnExitClick);
@@ -62,6 +62,6 @@ public class DeathDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerHealth.OnPlayerHit -= OnPlayerHit;
+        PlayerHealth.OnPlayerHealth -= OnPlayerHit;
     }
 }

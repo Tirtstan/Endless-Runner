@@ -12,21 +12,19 @@ public class PickupDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        PickupManager.OnJetpackTime += OnJetpackTime;
+        PickupManager.OnPickupTime += OnPickupTime;
     }
 
-    private void OnJetpackTime(float time)
+    private void OnPickupTime(float time)
     {
         pickupDisplay.SetActive(true);
         timeLeft.text = time.ToString();
         if (time <= 0)
-        {
             pickupDisplay.SetActive(false);
-        }
     }
 
     private void OnDisable()
     {
-        PickupManager.OnJetpackTime -= OnJetpackTime;
+        PickupManager.OnPickupTime -= OnPickupTime;
     }
 }

@@ -16,7 +16,7 @@ public class DamageVignette : MonoBehaviour
 
     private void Start()
     {
-        PlayerHealth.OnPlayerHit += OnPlayerHit;
+        PlayerHealth.OnPlayerHealth += OnPlayerHit;
     }
 
     private void OnPlayerHit(int currentHealth)
@@ -28,17 +28,17 @@ public class DamageVignette : MonoBehaviour
                 vignette.intensity.value = 0;
                 break;
             case 2:
-                vignette.intensity.value = 0.25f;
+                vignette.intensity.value = 0.3f;
                 break;
             case <= 1:
-                vignette.intensity.value = 0.4f;
+                vignette.intensity.value = 0.45f;
                 break;
         }
     }
 
     private void OnDestroy()
     {
-        PlayerHealth.OnPlayerHit -= OnPlayerHit;
+        PlayerHealth.OnPlayerHealth -= OnPlayerHit;
     }
 
     #region References

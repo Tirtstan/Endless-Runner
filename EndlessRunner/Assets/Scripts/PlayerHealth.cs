@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamagable
 {
-    public static event System.Action<int> OnPlayerHit;
+    public static event System.Action<int> OnPlayerHealth;
     private Rigidbody rb;
     private CameraShake cameraShake;
 
@@ -29,12 +29,14 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public void Heal(int healAmount)
     {
         CurrentHealth += healAmount;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+        OnPlayerHealth?.Invoke(CurrentHealth);
     }
 
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
-        OnPlayerHit?.Invoke(CurrentHealth);
+        OnPlayerHealth?.Invoke(CurrentHealth);
 
         if (CurrentHealth <= 0)
             Death();
@@ -44,7 +46,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     {
         if (other.CompareTag("Obstacle"))
         {
-            cameraShake.Shake(shakeDuration);
+            float amount = CurrentHealth >= 3 ? 0.05f : 0.125f;
+            cameraShake.Shake(shakeDuration, amount);
             rb.AddForce(Vector3.up * hitForce, ForceMode.Impulse);
             TakeDamage(1);
         }

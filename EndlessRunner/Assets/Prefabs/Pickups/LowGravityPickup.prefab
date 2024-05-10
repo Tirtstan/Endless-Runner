@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4339523180327909429}
   - component: {fileID: 8441855696519312761}
   - component: {fileID: 18864353740177450}
-  - component: {fileID: 5604939771335717884}
+  - component: {fileID: 8415589599553719566}
   - component: {fileID: 4031018432514267343}
   m_Layer: 0
-  m_Name: JetpackPickup
+  m_Name: LowGravityPickup
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d727c4a6b062d9445b8a335e08039612, type: 2}
+  - {fileID: 2100000, guid: fb3f4bef52b03b94e8bc8328353b652c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5604939771335717884
+--- !u!65 &8415589599553719566
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630dc6901a6c47f4d844f70a1859219e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupType: 0
+  pickupType: 1
