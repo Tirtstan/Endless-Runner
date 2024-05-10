@@ -1,10 +1,7 @@
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static event Action OnPlayerDeath;
-
     [Header("Components")]
     [SerializeField]
     private Transform groundCheck;
@@ -144,23 +141,10 @@ public class PlayerController : MonoBehaviour
         jumpBufferCounter = 0f;
     }
 
-    public void ToggleGravity(bool value)
-    {
-        usingGravity = value;
-    }
-
     //  ChunderSon2 (2021) demonstrates...
     private bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Obstacle"))
-        {
-            OnPlayerDeath?.Invoke();
-        }
     }
 
     private void AdjustPlayerShadow()
@@ -169,6 +153,11 @@ public class PlayerController : MonoBehaviour
 
         float shadowScale = Mathf.Lerp(0.125f, 0.05f, transform.position.y / 2f);
         shadow.localScale = Vector3.one * shadowScale;
+    }
+
+    public void ToggleGravity(bool value)
+    {
+        usingGravity = value;
     }
 
     #region References

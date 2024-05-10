@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        ObstaclePass.OnObstaclePass += OnObstaclePass;
+        ScoreTrigger.OnObstaclePass += OnObstaclePass;
     }
 
     private void OnObstaclePass()
@@ -19,6 +19,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        ObstaclePass.OnObstaclePass -= OnObstaclePass;
+        ScoreTrigger.OnObstaclePass -= OnObstaclePass;
     }
 }

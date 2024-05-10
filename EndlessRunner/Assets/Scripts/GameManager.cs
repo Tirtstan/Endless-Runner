@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int value)
     {
-        score++;
+        score += value;
     }
 
     public int GetScore()

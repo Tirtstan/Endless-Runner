@@ -9,14 +9,14 @@ public class FollowTarget : MonoBehaviour
     [Header("Configs")]
     [Range(0f, 30f)]
     [SerializeField]
-    private float offset = 10f;
+    private float zOffset = 10f;
 
     private void LateUpdate()
     {
         transform.position = new Vector3(
             transform.position.x,
             transform.position.y,
-            target.position.z - offset
+            target.position.z - zOffset
         );
     }
 }

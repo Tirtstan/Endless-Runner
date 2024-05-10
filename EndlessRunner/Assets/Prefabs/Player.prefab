@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 8845165938562241674}
   - component: {fileID: -8665842939830330092}
   - component: {fileID: -3550229784341011286}
+  - component: {fileID: 3370665172851959021}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -275,3 +276,18 @@ MonoBehaviour:
   jumpBufferTime: 0.15
   scaleMultiplier: 0.4
   downForce: 8
+--- !u!114 &3370665172851959021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258164278160711206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a10909965fcd84786833a6a49af4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitForce: 8
+  shakeDuration: 0.15
+  <MaxHealth>k__BackingField: 3

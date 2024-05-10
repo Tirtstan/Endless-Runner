@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ObstaclePass : MonoBehaviour
+public class ScoreTrigger : MonoBehaviour
 {
     public static event Action OnObstaclePass;
 
@@ -9,7 +9,7 @@ public class ObstaclePass : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.IncreaseScore();
+            GameManager.Instance.IncreaseScore(1);
             OnObstaclePass?.Invoke();
         }
     }
