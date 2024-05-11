@@ -8,20 +8,33 @@ public class UFO : MonoBehaviour
     private GameObject areaPrefab;
 
     [Header("UFO Configs")]
+    [Header("Pacing & Position")]
     [SerializeField]
     private float speed = 1f;
 
     [SerializeField]
-    private float yOffset = 5f;
+    private float yPosition = 5f;
 
     [SerializeField]
     private float zOffset = 30f;
 
+    [Header("Timings")]
     [SerializeField]
-    private float startCooldown = 15;
+    [Range(5, 15)]
+    private float startCooldown = 10;
 
     [SerializeField]
+    [Range(3, 8)]
     private float attackStartUp = 6;
+
+    [SerializeField]
+    private Vector2 moveTimeRange = new(7, 15);
+
+    [SerializeField]
+    private Vector2 attackTimeRange = new(4, 15);
+
+    [SerializeField]
+    private Vector2 endTimeRange = new(40, 80);
     private GameObject player;
     private CameraShake cameraShake;
     private float xTarget = 0;
@@ -44,7 +57,7 @@ public class UFO : MonoBehaviour
     {
         transform.position = Vector3.Lerp(
             transform.position,
-            new Vector3(xTarget, yOffset, player.transform.position.z + zOffset),
+            new Vector3(xTarget, yPosition, player.transform.position.z + zOffset),
             speed * Time.deltaTime
         );
     }
@@ -61,7 +74,7 @@ public class UFO : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(7, 15));
+            yield return new WaitForSeconds(Random.Range(moveTimeRange.x, moveTimeRange.y));
             xTarget = RandomLane();
         }
     }
@@ -70,8 +83,6 @@ public class UFO : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(4, 15));
-
             float xPos = Random.Range(0, 2) == 0 ? RandomLane() : player.transform.position.x;
             Vector3 areaPos = new(xPos, 0.01f, player.transform.position.z);
             area = Instantiate(areaPrefab, areaPos, Quaternion.identity);
@@ -91,12 +102,13 @@ public class UFO : MonoBehaviour
             }
 
             Destroy(area);
+            yield return new WaitForSeconds(Random.Range(attackTimeRange.x, attackTimeRange.y));
         }
     }
 
     private IEnumerator End()
     {
-        yield return new WaitForSeconds(Random.Range(40, 80));
+        yield return new WaitForSeconds(Random.Range(endTimeRange.x, endTimeRange.y));
         StopCoroutine(moveCoroutine);
         StopCoroutine(attackCoroutine);
         Destroy(area);

@@ -1171,8 +1171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7baf0356236bf49b61974e6098ea59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupPrefabs:
-  - {fileID: 2128615885461956252, guid: c97c90735826fc14e9ac654fa4029d43, type: 3}
   pickupSpawnPointsParent: {fileID: 5049132102813919925}
 --- !u!1 &8713401313096990451
 GameObject:
@@ -1188,7 +1186,7 @@ GameObject:
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1227,7 +1225,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 14, y: 24, z: 1}
-  m_Center: {x: 0, y: 4, z: 0}
+  m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!114 &525286895385140221
 MonoBehaviour:
   m_ObjectHideFlags: 0

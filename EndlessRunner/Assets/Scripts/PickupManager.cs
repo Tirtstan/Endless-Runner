@@ -69,15 +69,15 @@ public class PickupManager : MonoBehaviour
         playerController = other.gameObject.GetComponent<PlayerController>();
         currentPickupType = pickupType;
 
-        StopAllCoroutines();
-        playerController.ResetGravityMultiplier();
         switch (pickupType)
         {
             default:
             case ItemPickup.Type.Jetpack:
+                ResetPickupEffects();
                 StartCoroutine(StartJetpack());
                 break;
             case ItemPickup.Type.LowGravity:
+                ResetPickupEffects();
                 StartCoroutine(StartLowGravity());
                 break;
             case ItemPickup.Type.Heal:
@@ -120,6 +120,12 @@ public class PickupManager : MonoBehaviour
     {
         IDamagable damagable = playerRb.gameObject.GetComponent<IDamagable>();
         damagable.Heal(healAmount);
+    }
+
+    private void ResetPickupEffects()
+    {
+        StopAllCoroutines();
+        playerController.ResetGravityMultiplier();
     }
 
     public GameObject GetRandomPickup()

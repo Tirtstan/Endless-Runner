@@ -1,7 +1,9 @@
-Game Dev References:
+Reference List
 
-Assets:
+Geoff Dallimore. 2019. Real Stars Skybox Lite, 07 August 2019. [Online]. Available at: https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-lite-116333 [Accessed 11 May 2024]
 
-- https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-lite-116333
-- https://kaylousberg.itch.io/space-base-bits
-- https://kenney.nl/assets/mini-skate
+Kay Lousberg. 2024. KayKit : Space Base Bits, 29 April 2024. [Online]. Available at: https://kaylousberg.itch.io/space-base-bits [Accessed 11 May 2024]
+
+Kenney. 2024. Mini Skate, 29 February 2024. [Online]. Available at: https://kenney.nl/assets/mini-skate [Accessed 11 May 2024]
+
+mylifesucks69. 2021. low poly space assests, 22 June 2021. [Online]. Available at: https://mylifesucks69.itch.io/low-poly-space-assests [Accessed 11 May 2024]
