@@ -6,7 +6,7 @@ public class ItemPickup : MonoBehaviour
     {
         Jetpack = 0,
         LowGravity = 1,
-        SpeedBoots = 2
+        Heal = 2
     }
 
     [Header("Config")]

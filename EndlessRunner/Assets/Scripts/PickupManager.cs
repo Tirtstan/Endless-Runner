@@ -79,8 +79,8 @@ public class PickupManager : MonoBehaviour
             case ItemPickup.Type.LowGravity:
                 StartCoroutine(StartLowGravity());
                 break;
-            case ItemPickup.Type.SpeedBoots:
-                SpeedBoots();
+            case ItemPickup.Type.Heal:
+                Heal();
                 break;
         }
     }
@@ -115,7 +115,7 @@ public class PickupManager : MonoBehaviour
         playerController.ResetGravityMultiplier();
     }
 
-    private void SpeedBoots()
+    private void Heal()
     {
         IDamagable damagable = playerRb.gameObject.GetComponent<IDamagable>();
         damagable.Heal(healAmount);

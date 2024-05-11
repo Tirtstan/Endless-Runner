@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void Death()
     {
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime; // plays animation even when death screen is up
         animator.SetTrigger("Death");
     }
 

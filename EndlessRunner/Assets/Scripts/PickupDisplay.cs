@@ -36,7 +36,7 @@ public class PickupDisplay : MonoBehaviour
                 pickupText.color = pickupColors[1];
                 pickupText.text = "Low Gravity";
                 break;
-            case ItemPickup.Type.SpeedBoots:
+            case ItemPickup.Type.Heal:
                 break;
         }
 
