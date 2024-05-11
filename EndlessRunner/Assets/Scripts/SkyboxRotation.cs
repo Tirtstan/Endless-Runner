@@ -13,6 +13,11 @@ public class SkyboxRotation : MonoBehaviour
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * rotationTime);
     }
 
+    private void OnApplicationQuit()
+    {
+        RenderSettings.skybox.SetFloat("_Rotation", 0f);
+    }
+
     #region References
     /*
 

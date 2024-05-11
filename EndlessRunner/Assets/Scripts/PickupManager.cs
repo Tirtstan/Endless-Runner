@@ -70,6 +70,7 @@ public class PickupManager : MonoBehaviour
         currentPickupType = pickupType;
 
         StopAllCoroutines();
+        playerController.ResetGravityMultiplier();
         switch (pickupType)
         {
             default:

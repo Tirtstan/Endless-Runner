@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    [Header("Components")]
+    [SerializeField]
+    private GameObject playerPrefab;
+    private GameObject player;
     private int score;
 
     private void Awake()
@@ -21,9 +26,19 @@ public class GameManager : MonoBehaviour
         QualitySettings.vSyncCount = 1;
     }
 
+    private void Start()
+    {
+        player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
+    }
+
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public GameObject GetPlayer()
+    {
+        return player;
     }
 
     public void IncreaseScore(int value)
