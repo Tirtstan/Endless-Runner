@@ -9,17 +9,16 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        ObstaclePass.OnObstaclePass += OnObstaclePass;
+        ScoreTrigger.OnObstaclePass += OnObstaclePass;
     }
 
     private void OnObstaclePass()
     {
-        GameManager.Instance.IncreaseScore();
         scoreText.SetText($"Score: {GameManager.Instance.GetScore()}");
     }
 
     private void OnDestroy()
     {
-        ObstaclePass.OnObstaclePass -= OnObstaclePass;
+        ScoreTrigger.OnObstaclePass -= OnObstaclePass;
     }
 }

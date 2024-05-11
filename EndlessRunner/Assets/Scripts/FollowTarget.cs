@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class FollowTarget : MonoBehaviour
 {
-    [Header("Components")]
-    [SerializeField]
-    private Transform target;
-
     [Header("Configs")]
     [Range(0f, 30f)]
     [SerializeField]
-    private float offset = 10f;
+    private float zOffset = 10f;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameManager.Instance.GetPlayer();
+    }
 
     private void LateUpdate()
     {
         transform.position = new Vector3(
             transform.position.x,
             transform.position.y,
-            target.position.z - offset
+            player.transform.position.z - zOffset
         );
     }
 }

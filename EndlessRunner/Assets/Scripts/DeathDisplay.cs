@@ -26,14 +26,17 @@ public class DeathDisplay : MonoBehaviour
 
     private void Start()
     {
-        PlayerController.OnPlayerDeath += OnPlayerDeath;
+        PlayerHealth.OnPlayerHealth += OnPlayerHit;
         restartButton.onClick.AddListener(OnRestartClick);
         menuButton.onClick.AddListener(OnMenuClick);
         exitButton.onClick.AddListener(OnExitClick);
     }
 
-    private void OnPlayerDeath()
+    private void OnPlayerHit(int currentHealth)
     {
+        if (currentHealth > 0)
+            return;
+
         Time.timeScale = 0;
         scoreDisplay.SetActive(false);
         deathScreen.SetActive(true);
@@ -59,6 +62,6 @@ public class DeathDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerController.OnPlayerDeath -= OnPlayerDeath;
+        PlayerHealth.OnPlayerHealth -= OnPlayerHit;
     }
 }

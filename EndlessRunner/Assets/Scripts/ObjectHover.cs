@@ -5,30 +5,15 @@ public class ObjectHover : MonoBehaviour
     [Header("Configs")]
     [Header("Speed")]
     [SerializeField]
-    [Range(0.5f, 2f)]
-    private float minSpeed = 0.5f;
-
-    [SerializeField]
-    [Range(0.5f, 2f)]
-    private float maxSpeed = 1.5f;
+    private Vector2 speedRange = new(0.5f, 1.5f);
 
     [Header("Amplitude")]
     [SerializeField]
-    [Range(0.5f, 2f)]
-    private float minAmplitude = 0.5f;
-
-    [SerializeField]
-    [Range(0.5f, 2f)]
-    private float maxAmplitude = 1.5f;
+    private Vector2 amplitudeRange = new(0.5f, 1.5f);
 
     [Header("Rotation Speed")]
     [SerializeField]
-    [Range(10, 60)]
-    private int minRotationSpeed = 10;
-
-    [SerializeField]
-    [Range(10, 60)]
-    private int maxRotationSpeed = 30;
+    private Vector2 rotationSpeedRange = new(10, 30);
     private float speed;
     private float amplitude;
     private Vector3 originalTransform;
@@ -37,12 +22,12 @@ public class ObjectHover : MonoBehaviour
     private void Awake()
     {
         originalTransform = transform.position;
-        speed = Random.Range(minSpeed, maxSpeed);
-        amplitude = Random.Range(minAmplitude, maxAmplitude);
+        speed = Random.Range(speedRange.x, speedRange.y);
+        amplitude = Random.Range(amplitudeRange.x, amplitudeRange.y);
 
         int[] randoms = new int[3];
         for (int i = 0; i < randoms.Length; i++)
-            randoms[i] = Random.Range(minRotationSpeed, maxRotationSpeed);
+            randoms[i] = Random.Range((int)rotationSpeedRange.x, (int)rotationSpeedRange.y);
 
         randomRotation = new Vector3(randoms[0], randoms[1], randoms[2]);
     }

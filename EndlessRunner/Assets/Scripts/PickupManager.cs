@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,20 +5,38 @@ public class PickupManager : MonoBehaviour
 {
     public static PickupManager Instance { get; private set; }
 
+    [Header("Components")]
+    [SerializeField]
+    private GameObject[] pickupPrefabs;
+
     [Header("Configs")]
+    public float SpawnPercentage = 20f;
+
     [Header("Jetpack")]
     [SerializeField]
     private float jetpackTime = 8f;
 
     [SerializeField]
-    private float yOffset = 10f;
+    private float yPos = 10f;
 
     [SerializeField]
     private float upwardSpeed = 40f;
-    public static event Action<float> OnJetpackTime;
-    private Vector3 originalPosition;
-    private WaitForSeconds waitForSeconds;
-    private Collider playerCollider;
+
+    [Header("Low Gravity")]
+    [SerializeField]
+    private float lowGravityTime = 8f;
+
+    [SerializeField]
+    private float gravityScale = 1f;
+
+    [Header("Speed Boots")]
+    [SerializeField]
+    private int healAmount = 1;
+    public static event System.Action<ItemPickup.Type, float> OnPickupTime;
+    private readonly WaitForSeconds waitForOneSec = new(1);
+    private Rigidbody playerRb;
+    private PlayerController playerController;
+    private ItemPickup.Type currentPickupType;
     private bool isJetpackActive;
 
     private void Awake()
@@ -31,49 +48,88 @@ public class PickupManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            return;
         }
-
-        waitForSeconds = new WaitForSeconds(1);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isJetpackActive)
         {
-            playerCollider.transform.position = Vector3.MoveTowards(
-                playerCollider.transform.position,
-                new Vector3(
-                    playerCollider.transform.position.x,
-                    originalPosition.y + yOffset,
-                    playerCollider.transform.position.z
-                ),
-                upwardSpeed * Time.deltaTime
+            playerRb.position = Vector3.MoveTowards(
+                playerRb.position,
+                new Vector3(playerRb.position.x, yPos, playerRb.position.z),
+                upwardSpeed * Time.fixedDeltaTime
             );
         }
     }
 
-    public void ActivateJetpack(Collider other)
+    public void ActivatePickup(Collider other, ItemPickup.Type pickupType)
     {
-        playerCollider = other;
-        originalPosition = playerCollider.transform.position;
-        StartCoroutine(StartJetpack());
+        playerRb = other.gameObject.GetComponent<Rigidbody>();
+        playerController = other.gameObject.GetComponent<PlayerController>();
+        currentPickupType = pickupType;
+
+        switch (pickupType)
+        {
+            default:
+            case ItemPickup.Type.Jetpack:
+                ResetPickupEffects();
+                StartCoroutine(StartJetpack());
+                break;
+            case ItemPickup.Type.LowGravity:
+                ResetPickupEffects();
+                StartCoroutine(StartLowGravity());
+                break;
+            case ItemPickup.Type.Heal:
+                Heal();
+                break;
+        }
     }
 
-    private IEnumerator StartJetpack() // add particles
+    private IEnumerator StartJetpack()
     {
-        PlayerController playerController = playerCollider.GetComponent<PlayerController>();
-        playerController.SwitchGravity(false);
+        playerController.ToggleGravity(false);
         isJetpackActive = true;
 
         for (int i = 0; i < jetpackTime; i++)
         {
-            OnJetpackTime?.Invoke(jetpackTime - i);
-            yield return waitForSeconds;
+            OnPickupTime?.Invoke(currentPickupType, jetpackTime - i);
+            yield return waitForOneSec;
         }
-        OnJetpackTime?.Invoke(0);
+        OnPickupTime?.Invoke(currentPickupType, 0);
 
         isJetpackActive = false;
-        playerController.SwitchGravity(true);
+        playerController.ToggleGravity(true);
+    }
+
+    private IEnumerator StartLowGravity()
+    {
+        playerController.ChangeGravity(gravityScale);
+
+        for (int i = 0; i < lowGravityTime; i++)
+        {
+            OnPickupTime?.Invoke(currentPickupType, lowGravityTime - i);
+            yield return waitForOneSec;
+        }
+        OnPickupTime?.Invoke(currentPickupType, 0);
+
+        playerController.ResetGravityMultiplier();
+    }
+
+    private void Heal()
+    {
+        IDamagable damagable = playerRb.gameObject.GetComponent<IDamagable>();
+        damagable.Heal(healAmount);
+    }
+
+    private void ResetPickupEffects()
+    {
+        StopAllCoroutines();
+        playerController.ResetGravityMultiplier();
+    }
+
+    public GameObject GetRandomPickup()
+    {
+        return pickupPrefabs[Random.Range(0, pickupPrefabs.Length)];
     }
 }

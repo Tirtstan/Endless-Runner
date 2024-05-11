@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4339523180327909429}
   - component: {fileID: 8441855696519312761}
   - component: {fileID: 18864353740177450}
-  - component: {fileID: 5839000039616291644}
+  - component: {fileID: 5604939771335717884}
   - component: {fileID: 4031018432514267343}
+  - component: {fileID: 7463135608334625816}
   m_Layer: 0
   m_Name: JetpackPickup
   m_TagString: Pickup
@@ -29,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 2128615885461956252}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.67, z: 9.63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a022b512a215674899f79a666a18877, type: 2}
+  - {fileID: 2100000, guid: d727c4a6b062d9445b8a335e08039612, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5839000039616291644
-SphereCollider:
+--- !u!65 &5604939771335717884
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,7 +105,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1.2, y: 2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4031018432514267343
 MonoBehaviour:
@@ -118,3 +119,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630dc6901a6c47f4d844f70a1859219e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupType: 0
+--- !u!114 &7463135608334625816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128615885461956252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f204f4ac9f402864488696d2332226ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  amplitude: 0.2

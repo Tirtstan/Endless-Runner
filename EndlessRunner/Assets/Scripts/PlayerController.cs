@@ -1,16 +1,16 @@
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static event Action OnPlayerDeath;
-
     [Header("Components")]
     [SerializeField]
     private Transform groundCheck;
 
     [SerializeField]
     private LayerMask groundLayer;
+
+    [SerializeField]
+    private Transform shadow;
 
     [Header("Configs")]
     [Header("Pacing")]
@@ -41,19 +41,30 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float downForce = 20f;
-    private Vector3 originalScale;
-    private const float Gravity = -9.81f;
-    private float targetX;
     private Rigidbody rb;
-    private bool useGravity = true;
+    private BoxCollider boxCollider;
+    private Animator animator;
+    private const float Gravity = -9.81f;
+    private float xTarget;
+    private bool usingGravity = true;
+    private float originalGravityScale;
+    private Vector3 originalShadowScale;
+    private Vector3 originalColliderCenter;
+    private Vector3 originalColliderSize;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
+        animator = GetComponent<Animator>();
         rb.useGravity = false;
 
-        originalScale = transform.localScale;
+        originalColliderCenter = boxCollider.center;
+        originalColliderSize = boxCollider.size;
+
+        originalShadowScale = shadow.localScale;
         currentGravityScale = gravityScaleMultiplier;
+        originalGravityScale = gravityFallMultiplier;
     }
 
     private void Update()
@@ -62,13 +73,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            targetX -= moveOffset;
-            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+            xTarget -= moveOffset;
+            xTarget = Mathf.Clamp(xTarget, -moveOffset, moveOffset);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            targetX += moveOffset;
-            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+            xTarget += moveOffset;
+            xTarget = Mathf.Clamp(xTarget, -moveOffset, moveOffset);
         }
 
         if (jumpBufferCounter > 0)
@@ -81,47 +92,61 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         }
 
-        if (Input.GetKey(KeyCode.S) && useGravity) // press s and not flying
+        animator.SetBool("IsJumping", !IsGrounded());
+
+        if (Input.GetKey(KeyCode.S) && usingGravity) // press s and not flying
         {
+            animator.SetBool("IsCrouching", true);
             if (!IsGrounded())
             {
                 rb.AddForce(downForce * Vector3.down, ForceMode.Impulse);
             }
             else
             {
-                transform.localScale = new Vector3(
-                    transform.localScale.x,
-                    originalScale.y * scaleMultiplier,
-                    transform.localScale.z
+                boxCollider.center = new Vector3(
+                    boxCollider.size.x,
+                    originalColliderCenter.y * scaleMultiplier,
+                    boxCollider.size.z
+                );
+                boxCollider.size = new Vector3(
+                    boxCollider.size.x,
+                    originalColliderSize.y * scaleMultiplier,
+                    boxCollider.size.z
                 );
             }
         }
-        else
+
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            transform.localScale = originalScale;
+            animator.SetBool("IsCrouching", false);
+            boxCollider.center = originalColliderCenter;
+            boxCollider.size = originalColliderSize;
         }
 
-        if (transform.position.y < -20f) // for if the player falls
+        if (transform.position.y < -20f) // for if the player falls off map
         {
             GameManager.Instance.RestartGame();
         }
+
+        // animator.SetBool("IsFalling", rb.velocity.y < -2f);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseMenu.Instance.TogglePauseMenu();
         }
+
+        AdjustPlayerShadow();
     }
 
     private void FixedUpdate()
     {
-        Vector3 targetPos = Vector3.MoveTowards(
+        rb.position = Vector3.MoveTowards(
             rb.position,
-            new Vector3(targetX, rb.position.y, rb.position.z),
+            new Vector3(xTarget, rb.position.y, rb.position.z),
             speedTime * Time.fixedDeltaTime
         );
-        rb.MovePosition(targetPos);
 
-        if (useGravity)
+        if (usingGravity)
         {
             currentGravityScale =
                 rb.velocity.y < 0
@@ -136,13 +161,9 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded())
             return;
 
+        // animator.SetBool("IsJumping", true);
         rb.velocity = new Vector3(rb.velocity.x, power, rb.velocity.z);
         jumpBufferCounter = 0f;
-    }
-
-    public void SwitchGravity(bool value)
-    {
-        useGravity = value;
     }
 
     //  ChunderSon2 (2021) demonstrates...
@@ -151,12 +172,31 @@ public class PlayerController : MonoBehaviour
         return Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void AdjustPlayerShadow()
     {
-        if (other.gameObject.CompareTag("Obstacle"))
-        {
-            OnPlayerDeath?.Invoke();
-        }
+        shadow.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
+
+        float shadowScale = Mathf.Lerp(
+            originalShadowScale.x,
+            originalShadowScale.x * 0.8f,
+            transform.position.y
+        );
+        shadow.localScale = new Vector3(shadowScale, originalShadowScale.y, shadowScale);
+    }
+
+    public void ToggleGravity(bool value)
+    {
+        usingGravity = value;
+    }
+
+    public void ChangeGravity(float value)
+    {
+        gravityScaleMultiplier = value;
+    }
+
+    public void ResetGravityMultiplier()
+    {
+        gravityScaleMultiplier = originalGravityScale;
     }
 
     #region References

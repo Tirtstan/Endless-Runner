@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -9,11 +10,15 @@ public class LevelManager : MonoBehaviour
     private GameObject[] levelPrefabs;
 
     [SerializeField]
-    private Transform level;
+    private Transform levelParent;
 
+    [Header("Config")]
     [SerializeField]
-    private float difficultyIncreaseRate = 0.1f;
-    public float CurrentLevelSpeed { get; set; } = 10f;
+    private float difficultyIncreaseRate = 0.05f;
+
+    [field: SerializeField]
+    public float CurrentLevelSpeed { get; private set; } = 10f;
+    private List<GameObject> spawnedLevels = new(3);
 
     private void Awake()
     {
@@ -26,6 +31,11 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        for (int i = 0; i < levelParent.childCount; i++)
+        {
+            spawnedLevels.Add(levelParent.GetChild(i).gameObject);
+        }
     }
 
     private void Update()
@@ -33,18 +43,32 @@ public class LevelManager : MonoBehaviour
         CurrentLevelSpeed += Time.deltaTime * difficultyIncreaseRate;
     }
 
-    public void SpawnObstacle(Vector3 pos)
+    public void SpawnObstacle()
     {
         int index = Random.Range(0, levelPrefabs.Length);
-        GameObject obj = Instantiate(levelPrefabs[index], pos, Quaternion.identity);
-        obj.transform.SetParent(level);
+        Vector3 lastLevel = spawnedLevels[^1].transform.position;
+
+        GameObject obj = Instantiate(
+            levelPrefabs[index],
+            new Vector3(lastLevel.x, lastLevel.y, lastLevel.z + 52f),
+            Quaternion.identity
+        );
+        obj.transform.SetParent(levelParent);
+
+        spawnedLevels.Add(obj);
+    }
+
+    public void DestroyObstacle(GameObject obj)
+    {
+        spawnedLevels.Remove(obj);
+        Destroy(obj, 1);
     }
 
     public void DestroyAllObstacles()
     {
-        for (int i = 0; i < level.childCount; i++)
+        for (int i = 0; i < levelParent.childCount; i++)
         {
-            Destroy(level.GetChild(i).gameObject);
+            Destroy(levelParent.GetChild(i).gameObject);
         }
     }
 }

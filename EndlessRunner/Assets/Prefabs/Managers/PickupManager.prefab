@@ -44,6 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f3c4f5c1ad41f4db27e673263d1e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetpackTime: 8
-  yOffset: 10
-  upwardSpeed: 80
+  pickupPrefabs:
+  - {fileID: 2128615885461956252, guid: c97c90735826fc14e9ac654fa4029d43, type: 3}
+  - {fileID: 2128615885461956252, guid: 727affd75e07d644d89f1f1f9a29f825, type: 3}
+  - {fileID: 2128615885461956252, guid: ce84af8516091a34487a88b2906cdd4e, type: 3}
+  SpawnPercentage: 20
+  jetpackTime: 10
+  yPos: 3
+  upwardSpeed: 15
+  lowGravityTime: 15
+  gravityScale: 0.75

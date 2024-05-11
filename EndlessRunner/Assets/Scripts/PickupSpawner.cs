@@ -4,12 +4,8 @@ public class PickupSpawner : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField]
-    private GameObject[] pickupPrefabs;
-
-    [SerializeField]
     private GameObject pickupSpawnPointsParent;
     private GameObject[] pickupSpawnPoints;
-    private static int spawnPercentage = 20;
 
     private void Awake()
     {
@@ -18,9 +14,12 @@ public class PickupSpawner : MonoBehaviour
         {
             pickupSpawnPoints[i] = pickupSpawnPointsParent.transform.GetChild(i).gameObject;
         }
+    }
 
-        int spawnChance = Random.Range(0, 101);
-        if (spawnChance <= spawnPercentage) // 10% chance to spawn a pickup
+    private void Start()
+    {
+        int spawnChance = Random.Range(0, 100);
+        if (spawnChance <= PickupManager.Instance.SpawnPercentage) // certain chance to spawn a pickup
         {
             SpawnPickup();
         }
@@ -28,14 +27,17 @@ public class PickupSpawner : MonoBehaviour
 
     private void SpawnPickup()
     {
-        int pickupIndex = Random.Range(0, pickupPrefabs.Length);
+        if (pickupSpawnPoints.Length <= 0)
+            return;
+
         int spawnIndex = Random.Range(0, pickupSpawnPoints.Length);
+        Vector3 pos = pickupSpawnPoints[spawnIndex].transform.position;
+
         GameObject obj = Instantiate(
-            pickupPrefabs[pickupIndex],
-            pickupSpawnPoints[spawnIndex].transform.position,
+            PickupManager.Instance.GetRandomPickup(),
+            new Vector3(pos.x, pos.y + 0.5f, pos.z),
             Quaternion.identity
         );
-
         obj.transform.SetParent(transform);
     }
 }
