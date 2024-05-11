@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossPrefabs:
   - {fileID: 2691753521013211749, guid: 5510f562b8b0bbc4fa4e538f92c52b96, type: 3}
-  scoreMulitpleCheck: 30
+  scoreMulitpleCheck: 25
   scoreIncreaseBy: 10

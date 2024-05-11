@@ -28,7 +28,7 @@ public class DamageVignette : MonoBehaviour
                 vignette.intensity.value = 0;
                 break;
             case 2:
-                vignette.intensity.value = 0.3f;
+                vignette.intensity.value = 0.25f;
                 break;
             case <= 1:
                 vignette.intensity.value = 0.45f;

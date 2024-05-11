@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider boxCollider;
     private Animator animator;
     private const float Gravity = -9.81f;
-    private float targetX;
+    private float xTarget;
     private bool usingGravity = true;
     private float originalGravityScale;
     private Vector3 originalShadowScale;
@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            targetX -= moveOffset;
-            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+            xTarget -= moveOffset;
+            xTarget = Mathf.Clamp(xTarget, -moveOffset, moveOffset);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            targetX += moveOffset;
-            targetX = Mathf.Clamp(targetX, -moveOffset, moveOffset);
+            xTarget += moveOffset;
+            xTarget = Mathf.Clamp(xTarget, -moveOffset, moveOffset);
         }
 
         if (jumpBufferCounter > 0)
@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.position = Vector3.MoveTowards(
             rb.position,
-            new Vector3(targetX, rb.position.y, rb.position.z),
+            new Vector3(xTarget, rb.position.y, rb.position.z),
             speedTime * Time.fixedDeltaTime
         );
 

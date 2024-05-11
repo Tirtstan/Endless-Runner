@@ -41,6 +41,10 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void TakeDamage(int damage)
     {
+        float amount = CurrentHealth >= 3 ? 0.1f : 0.15f;
+        cameraShake.Shake(shakeDuration, amount);
+        rb.AddForce(Vector3.up * hitForce, ForceMode.Impulse);
+
         CurrentHealth -= damage;
         OnPlayerHealth?.Invoke(CurrentHealth);
 
@@ -52,9 +56,6 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     {
         if (other.CompareTag("Obstacle"))
         {
-            float amount = CurrentHealth >= 3 ? 0.05f : 0.125f;
-            cameraShake.Shake(shakeDuration, amount);
-            rb.AddForce(Vector3.up * hitForce, ForceMode.Impulse);
             TakeDamage(1);
         }
     }

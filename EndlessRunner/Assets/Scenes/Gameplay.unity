@@ -4192,11 +4192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 4060070323106428152, guid: 11895e5aee80fe64582cb0e9a81b8d5e,
-        type: 3}
-      propertyPath: scoreMulitpleCheck
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

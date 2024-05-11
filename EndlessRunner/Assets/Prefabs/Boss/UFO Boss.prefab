@@ -97,9 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22f3098841383e4e946c179b2f3ab0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  areaPrefab: {fileID: 4869567229864271939, guid: 8bfbd44c78ade4d4799cff40720fff76,
+    type: 3}
+  speed: 0.5
   yOffset: 5
   zOffset: 30
+  startCooldown: 10
+  attackStartUp: 6
 --- !u!114 &904498268322822223
 MonoBehaviour:
   m_ObjectHideFlags: 0
