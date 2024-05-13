@@ -11,8 +11,8 @@ public class BossSpawner : MonoBehaviour
     private int scoreMulitpleCheck = 30;
 
     [SerializeField]
-    private int scoreIncreaseBy = 10;
-    private int spawnChance = 10;
+    private int spawnChanceIncrease = 10;
+    private int spawnChance = 5;
     private GameObject boss;
 
     private void Start()
@@ -31,7 +31,7 @@ public class BossSpawner : MonoBehaviour
             int random = Random.Range(0, 100);
             if (random <= spawnChance)
             {
-                spawnChance = 10;
+                spawnChance = 0;
                 int randomIndex = Random.Range(0, bossPrefabs.Length);
                 boss = Instantiate(
                     bossPrefabs[randomIndex],
@@ -41,7 +41,7 @@ public class BossSpawner : MonoBehaviour
             }
             else
             {
-                spawnChance += scoreIncreaseBy;
+                spawnChance += spawnChanceIncrease;
             }
         }
     }

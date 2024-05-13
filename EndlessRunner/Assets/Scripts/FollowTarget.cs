@@ -15,6 +15,9 @@ public class FollowTarget : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (player == null)
+            Start();
+
         transform.position = new Vector3(
             transform.position.x,
             transform.position.y,
