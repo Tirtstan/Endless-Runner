@@ -215,12 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 1.5
-  minAmplitude: 0.5
-  maxAmplitude: 1.248
-  minRotationSpeed: 10
-  maxRotationSpeed: 30
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &160998875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 799b6d9e1af3e3548a16cac64acf100a,
@@ -735,12 +732,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.845
-  maxSpeed: 1.773
-  minAmplitude: 0.765
-  maxAmplitude: 1.304
-  minRotationSpeed: 23
-  maxRotationSpeed: 48
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &986936756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 668412506638b454a89624c83fac2f1b,
@@ -857,12 +851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 0.5
-  minAmplitude: 0.5
-  maxAmplitude: 0.5
-  minRotationSpeed: 10
-  maxRotationSpeed: 10
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &1079775161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c89de13704d7c604ea9bd4998ddca905,
@@ -1269,12 +1260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 1.517
-  minAmplitude: 0.5
-  maxAmplitude: 1.129
-  minRotationSpeed: 10
-  maxRotationSpeed: 30
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &1557126559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f423131fba1ecc249b08eb9ce3f55dda,
@@ -1391,12 +1379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 1
-  minAmplitude: 0.5
-  maxAmplitude: 1.5
-  minRotationSpeed: 10
-  maxRotationSpeed: 15
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &1652600176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 987cae79ab7b589489b53a6e65b86dc7,
@@ -1518,7 +1503,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1696,12 +1681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 1.371
-  minAmplitude: 0.5
-  maxAmplitude: 1.144
-  minRotationSpeed: 10
-  maxRotationSpeed: 23
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!1 &1973198446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1801,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -1874,7 +1856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 269.1348, y: 157.8554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049384949
@@ -2071,12 +2053,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d5e2f77d9485e49a78e81fe7e33d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  maxSpeed: 0.5
-  minAmplitude: 0.5
-  maxAmplitude: 0.5
-  minRotationSpeed: 10
-  maxRotationSpeed: 10
+  speedRange: {x: 0.5, y: 1.5}
+  amplitudeRange: {x: 0.5, y: 1.5}
+  rotationSpeedRange: {x: 10, y: 30}
 --- !u!4 &2083008499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 931e24430a3803e469dad2e295fab420,
