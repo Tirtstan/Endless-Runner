@@ -8,25 +8,30 @@ public class BossSpawner : MonoBehaviour
 
     [Header("Spawn Configs")]
     [SerializeField]
-    private int scoreMulitpleCheck = 30;
+    private int spawnScoreThreshold = 30;
 
     [SerializeField]
-    private int spawnChanceIncrease = 10;
+    private int scoreMulitpleCheck = 10;
+
+    [SerializeField]
+    private int spawnChanceIncrease = 5;
     private int spawnChance = 5;
     private GameObject boss;
 
     private void Start()
     {
-        ScoreTrigger.OnObstaclePass += OnObstaclePass;
+        GameManager.OnScoreChange += OnScoreChange;
     }
 
-    private void OnObstaclePass()
+    private void OnScoreChange(int score)
     {
         if (boss != null)
             return;
 
-        int currentScore = GameManager.Instance.GetScore();
-        if (currentScore % scoreMulitpleCheck == 0)
+        if (score < spawnScoreThreshold)
+            return;
+
+        if (score % scoreMulitpleCheck == 0)
         {
             int random = Random.Range(0, 100);
             if (random <= spawnChance)
@@ -48,6 +53,6 @@ public class BossSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        ScoreTrigger.OnObstaclePass -= OnObstaclePass;
+        GameManager.OnScoreChange -= OnScoreChange;
     }
 }
