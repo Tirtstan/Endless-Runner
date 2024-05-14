@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject playerPrefab;
     private GameObject player;
+    public static event Action<int> OnScoreChange;
     private int score;
 
     private void Awake()
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int value)
     {
         score += value;
+        OnScoreChange?.Invoke(score);
     }
 
     public int GetScore()

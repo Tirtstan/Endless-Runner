@@ -109,7 +109,11 @@ public class UFO : MonoBehaviour
 
             for (int i = 0; i < areaAttacks.Length; i++)
             {
-                lineRenderers[i].SetPosition(0, lineRenderers[i].transform.parent.position);
+                Vector3 parentPos = lineRenderers[i].transform.parent.position;
+                lineRenderers[i].SetPosition(
+                    0,
+                    new Vector3(parentPos.x, parentPos.y + 1f, parentPos.z)
+                );
                 lineRenderers[i].SetPosition(1, areaAttacks[i].transform.position);
                 if (
                     Mathf.Approximately(
@@ -124,7 +128,7 @@ public class UFO : MonoBehaviour
                 }
                 else
                 {
-                    if (i == areaAttacks.Length - 1)
+                    if (i == areaAttacks.Length - 1) // only shake once if missed
                         cameraShake.Shake(0.15f);
                 }
             }
