@@ -128,8 +128,6 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.RestartGame();
         }
 
-        // animator.SetBool("IsFalling", rb.velocity.y < -2f);
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseMenu.Instance.TogglePauseMenu();
@@ -161,7 +159,6 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded())
             return;
 
-        // animator.SetBool("IsJumping", true);
         rb.velocity = new Vector3(rb.velocity.x, power, rb.velocity.z);
         jumpBufferCounter = 0f;
     }

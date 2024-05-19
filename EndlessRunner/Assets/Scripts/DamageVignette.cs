@@ -6,12 +6,14 @@ public class DamageVignette : MonoBehaviour
 {
     private Volume volume;
     private Vignette vignette;
+    private ChromaticAberration chromaticAberration;
 
     // (see How to Change Post Processing through Code (C# Unity Tutorial), 2023)
     private void Awake()
     {
         volume = GetComponent<Volume>();
         volume.profile.TryGet(out vignette);
+        volume.profile.TryGet(out chromaticAberration);
     }
 
     private void Start()
@@ -26,12 +28,15 @@ public class DamageVignette : MonoBehaviour
             default:
             case >= 3:
                 vignette.intensity.value = 0;
+                chromaticAberration.intensity.value = 0;
                 break;
             case 2:
                 vignette.intensity.value = 0.25f;
+                chromaticAberration.intensity.value = 0.25f;
                 break;
             case <= 1:
                 vignette.intensity.value = 0.45f;
+                chromaticAberration.intensity.value = 0.45f;
                 break;
         }
     }
