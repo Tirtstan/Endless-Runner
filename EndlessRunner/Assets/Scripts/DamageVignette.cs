@@ -32,7 +32,7 @@ public class DamageVignette : MonoBehaviour
                 break;
             case 2:
                 vignette.intensity.value = 0.25f;
-                chromaticAberration.intensity.value = 0.25f;
+                chromaticAberration.intensity.value = 0.15f;
                 break;
             case <= 1:
                 vignette.intensity.value = 0.45f;

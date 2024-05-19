@@ -3,7 +3,12 @@ guid: ee118df590da84444912e3b9d19e352a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spacebits_texture
+    second: {fileID: 2100000, guid: ddf1e84d71524504d8ee1e4f47945b9b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

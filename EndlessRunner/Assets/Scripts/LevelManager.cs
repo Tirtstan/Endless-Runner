@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
 
     [field: SerializeField]
     public float CurrentLevelSpeed { get; private set; } = 10f;
-    private List<GameObject> spawnedLevels = new(3);
+    private List<GameObject> spawnedLevels = new(4);
 
     private void Awake()
     {
