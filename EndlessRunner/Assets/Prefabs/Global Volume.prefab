@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7688352187444986938}
   - component: {fileID: 6666909831837610506}
-  - component: {fileID: 3218104100523033460}
+  - component: {fileID: 4522825225874520731}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -50,7 +50,7 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 2c3af4720818d2a458f18f7b86d852f3, type: 2}
---- !u!114 &3218104100523033460
+--- !u!114 &4522825225874520731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

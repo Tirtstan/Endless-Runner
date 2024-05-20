@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamagable
@@ -28,7 +29,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void Death()
     {
-        animator.updateMode = AnimatorUpdateMode.UnscaledTime; // plays animation even when death screen is up
+        StartCoroutine(AnimateDeath());
         animator.SetTrigger("Death");
     }
 
@@ -50,6 +51,13 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
         if (CurrentHealth <= 0)
             Death();
+    }
+
+    private IEnumerator AnimateDeath() // plays animation even when death screen is up
+    {
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        yield return new WaitForSecondsRealtime(1f);
+        animator.updateMode = AnimatorUpdateMode.Normal;
     }
 
     private void OnTriggerEnter(Collider other)

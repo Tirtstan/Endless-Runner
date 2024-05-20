@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
         }
 
         QualitySettings.vSyncCount = 1;
-    }
-
-    private void Start()
-    {
         player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
     }
 

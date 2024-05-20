@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class DamageVignette : MonoBehaviour
+public class DamagePostProcessing : MonoBehaviour
 {
     private Volume volume;
     private Vignette vignette;
