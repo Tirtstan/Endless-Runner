@@ -327,7 +327,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 420.98, y: 50}
+  m_SizeDelta: {x: 519.21, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &646056647
 MonoBehaviour:
@@ -351,8 +351,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Toggle Fullscreen - [Alt + Enter]
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 70b4f27d4c5666f4ab14d7d2354d53b0, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 64f372d6e5ec2ce4797cbf4f8c4cff29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e8b8271044c2536419f338d0f1ac366b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 7083a1e4aa6ca8446841438c5c43f46b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 811926654}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &689269010
@@ -639,12 +639,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 795341523}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 811926654}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &811926654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4775544398350235573, guid: dc55eb44a12b295488593da47d2f0304,
+    type: 3}
+  m_PrefabInstance: {fileID: 795341523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986936753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1069,7 +1075,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 132.22}
-  m_SizeDelta: {x: 727.2893, y: 106.5904}
+  m_SizeDelta: {x: 902.75, y: 106.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1334615728
 MonoBehaviour:
@@ -1093,8 +1099,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Martian Marathon
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 70b4f27d4c5666f4ab14d7d2354d53b0, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a5c7c4128d9842a42b809b83c1ace406, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6e9ac2f35e97dba418a0bb0af02bd3d2, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: c6114c2593e8e9a4180d672ee4a5c7b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1637,11 +1643,11 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5087
+  m_ColorTemperature: 5000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1879,8 +1885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 269.1348, y: 157.8554}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 270, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049384949
 MonoBehaviour:

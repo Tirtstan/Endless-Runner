@@ -50,7 +50,8 @@ MonoBehaviour:
   - {fileID: 2128615885461956252, guid: ce84af8516091a34487a88b2906cdd4e, type: 3}
   SpawnPercentage: 20
   jetpackTime: 10
-  yPos: 3
+  yPos: 2.5
   upwardSpeed: 15
   lowGravityTime: 15
   gravityScale: 0.75
+  healAmount: 1

@@ -77,8 +77,6 @@ public class LevelManager : MonoBehaviour
     public void DestroyAllObstacles()
     {
         for (int i = 0; i < levelParent.childCount; i++)
-        {
             Destroy(levelParent.GetChild(i).gameObject);
-        }
     }
 }

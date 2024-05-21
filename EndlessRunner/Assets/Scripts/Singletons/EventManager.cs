@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
     public static event Action OnBoss2Spawned; // sand worm
     public static event Action<int> OnBossDefeated;
     private int score;
+    private int levelsBeaten;
 
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class EventManager : MonoBehaviour
     public void InvokeBossDefeated(int bossId)
     {
         OnBossDefeated?.Invoke(bossId);
+        levelsBeaten++;
     }
 
     public void IncreaseScore(int value)
@@ -50,8 +52,7 @@ public class EventManager : MonoBehaviour
         OnScoreChange?.Invoke(score);
     }
 
-    public int GetScore()
-    {
-        return score;
-    }
+    public int GetScore() => score;
+
+    public int GetLevelsBeaten() => levelsBeaten;
 }

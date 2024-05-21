@@ -149,7 +149,7 @@ public class UFO : MonoBehaviour
 
         EventManager.Instance.InvokeBossDefeated(1);
         xTarget = 80;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
     }
 
     private float GetRandomLane()
