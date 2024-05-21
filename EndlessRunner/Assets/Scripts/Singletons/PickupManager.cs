@@ -128,8 +128,5 @@ public class PickupManager : MonoBehaviour
         playerController.ResetGravityMultiplier();
     }
 
-    public GameObject GetRandomPickup()
-    {
-        return pickupPrefabs[Random.Range(0, pickupPrefabs.Length)];
-    }
+    public GameObject GetRandomPickup() => pickupPrefabs[Random.Range(0, pickupPrefabs.Length)];
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8479441680766977792
+--- !u!1 &467172239087550079
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5503289913503241165}
-  - component: {fileID: 6580633206238686884}
+  - component: {fileID: 986500701727381181}
+  - component: {fileID: 168640784803969173}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: EventManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5503289913503241165
+--- !u!4 &986500701727381181
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8479441680766977792}
+  m_GameObject: {fileID: 467172239087550079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,23 +32,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6580633206238686884
+--- !u!114 &168640784803969173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8479441680766977792}
+  m_GameObject: {fileID: 467172239087550079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5268da355ee14d41a10aed1c0a4d598, type: 3}
+  m_Script: {fileID: 11500000, guid: 74d0d1b576eaa204b9fd493821f9e7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPrefabs:
-  - {fileID: 8502656419886144226, guid: d53b6dbfcfcd10c479ef6cdab20cffcb, type: 3}
-  - {fileID: 8502656419886144226, guid: b804041bf399d864788f340e08c7613b, type: 3}
-  - {fileID: 8502656419886144226, guid: ae22c48bddd960d40a981505ce2dba3a, type: 3}
-  levelParent: {fileID: 0}
-  difficultyIncreaseRate: 0.05
-  levelSpeedCap: 22.5
-  <CurrentLevelSpeed>k__BackingField: 10

@@ -5,6 +5,9 @@ public class ScoreTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            GameManager.Instance.IncreaseScore(1);
+        {
+            EventManager.Instance.InvokePassObstacle();
+            EventManager.Instance.IncreaseScore(1);
+        }
     }
 }

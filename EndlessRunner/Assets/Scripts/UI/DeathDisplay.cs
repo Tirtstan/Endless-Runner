@@ -40,7 +40,7 @@ public class DeathDisplay : MonoBehaviour
         Time.timeScale = 0;
         scoreDisplay.SetActive(false);
         deathScreen.SetActive(true);
-        scoreText.text = $"Score: {GameManager.Instance.GetScore()}";
+        scoreText.text = $"Score: {EventManager.Instance.GetScore()}";
     }
 
     private void OnRestartClick()

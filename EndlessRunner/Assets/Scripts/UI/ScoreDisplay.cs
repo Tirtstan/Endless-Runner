@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        GameManager.OnScoreChange += OnScoreChange;
+        EventManager.OnScoreChange += OnScoreChange;
     }
 
     private void OnScoreChange(int score)
@@ -19,6 +19,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.OnScoreChange -= OnScoreChange;
+        EventManager.OnScoreChange -= OnScoreChange;
     }
 }

@@ -54,6 +54,7 @@ public class UFO : MonoBehaviour
     private void Start()
     {
         player = GameManager.Instance.GetPlayer();
+        EventManager.Instance.InvokeBoss1Spawned();
         StartCoroutine(StartCooldown());
     }
 
@@ -146,6 +147,7 @@ public class UFO : MonoBehaviour
         StopCoroutine(attackCoroutine);
         ResetAttacks();
 
+        EventManager.Instance.InvokeBossDefeated(1);
         xTarget = 80;
         Destroy(gameObject, 5f);
     }

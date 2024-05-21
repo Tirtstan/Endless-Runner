@@ -10,14 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject playerPrefab;
     private GameObject player;
-    public static event Action<int> OnScoreChange;
-    private int score;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -26,7 +25,9 @@ public class GameManager : MonoBehaviour
         }
 
         QualitySettings.vSyncCount = 1;
-        player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
+
+        if (SceneManager.GetActiveScene().buildIndex != 0 && player == null)
+            player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
     }
 
     public void RestartGame()
@@ -37,16 +38,5 @@ public class GameManager : MonoBehaviour
     public GameObject GetPlayer()
     {
         return player;
-    }
-
-    public void IncreaseScore(int value)
-    {
-        score += value;
-        OnScoreChange?.Invoke(score);
-    }
-
-    public int GetScore()
-    {
-        return score;
     }
 }

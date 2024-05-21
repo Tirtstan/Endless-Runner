@@ -35,6 +35,12 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
+        if (levelParent == null)
+        {
+            Debug.LogWarning("Level Parent is not assigned in the inspector!", gameObject);
+            return;
+        }
+
         for (int i = 0; i < levelParent.childCount; i++)
             spawnedLevels.Add(levelParent.GetChild(i).gameObject);
     }

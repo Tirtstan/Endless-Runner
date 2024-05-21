@@ -20,7 +20,7 @@ public class BossSpawner : MonoBehaviour
 
     private void Start()
     {
-        GameManager.OnScoreChange += OnScoreChange;
+        EventManager.OnScoreChange += OnScoreChange;
     }
 
     private void OnScoreChange(int score)
@@ -53,6 +53,6 @@ public class BossSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.OnScoreChange -= OnScoreChange;
+        EventManager.OnScoreChange -= OnScoreChange;
     }
 }
