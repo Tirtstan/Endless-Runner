@@ -3404,6 +3404,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022353194}
   m_CullTransparentMesh: 1
+--- !u!1001 &2022593395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5036018779142321168, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSpeedManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053980005130671956, guid: 6122f1032b57d054f858127fcc7101ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6122f1032b57d054f858127fcc7101ef, type: 3}
 --- !u!1 &2042549231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,6 +4013,29 @@ PrefabInstance:
       propertyPath: levelParent
       value: 
       objectReference: {fileID: 1078297984}
+    - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
+        type: 3}
+      propertyPath: levelPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
+        type: 3}
+      propertyPath: levelPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8502656419886144226, guid: d53b6dbfcfcd10c479ef6cdab20cffcb,
+        type: 3}
+    - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
+        type: 3}
+      propertyPath: levelPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8502656419886144226, guid: b804041bf399d864788f340e08c7613b,
+        type: 3}
+    - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
+        type: 3}
+      propertyPath: levelPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8502656419886144226, guid: ae22c48bddd960d40a981505ce2dba3a,
+        type: 3}
     - target: {fileID: 779323138780313176, guid: 1a9659a1775e15d44a39de467098f016,
         type: 3}
       propertyPath: m_Name
@@ -4196,6 +4287,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1328392640785083292}
+  - {fileID: 2022593395}
   - {fileID: 9119672077891187253}
   - {fileID: 2096788063}
   - {fileID: 1340204576}

@@ -11,16 +11,6 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private Transform levelParent;
-
-    [Header("Config")]
-    [SerializeField]
-    private float difficultyIncreaseRate = 0.05f;
-
-    [SerializeField]
-    private float levelSpeedCap = 22.5f;
-
-    [field: SerializeField]
-    public float CurrentLevelSpeed { get; private set; } = 10f;
     private List<GameObject> spawnedLevels = new(4);
 
     private void Awake()
@@ -43,14 +33,6 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < levelParent.childCount; i++)
             spawnedLevels.Add(levelParent.GetChild(i).gameObject);
-    }
-
-    private void Update()
-    {
-        if (CurrentLevelSpeed >= levelSpeedCap)
-            return;
-
-        CurrentLevelSpeed += Time.deltaTime * difficultyIncreaseRate;
     }
 
     public void SpawnObstacle()

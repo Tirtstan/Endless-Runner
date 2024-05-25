@@ -31,7 +31,7 @@ public class DamagePostProcessing : MonoBehaviour
                 chromaticAberration.intensity.value = 0;
                 break;
             case 2:
-                vignette.intensity.value = 0.25f;
+                vignette.intensity.value = 0.3f;
                 chromaticAberration.intensity.value = 0.15f;
                 break;
             case <= 1:

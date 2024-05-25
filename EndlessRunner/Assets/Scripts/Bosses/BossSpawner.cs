@@ -8,12 +8,15 @@ public class BossSpawner : MonoBehaviour
 
     [Header("Spawn Configs")]
     [SerializeField]
+    [Range(10, 100)]
     private int spawnScoreThreshold = 30;
 
     [SerializeField]
+    [Range(5, 30)]
     private int scoreMulitpleCheck = 10;
 
     [SerializeField]
+    [Range(1, 20)]
     private int spawnChanceIncrease = 5;
     private int spawnChance = 5;
     private GameObject boss;
