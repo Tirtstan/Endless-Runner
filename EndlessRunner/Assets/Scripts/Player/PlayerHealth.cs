@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     private void Update()
     {
-        if (transform.position.y < 20) // if player falls off the map
+        if (transform.position.y < -20) // if player falls off the map
             TakeDamage(99);
     }
 
