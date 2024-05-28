@@ -1099,8 +1099,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Martian Marathon
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e9ac2f35e97dba418a0bb0af02bd3d2, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: c6114c2593e8e9a4180d672ee4a5c7b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e8b8271044c2536419f338d0f1ac366b, type: 2}
+  m_sharedMaterial: {fileID: -5536994477092548150, guid: e8b8271044c2536419f338d0f1ac366b,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1130,7 +1131,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

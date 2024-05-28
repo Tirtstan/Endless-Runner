@@ -5,12 +5,12 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
     public static event Action OnPassObstacle;
-    public static event Action<int> OnScoreChange;
     public static event Action OnBoss1Spawned; // ufo
     public static event Action OnBoss2Spawned; // sand worm
+    public static event Action OnPickup1;
+    public static event Action OnPickup2;
+    public static event Action OnPickup3;
     public static event Action<int> OnBossDefeated;
-    private int score;
-    private int levelsBeaten;
 
     private void Awake()
     {
@@ -25,34 +25,17 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void InvokePassObstacle()
-    {
-        OnPassObstacle?.Invoke();
-    }
+    public void InvokePassObstacle() => OnPassObstacle?.Invoke();
 
-    public void InvokeBoss1Spawned()
-    {
-        OnBoss1Spawned?.Invoke();
-    }
+    public void InvokeBoss1Spawned() => OnBoss1Spawned?.Invoke();
 
-    public void InvokeBoss2Spawned()
-    {
-        OnBoss2Spawned?.Invoke();
-    }
+    public void InvokeBoss2Spawned() => OnBoss2Spawned?.Invoke();
 
-    public void InvokeBossDefeated(int bossId)
-    {
-        OnBossDefeated?.Invoke(bossId);
-        levelsBeaten++;
-    }
+    public void InvokePickup1() => OnPickup1?.Invoke();
 
-    public void IncreaseScore(int value)
-    {
-        score += value;
-        OnScoreChange?.Invoke(score);
-    }
+    public void InvokePickup2() => OnPickup2?.Invoke();
 
-    public int GetScore() => score;
+    public void InvokePickup3() => OnPickup3?.Invoke();
 
-    public int GetLevelsBeaten() => levelsBeaten;
+    public void InvokeBossDefeated(int bossId) => OnBossDefeated?.Invoke(bossId);
 }

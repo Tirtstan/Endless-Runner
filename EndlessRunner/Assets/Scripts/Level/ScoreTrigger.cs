@@ -7,7 +7,7 @@ public class ScoreTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             EventManager.Instance.InvokePassObstacle();
-            EventManager.Instance.IncreaseScore(1);
+            PlayerMetricsManager.Instance.IncreaseScore(1);
         }
     }
 }

@@ -18,6 +18,18 @@ public class ItemPickup : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PickupManager.Instance.ActivatePickup(other, pickupType);
+            switch (pickupType)
+            {
+                case Type.Jetpack:
+                    EventManager.Instance.InvokePickup1();
+                    break;
+                case Type.LowGravity:
+                    EventManager.Instance.InvokePickup2();
+                    break;
+                case Type.Heal:
+                    EventManager.Instance.InvokePickup3();
+                    break;
+            }
             Destroy(gameObject);
         }
     }

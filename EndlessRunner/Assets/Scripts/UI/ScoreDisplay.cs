@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class ScoreDisplay : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        EventManager.OnScoreChange += OnScoreChange;
+        PlayerMetricsManager.OnScoreChange += OnScoreChange;
     }
 
     private void OnScoreChange(int score)
@@ -19,6 +19,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.OnScoreChange -= OnScoreChange;
+        PlayerMetricsManager.OnScoreChange -= OnScoreChange;
     }
 }

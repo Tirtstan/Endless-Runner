@@ -1,8 +1,9 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static event System.Action OnPlayerJump;
+
     [Header("Components")]
     [SerializeField]
     private Transform groundCheck;
@@ -157,13 +158,11 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector3(rb.velocity.x, power, rb.velocity.z);
         jumpBufferCounter = 0f;
+        OnPlayerJump?.Invoke();
     }
 
     //  ChunderSon2 (2021) demonstrates...
-    private bool IsGrounded()
-    {
-        return Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
-    }
+    private bool IsGrounded() => Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
 
     private void AdjustPlayerShadow()
     {

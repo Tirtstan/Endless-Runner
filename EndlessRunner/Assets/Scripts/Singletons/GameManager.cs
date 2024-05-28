@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int startTime = 3;
     private GameObject player;
-    private WaitForSecondsRealtime waitForOneSec = new(1);
+    private readonly WaitForSecondsRealtime waitForOneSec = new(1);
 
     private void Awake()
     {
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartCountdown()
     {
         Time.timeScale = 0;
+        OnStartTime?.Invoke(startTime);
         for (int i = 0; i < startTime; i++)
         {
             OnStartTime?.Invoke(startTime - i);
