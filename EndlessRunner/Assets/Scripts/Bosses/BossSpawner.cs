@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossSpawner : MonoBehaviour
 {
-    [Header("Configs")]
+    [Header("Components")]
     [SerializeField]
     private GameObject[] bossPrefabs;
 

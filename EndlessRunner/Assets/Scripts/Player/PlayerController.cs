@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -121,11 +122,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsCrouching", false);
             boxCollider.center = originalColliderCenter;
             boxCollider.size = originalColliderSize;
-        }
-
-        if (transform.position.y < -20f) // for if the player falls off map
-        {
-            GameManager.Instance.RestartGame();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

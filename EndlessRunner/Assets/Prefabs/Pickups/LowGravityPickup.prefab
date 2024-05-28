@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8415589599553719566}
   - component: {fileID: 4031018432514267343}
   - component: {fileID: 4007142314262037775}
+  - component: {fileID: 4403535086591367570}
   m_Layer: 0
   m_Name: LowGravityPickup
   m_TagString: Pickup
@@ -134,3 +135,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   amplitude: 0.2
+--- !u!114 &4403535086591367570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128615885461956252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a8e920e78ff914d9684a2640ffe581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

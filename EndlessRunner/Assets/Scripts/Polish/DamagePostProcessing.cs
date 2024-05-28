@@ -18,7 +18,7 @@ public class DamagePostProcessing : MonoBehaviour
 
     private void Start()
     {
-        PlayerHealth.OnPlayerHealth += OnPlayerHit;
+        PlayerHealth.OnPlayerHealthChanged += OnPlayerHit;
     }
 
     private void OnPlayerHit(int currentHealth)
@@ -43,7 +43,7 @@ public class DamagePostProcessing : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerHealth.OnPlayerHealth -= OnPlayerHit;
+        PlayerHealth.OnPlayerHealthChanged -= OnPlayerHit;
     }
 
     #region References

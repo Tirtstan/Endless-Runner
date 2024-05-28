@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamagable
 {
-    public static event System.Action<int> OnPlayerHealth;
+    public static event System.Action<int> OnPlayerHealthChanged;
     private Rigidbody rb;
     private Animator animator;
     private CameraShake cameraShake;
@@ -27,6 +27,12 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         CurrentHealth = MaxHealth;
     }
 
+    private void Update()
+    {
+        if (transform.position.y < 20) // if player falls off the map
+            TakeDamage(99);
+    }
+
     public void Death()
     {
         StartCoroutine(AnimateDeath());
@@ -37,7 +43,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     {
         CurrentHealth += healAmount;
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
-        OnPlayerHealth?.Invoke(CurrentHealth);
+        OnPlayerHealthChanged?.Invoke(CurrentHealth);
     }
 
     public void TakeDamage(int damage)
@@ -47,7 +53,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         rb.AddForce(Vector3.up * hitForce, ForceMode.Impulse);
 
         CurrentHealth -= damage;
-        OnPlayerHealth?.Invoke(CurrentHealth);
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+        OnPlayerHealthChanged?.Invoke(CurrentHealth);
 
         if (CurrentHealth <= 0)
             Death();
@@ -56,15 +63,13 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     private IEnumerator AnimateDeath() // plays animation even when death screen is up
     {
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(1.5f);
         animator.updateMode = AnimatorUpdateMode.Normal;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
-        {
             TakeDamage(1);
-        }
     }
 }

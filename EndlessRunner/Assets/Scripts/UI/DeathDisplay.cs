@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DeathDisplay : MonoBehaviour
 {
@@ -26,7 +26,7 @@ public class DeathDisplay : MonoBehaviour
 
     private void Start()
     {
-        PlayerHealth.OnPlayerHealth += OnPlayerHit;
+        PlayerHealth.OnPlayerHealthChanged += OnPlayerHit;
         restartButton.onClick.AddListener(OnRestartClick);
         menuButton.onClick.AddListener(OnMenuClick);
         exitButton.onClick.AddListener(OnExitClick);
@@ -62,6 +62,6 @@ public class DeathDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerHealth.OnPlayerHealth -= OnPlayerHit;
+        PlayerHealth.OnPlayerHealthChanged -= OnPlayerHit;
     }
 }

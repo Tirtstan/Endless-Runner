@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4731663552030837365, guid: bbc798021eb9ccf4692f6b201429c786,
     type: 3}
+  startTime: 4
