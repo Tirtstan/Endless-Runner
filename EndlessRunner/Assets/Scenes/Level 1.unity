@@ -1276,6 +1276,12 @@ PrefabInstance:
       objectReference: {fileID: 1078297984}
     - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
         type: 3}
+      propertyPath: levelTransitionPrefab
+      value: 
+      objectReference: {fileID: 8502656419886144226, guid: f517167152e2103448ec0063da8f4e27,
+        type: 3}
+    - target: {fileID: 634009614007997078, guid: 1a9659a1775e15d44a39de467098f016,
+        type: 3}
       propertyPath: levelPrefabs.Array.size
       value: 3
       objectReference: {fileID: 0}

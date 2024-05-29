@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartCountdown()
     {
         Time.timeScale = 0;
+
         OnStartTime?.Invoke(startTime);
         for (int i = 0; i < startTime; i++)
         {
@@ -54,16 +55,14 @@ public class GameManager : MonoBehaviour
             yield return waitForOneSec;
         }
         OnStartTime?.Invoke(0);
+
         Time.timeScale = 1;
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadSceneAsync(1);
     }
 
-    public GameObject GetPlayer()
-    {
-        return player;
-    }
+    public GameObject GetPlayer() => player;
 }

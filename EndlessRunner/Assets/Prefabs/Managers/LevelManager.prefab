@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs: []
+  level2TransitionPrefab: {fileID: 8502656419886144226, guid: f517167152e2103448ec0063da8f4e27,
+    type: 3}
   levelParent: {fileID: 0}
-  difficultyIncreaseRate: 0.05
-  levelSpeedCap: 22.5

@@ -10,8 +10,12 @@ public class LevelManager : MonoBehaviour
     private GameObject[] levelPrefabs;
 
     [SerializeField]
+    private GameObject levelTransitionPrefab;
+
+    [SerializeField]
     private Transform levelParent;
     private List<GameObject> spawnedLevels = new(4);
+    private bool isBossDefeated;
 
     private void Awake()
     {
@@ -35,13 +39,39 @@ public class LevelManager : MonoBehaviour
             spawnedLevels.Add(levelParent.GetChild(i).gameObject);
     }
 
+    private void Start()
+    {
+        EventManager.OnBossDefeated += OnBossDefeated;
+    }
+
+    private void Update()
+    {
+        if (isBossDefeated)
+        {
+            RenderSettings.fogStartDistance = 15f;
+            RenderSettings.fogEndDistance = Mathf.Lerp(
+                RenderSettings.fogEndDistance,
+                RenderSettings.fogStartDistance * 2f,
+                Time.deltaTime * 0.4f
+            );
+        }
+    }
+
+    private void OnBossDefeated(int bossId)
+    {
+        isBossDefeated = true;
+    }
+
     public void SpawnObstacle()
     {
-        int index = Random.Range(0, levelPrefabs.Length);
+        GameObject levelPrefab = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
+        if (isBossDefeated)
+            levelPrefab = levelTransitionPrefab;
+
         Vector3 lastLevel = spawnedLevels[^1].transform.position;
 
         GameObject obj = Instantiate(
-            levelPrefabs[index],
+            levelPrefab,
             new Vector3(lastLevel.x, lastLevel.y, lastLevel.z + 52f),
             Quaternion.identity
         );
@@ -60,5 +90,10 @@ public class LevelManager : MonoBehaviour
     {
         for (int i = 0; i < levelParent.childCount; i++)
             Destroy(levelParent.GetChild(i).gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.OnBossDefeated -= OnBossDefeated;
     }
 }
