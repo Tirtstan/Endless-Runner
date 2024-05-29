@@ -25,9 +25,24 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Button backButton;
 
+    [Header("Configs")]
+    [SerializeField]
+    private float mainPanelYRot = -12;
+
+    [SerializeField]
+    private float statsPanelYRot = 25;
+
+    [SerializeField]
+    [Range(1, 10)]
+    private float rotSpeed = 4;
+    private Camera mainCamera;
+    private float targetYRot = -12;
+
     [SerializeField]
     private void Awake()
     {
+        mainCamera = Camera.main;
+
         playButton.onClick.AddListener(OnPlayClick);
         statsButton.onClick.AddListener(OnStatsClick);
         exitButton.onClick.AddListener(OnExitClick);
@@ -36,25 +51,30 @@ public class MainMenu : MonoBehaviour
         OnBackClick();
     }
 
-    private void OnPlayClick()
+    private void Update()
     {
-        SceneManager.LoadSceneAsync(1);
+        mainCamera.transform.rotation = Quaternion.Slerp(
+            mainCamera.transform.rotation,
+            Quaternion.Euler(
+                mainCamera.transform.eulerAngles.x,
+                targetYRot,
+                mainCamera.transform.eulerAngles.z
+            ),
+            Time.deltaTime * rotSpeed
+        );
     }
+
+    private void OnPlayClick() => SceneManager.LoadSceneAsync(1);
 
     private void OnStatsClick()
     {
-        mainPanel.SetActive(false);
-        statsPanel.SetActive(true);
+        targetYRot = statsPanelYRot;
     }
 
-    private void OnExitClick()
-    {
-        Application.Quit();
-    }
+    private void OnExitClick() => Application.Quit();
 
     private void OnBackClick()
     {
-        mainPanel.SetActive(true);
-        statsPanel.SetActive(false);
+        targetYRot = mainPanelYRot;
     }
 }
