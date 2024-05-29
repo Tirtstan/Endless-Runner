@@ -15,25 +15,7 @@ public class DeathDisplay : MonoBehaviour
 
     [Header("Text")]
     [SerializeField]
-    private TextMeshProUGUI playerNameText;
-
-    [SerializeField]
-    private TextMeshProUGUI scoreText;
-
-    [SerializeField]
-    private TextMeshProUGUI levelsBeatenText;
-
-    [SerializeField]
-    private TextMeshProUGUI jumpsText;
-
-    [SerializeField]
-    private TextMeshProUGUI jetpackPickupText;
-
-    [SerializeField]
-    private TextMeshProUGUI lowGravityPickupText;
-
-    [SerializeField]
-    private TextMeshProUGUI healPickupText;
+    private TextMeshProUGUI playerMetricsText;
 
     [Header("Buttons")]
     [SerializeField]
@@ -87,14 +69,7 @@ public class DeathDisplay : MonoBehaviour
 
     private void FillInfo()
     {
-        playerNameText.text = $"Player: {PlayerMetricsManager.Instance.CurrentPlayerName}";
-        scoreText.text = $"Score: {PlayerMetricsManager.Instance.Score}";
-        levelsBeatenText.text = $"Levels Beaten: {PlayerMetricsManager.Instance.LevelsBeaten}";
-        jumpsText.text = $"Jumps: {PlayerMetricsManager.Instance.Jumps}";
-        jetpackPickupText.text = $"Jetpacks: {PlayerMetricsManager.Instance.JetpackPickupAmount}";
-        lowGravityPickupText.text =
-            $"Low Gravity: {PlayerMetricsManager.Instance.LowGravityPickupAmount}";
-        healPickupText.text = $"Heals: {PlayerMetricsManager.Instance.HealPickupAmount}";
+        playerMetricsText.text = PlayerMetricsManager.Instance.GetPlayerMetrics();
     }
 
     private void OnDestroy()

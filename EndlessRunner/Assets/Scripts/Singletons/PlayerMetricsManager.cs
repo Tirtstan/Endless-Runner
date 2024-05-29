@@ -27,6 +27,10 @@ public class PlayerMetricsManager : MonoBehaviour
         }
     }
 
+    public string GetPlayerMetrics() =>
+        $"Player: {CurrentPlayerName}\nScore: {Score}\nLevels Beaten: {LevelsBeaten}\nJumps: {Jumps}\n"
+        + $"<color=#E94343>Jetpacks: {JetpackPickupAmount}\n<color=#67C5EC>Low Gravity: {LowGravityPickupAmount}\n<color=#67EC81>Heals: {HealPickupAmount}</color>";
+
     private void Start()
     {
         EventManager.OnBossDefeated += OnBossDefeated;
