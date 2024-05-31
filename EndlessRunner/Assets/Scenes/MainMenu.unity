@@ -2029,7 +2029,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &861649232
 Transform:
@@ -4576,6 +4576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4643,6 +4648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4712,6 +4722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4779,6 +4794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4868,6 +4888,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4935,6 +4960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5004,6 +5034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: landingpad_large
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d14891bc78df9fb46a0a83ec72a63cd6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5071,6 +5106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5160,6 +5200,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5227,6 +5272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5316,6 +5366,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5383,6 +5438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5452,6 +5512,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5519,6 +5584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5588,6 +5658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5656,6 +5731,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287c5c261dd17a24a87eea34944b540d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5723,6 +5803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lander_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a77b2d74fed60e40aab729040d4f265,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5812,6 +5897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5879,6 +5969,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5968,6 +6063,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6035,6 +6135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6125,6 +6230,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: structure_low
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8449a44a061a3984cb16fc5bcd736ad2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6192,6 +6302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6261,6 +6376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_inner_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6329,6 +6449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287c5c261dd17a24a87eea34944b540d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6396,6 +6521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6485,6 +6615,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6553,6 +6688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6620,6 +6760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6709,6 +6854,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6777,6 +6927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6844,6 +6999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6933,6 +7093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7018,6 +7183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7086,6 +7256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7153,6 +7328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7256,6 +7436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: solarpanel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7344,6 +7529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7417,6 +7607,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7484,6 +7679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7573,6 +7773,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7640,6 +7845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: basemodule_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1605eab0bb9e9f941ae4d808f85d1c7e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7709,6 +7919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7776,6 +7991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: structure_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8449a44a061a3984cb16fc5bcd736ad2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7865,6 +8085,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7952,6 +8177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8041,6 +8271,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cargo_A_packed
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ca7a98230a18448a7bcc0e73a62e1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8128,6 +8363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8217,6 +8457,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8284,6 +8529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8353,6 +8603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basemodule_D
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a46fefcbd56a8e246890c49da8389693,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8420,6 +8675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_tall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c308a139eb7251948b667aeea38c41c1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8489,6 +8749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8557,6 +8822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basemodule_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7879d1ec520cda4cab1a11d5bb0ec25,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8576,7 +8846,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &2295896913787430677
 PrefabInstance:
@@ -8640,6 +8910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8709,6 +8984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8776,6 +9056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8845,6 +9130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8912,6 +9202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8981,6 +9276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: solarpanel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9048,6 +9348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9117,6 +9422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9184,6 +9494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9253,6 +9568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9320,6 +9640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9389,6 +9714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: roofmodule_solarpanels
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5cfa36b6825282049957678c9775f1d4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9456,6 +9786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_B (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9525,6 +9860,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9592,6 +9932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9661,6 +10006,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9729,6 +10079,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basemodule_E
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8974803f0fea4f644ba81e1300123189,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9796,6 +10151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9884,6 +10244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9985,6 +10350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10052,6 +10422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10121,6 +10496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 556c492c857e6314d90c6ec39d3451d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10189,6 +10569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10252,10 +10637,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4468621223483337608, guid: 3c8d1398beb585f469213ded38b9dfe8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c8d1398beb585f469213ded38b9dfe8,
         type: 3}
       propertyPath: m_Name
       value: basemodule_garage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8d1398beb585f469213ded38b9dfe8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10324,6 +10719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10413,6 +10813,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10480,6 +10885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tunnel_straight_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a33c38d675a5ed4f9790e3019a4daba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10549,6 +10959,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basemodule_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1605eab0bb9e9f941ae4d808f85d1c7e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10616,6 +11031,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_inner_corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10685,6 +11105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10752,6 +11177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10841,6 +11271,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10929,6 +11364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10996,6 +11436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: solarpanel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11065,6 +11510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11132,6 +11582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11201,6 +11656,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11268,6 +11728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11337,6 +11802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11405,6 +11875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11472,6 +11947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_inner_corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11590,6 +12070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11657,6 +12142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11726,6 +12216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_inner_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11793,6 +12288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11881,6 +12381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_B (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12015,6 +12520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12082,6 +12592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: solarpanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12171,6 +12686,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12234,10 +12754,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.297
       objectReference: {fileID: 0}
+    - target: {fileID: -8643180834264830245, guid: 987cae79ab7b589489b53a6e65b86dc7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6132780015496525388, guid: 987cae79ab7b589489b53a6e65b86dc7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5538782409875720322, guid: 987cae79ab7b589489b53a6e65b86dc7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 987cae79ab7b589489b53a6e65b86dc7,
         type: 3}
       propertyPath: m_Name
       value: spacetruck
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 987cae79ab7b589489b53a6e65b86dc7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542492692138045037, guid: 987cae79ab7b589489b53a6e65b86dc7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12344,6 +12889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12411,6 +12961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12500,6 +13055,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12567,6 +13127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12656,6 +13221,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12675,7 +13245,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &4704139323947130132
 GameObject:
@@ -12691,7 +13261,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &4725474370560430042
 PrefabInstance:
@@ -12776,6 +13346,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12844,6 +13419,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12911,6 +13491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_inner_corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13000,6 +13585,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13067,6 +13657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13156,6 +13751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13223,6 +13823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rocks_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 556c492c857e6314d90c6ec39d3451d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13311,6 +13916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13464,6 +14074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13531,6 +14146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13600,6 +14220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 556c492c857e6314d90c6ec39d3451d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13663,10 +14288,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4430296920015074026, guid: 30df11e40afc9104d80a64d624458d67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -794032913998846215, guid: 30df11e40afc9104d80a64d624458d67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30df11e40afc9104d80a64d624458d67,
         type: 3}
       propertyPath: m_Name
       value: spacetruck_trailer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30df11e40afc9104d80a64d624458d67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590124233882984418, guid: 30df11e40afc9104d80a64d624458d67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779346272524325638, guid: 30df11e40afc9104d80a64d624458d67,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13736,11 +14386,84 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a0f205d755c0f8478816c4422845647, type: 3}
+--- !u!1001 &5121661296823105902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493348248934480546, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980381539194942716, guid: 69247532707792048932ddd1db4cdd30,
+        type: 3}
+      propertyPath: m_Name
+      value: DatabaseManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69247532707792048932ddd1db4cdd30, type: 3}
 --- !u!1001 &5274793179290446502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13803,6 +14526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13872,6 +14600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13939,6 +14672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14013,6 +14751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14081,6 +14824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14148,6 +14896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14237,6 +14990,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14256,7 +15014,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &5551045507160096862
 PrefabInstance:
@@ -14341,6 +15099,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14419,6 +15182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14486,6 +15254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14555,6 +15328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14622,6 +15400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14691,6 +15474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14754,10 +15542,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1781117291513219761, guid: f423131fba1ecc249b08eb9ce3f55dda,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f423131fba1ecc249b08eb9ce3f55dda,
         type: 3}
       propertyPath: m_Name
       value: drill_structure
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f423131fba1ecc249b08eb9ce3f55dda,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14826,6 +15624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14915,6 +15718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287c5c261dd17a24a87eea34944b540d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15002,6 +15810,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15091,6 +15904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15169,6 +15987,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15237,6 +16060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15304,6 +16132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15431,6 +16264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15498,6 +16336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: solarpanel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15567,6 +16410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: landingpad_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cfd82f9ef0123943b6a30bd2cee9be4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15635,6 +16483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15702,6 +16555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15791,6 +16649,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15859,6 +16722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15926,6 +16794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16015,6 +16888,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16082,6 +16960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rocks_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 556c492c857e6314d90c6ec39d3451d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16151,6 +17034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: roofmodule_cargo_C
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05c116347e398e04997ca3d82bf34839,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16218,6 +17106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16287,6 +17180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16355,6 +17253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16422,6 +17325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: basemodule_E (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8974803f0fea4f644ba81e1300123189,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16500,6 +17408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16589,6 +17502,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16656,6 +17574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16745,6 +17668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16812,6 +17740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_inner_corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16881,6 +17814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16948,6 +17886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: roofmodule_cargo_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1adb84cb5a3cb364cb1d57a276c650d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17054,6 +17997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cargo_A_packed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ca7a98230a18448a7bcc0e73a62e1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17121,6 +18069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17190,6 +18143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17257,6 +18215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17394,6 +18357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_inner_corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17481,6 +18449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17570,6 +18543,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17638,6 +18616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocks_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 287c5c261dd17a24a87eea34944b540d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17657,7 +18640,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &7313037547894927745
 PrefabInstance:
@@ -17742,6 +18725,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17809,6 +18797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_A (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17898,6 +18891,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17965,6 +18963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18054,6 +19057,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18142,6 +19150,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18209,6 +19222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18278,6 +19296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18297,7 +19320,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &7594134162071831426
 GameObject:
@@ -18314,7 +19337,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &7634201588542707672
 GameObject:
@@ -18330,7 +19353,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &7656177960562358436
 PrefabInstance:
@@ -18394,6 +19417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18462,6 +19490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: basemodule_D (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a46fefcbd56a8e246890c49da8389693,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18551,6 +19584,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18618,6 +19656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cargodepot_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd079f3c1da9ef4439afaf2b81d8c0f3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18692,6 +19735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18759,6 +19807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: basemodule_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6e5ee1c640e83a46aa5f04ff0ea6491,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18828,6 +19881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_inner_corner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8df3dbf698417d24196ebec6b4b68055,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18895,6 +19953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18964,6 +20027,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19031,6 +20099,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19100,6 +20173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tunnel_straight_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a33c38d675a5ed4f9790e3019a4daba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19163,10 +20241,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4468621223483337608, guid: 3c8d1398beb585f469213ded38b9dfe8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c8d1398beb585f469213ded38b9dfe8,
         type: 3}
       propertyPath: m_Name
       value: basemodule_garage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8d1398beb585f469213ded38b9dfe8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19236,6 +20324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19249,6 +20342,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4282801292364497710}
     m_Modifications:
+    - target: {fileID: -8958797711488727423, guid: c847718955ee6224296ecf7a14b8ba41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c847718955ee6224296ecf7a14b8ba41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19299,10 +20397,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7077531049673652378, guid: c847718955ee6224296ecf7a14b8ba41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -736985188228062666, guid: c847718955ee6224296ecf7a14b8ba41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c847718955ee6224296ecf7a14b8ba41,
         type: 3}
       propertyPath: m_Name
       value: spacetruck_large
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c847718955ee6224296ecf7a14b8ba41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743314352115904400, guid: c847718955ee6224296ecf7a14b8ba41,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19372,6 +20490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19440,6 +20563,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19507,6 +20635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_low (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19596,6 +20729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9acd2120073a024b8e90e5e9cc221e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19683,6 +20821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19772,6 +20915,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19840,6 +20988,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19907,6 +21060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19993,6 +21151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: structure_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8449a44a061a3984cb16fc5bcd736ad2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20012,7 +21175,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &8522178281576562611
 PrefabInstance:
@@ -20097,6 +21260,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20164,6 +21332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 799b6d9e1af3e3548a16cac64acf100a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20253,6 +21426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20341,6 +21519,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20408,6 +21591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20477,6 +21665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lights (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 799b6d9e1af3e3548a16cac64acf100a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20544,6 +21737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope_outer_corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20618,6 +21816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_low (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20686,6 +21889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20705,7 +21913,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &8856474709292754676
 PrefabInstance:
@@ -20770,6 +21978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20789,7 +22002,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1001 &8887709728734387173
 PrefabInstance:
@@ -20853,6 +22066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: solarpanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c89de13704d7c604ea9bd4998ddca905,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20942,6 +22160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21010,6 +22233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21077,6 +22305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21185,6 +22418,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a34bec66b49b06e4cb7e8b559fcfc223,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21253,6 +22491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain_slope_outer_corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32ebd24921e8db04ea0e659c2b8f5ef5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21320,6 +22563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21409,6 +22657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21476,6 +22729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: terrain_slope (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d077f6a769ad1d40be71ac5253ac493,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21565,6 +22823,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_A (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a0f205d755c0f8478816c4422845647,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21576,6 +22839,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1973198449}
   - {fileID: 1792544449}
+  - {fileID: 5121661296823105902}
   - {fileID: 7003950075046112011}
   - {fileID: 262291798}
   - {fileID: 689269010}
