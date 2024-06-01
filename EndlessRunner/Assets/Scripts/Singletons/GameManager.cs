@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        QualitySettings.vSyncCount = 1;
         player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
     }
 

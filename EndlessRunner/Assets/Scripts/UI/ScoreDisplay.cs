@@ -9,7 +9,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        PlayerMetricsManager.OnScoreChange += OnScoreChange;
+        DatabaseManager.OnScoreChange += OnScoreChange;
     }
 
     private void OnScoreChange(int score)
@@ -19,6 +19,6 @@ public class ScoreDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerMetricsManager.OnScoreChange -= OnScoreChange;
+        DatabaseManager.OnScoreChange -= OnScoreChange;
     }
 }

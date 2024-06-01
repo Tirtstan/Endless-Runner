@@ -25,6 +25,9 @@ public class ObjectHover : MonoBehaviour
         speed = Random.Range(speedRange.x, speedRange.y);
         amplitude = Random.Range(amplitudeRange.x, amplitudeRange.y);
 
+        speed = Random.Range(0, 2) == 0 ? speed : -speed;
+        amplitude = Random.Range(0, 2) == 0 ? amplitude : -amplitude;
+
         int[] randoms = new int[3];
         for (int i = 0; i < randoms.Length; i++)
             randoms[i] = Random.Range((int)rotationSpeedRange.x, (int)rotationSpeedRange.y);
@@ -34,7 +37,7 @@ public class ObjectHover : MonoBehaviour
 
     private void Update()
     {
-        float newX = originalTransform.x + Mathf.Sin(Time.time * speed * 0.5f) * amplitude;
+        float newX = originalTransform.x + Mathf.Cos(Time.time * speed * 0.5f) * amplitude;
         float newY = originalTransform.y + Mathf.Sin(Time.time * speed) * amplitude;
 
         transform.position = new Vector3(newX, newY, transform.position.z);

@@ -23,7 +23,7 @@ public class BossSpawner : MonoBehaviour
 
     private void Start()
     {
-        PlayerMetricsManager.OnScoreChange += OnScoreChange;
+        DatabaseManager.OnScoreChange += OnScoreChange;
     }
 
     private void OnScoreChange(int score)
@@ -56,6 +56,6 @@ public class BossSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerMetricsManager.OnScoreChange -= OnScoreChange;
+        DatabaseManager.OnScoreChange -= OnScoreChange;
     }
 }
