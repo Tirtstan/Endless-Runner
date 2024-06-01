@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Services.Authentication;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -69,7 +70,9 @@ public class DeathDisplay : MonoBehaviour
 
     private void FillInfo()
     {
-        playerMetricsText.text = PlayerMetricsManager.Instance.GetPlayerMetrics();
+        playerMetricsText.text =
+            $"<size=+2><u>Current Session Stats:</u></size>\n\nPlayer: {AuthenticationService.Instance.PlayerName}\n"
+            + $"{PlayerMetricsManager.Instance.GetSessionPlayerMetrics()}";
     }
 
     private void OnDestroy()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSpeedManager : MonoBehaviour
 {
@@ -27,11 +28,27 @@ public class LevelSpeedManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0)
+            Destroy(gameObject);
+    }
+
     private void Update()
     {
         if (CurrentLevelSpeed >= levelSpeedCap)
             return;
 
         CurrentLevelSpeed += Time.deltaTime * speedIncreaseRate;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

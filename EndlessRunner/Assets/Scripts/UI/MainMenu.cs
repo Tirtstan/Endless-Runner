@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.Services.Authentication;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -25,6 +27,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Button backButton;
 
+    [Header("Text")]
+    [SerializeField]
+    private TextMeshProUGUI statsText;
+
     [Header("Configs")]
     [SerializeField]
     private float mainPanelYRot = -12;
@@ -36,12 +42,14 @@ public class MainMenu : MonoBehaviour
     [Range(1, 10)]
     private float rotSpeed = 4;
     private Camera mainCamera;
-    private float targetYRot = -12;
+    private float targetYRot;
 
     [SerializeField]
     private void Awake()
     {
+        targetYRot = mainPanelYRot;
         mainCamera = Camera.main;
+        statsText.text = "Loading...";
 
         playButton.onClick.AddListener(OnPlayClick);
         statsButton.onClick.AddListener(OnStatsClick);
@@ -69,6 +77,8 @@ public class MainMenu : MonoBehaviour
     private void OnStatsClick()
     {
         targetYRot = statsPanelYRot;
+        statsText.text =
+            $"Player: {AuthenticationService.Instance.PlayerName}\n{PlayerMetricsManager.Instance.GetTotalPlayerMetrics()}";
     }
 
     private void OnExitClick() => Application.Quit();

@@ -1,5 +1,5 @@
+using System;
 using Unity.Services.Authentication;
-using Unity.Services.CloudSave;
 using Unity.Services.Core;
 using UnityEngine;
 
@@ -32,7 +32,7 @@ public class DatabaseManager : MonoBehaviour
 
             Login();
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.LogWarning($"Failed to initialize Unity Services!: {e.Message}");
         }
@@ -43,12 +43,11 @@ public class DatabaseManager : MonoBehaviour
         try
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
-            var playerInfo = await AuthenticationService.Instance.GetPlayerInfoAsync();
             Debug.Log(
-                $"User signed in anonymously as {playerInfo.Username} with ID: {playerInfo.Id}"
+                $"User signed in anonymously as {AuthenticationService.Instance.PlayerName} with ID: {AuthenticationService.Instance.PlayerId}"
             );
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.LogWarning($"Failed to sign in anonymously!: {e.Message}");
         }
