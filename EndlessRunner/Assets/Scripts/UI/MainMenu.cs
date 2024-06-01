@@ -40,6 +40,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI statsText;
 
+    [SerializeField]
+    private TextMeshProUGUI highScoresText;
+
     [Header("Configs")]
     [SerializeField]
     private Vector2 mainPanelRot = new(-6, -12);
@@ -71,6 +74,11 @@ public class MainMenu : MonoBehaviour
         statsBackButton.onClick.AddListener(OnBackClick);
     }
 
+    private void Start()
+    {
+        AuthenticationService.Instance.SignedIn += OnSignedIn;
+    }
+
     private void Update()
     {
         mainCamera.transform.rotation = Quaternion.Slerp(
@@ -88,16 +96,47 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(true);
     }
 
-    private async void OnStatsClick()
+    private void OnStatsClick()
     {
         targetRot = statsPanelRot;
+        OnSignedIn();
+    }
+
+    // According to Unity (s.a) ...
+    private async void OnSignedIn()
+    {
         int highScore = await GetPlayerHighScore();
         statsText.text =
             $"Player: {AuthenticationService.Instance.PlayerName}\n"
             + $"{DatabaseManager.Instance.GetTotalPlayerMetrics()}\n"
             + $"\nHigh Score: {highScore}";
+
+        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(
+            DatabaseManager.LeaderboardId,
+            new GetScoresOptions { Offset = 0, Limit = 10 }
+        );
+
+        string output = "";
+        for (int i = 0; i < 10; i++)
+        {
+            string info = ".............";
+            if (i < scoresResponse.Results.Count)
+            {
+                info =
+                    $"{scoresResponse.Results[i].PlayerName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
+                if (scoresResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
+                {
+                    info = "<u>" + info + "</u>";
+                }
+            }
+
+            output += $"{i + 1}| {info}\n";
+        }
+
+        highScoresText.text = output;
     }
 
+    // According to Unity (s.a) ...
     private async Task<int> GetPlayerHighScore()
     {
         var info = await LeaderboardsService.Instance.GetPlayerScoreAsync(
@@ -114,4 +153,19 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(false);
         targetRot = mainPanelRot;
     }
+
+    private void OnDestroy()
+    {
+        AuthenticationService.Instance.SignedIn -= OnSignedIn;
+    }
 }
+
+#region References
+/*
+
+Unity. s.a. Get scores, n.d. [Online]. Available at: https://docs.unity.com/ugs/en-us/manual/leaderboards/manual/get-score [Accessed 01 June 2024]
+
+Unity. s.a. Get the player’s score, n.d. [Online]. Available at: https://docs.unity.com/ugs/en-us/manual/leaderboards/manual/get-player-score [Accessed 01 June 2024]
+
+*/
+#endregion

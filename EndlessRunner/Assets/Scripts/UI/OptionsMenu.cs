@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +22,9 @@ public class OptionsMenu : MonoBehaviour
 
     [Header("Buttons")]
     [SerializeField]
+    private Button signOutButton;
+
+    [SerializeField]
     private Button applyButton;
 
     [SerializeField]
@@ -36,6 +40,7 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.onValueChanged.AddListener(OnResolutionValueChange);
         windowModeDropdown.onValueChanged.AddListener(OnWindowModeValueChange);
 
+        signOutButton.onClick.AddListener(() => AuthenticationService.Instance.SignOut(true));
         applyButton.onClick.AddListener(Apply);
         resetButton.onClick.AddListener(Reset);
     }
