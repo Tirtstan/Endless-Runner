@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public static event System.Action<int> OnPlayerHealthChanged;
     private Rigidbody rb;
     private Animator animator;
+    private AudioSource audioSource;
     private CameraShake cameraShake;
 
     [Header("Configs")]
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
         CurrentHealth = MaxHealth;
     }
@@ -55,6 +57,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         CurrentHealth -= damage;
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
         OnPlayerHealthChanged?.Invoke(CurrentHealth);
+
+        audioSource.Play();
 
         if (CurrentHealth <= 0)
             Death();

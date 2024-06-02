@@ -317,7 +317,6 @@ MonoBehaviour:
   jumpForce: 6.5
   gravityScaleMultiplier: 2
   gravityFallMultiplier: 2
-  jumpBufferTime: 0.15
   scaleMultiplier: 0.4
   downForce: 8
 --- !u!1 &5781560594729218403

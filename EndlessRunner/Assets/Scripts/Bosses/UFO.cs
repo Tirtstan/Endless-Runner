@@ -10,6 +10,10 @@ public class UFO : MonoBehaviour
     [SerializeField]
     private LineRenderer[] lineRenderers;
 
+    [Header("Audio")]
+    [SerializeField]
+    private AudioClip[] laserAttackClips;
+
     [Header("UFO Configs")]
     [Header("Pacing & Position")]
     [SerializeField]
@@ -41,6 +45,7 @@ public class UFO : MonoBehaviour
 
     private GameObject player;
     private CameraShake cameraShake;
+    private AudioSource audioSource;
     private float xTarget = 0;
     private Coroutine moveCoroutine;
     private Coroutine attackCoroutine;
@@ -49,6 +54,7 @@ public class UFO : MonoBehaviour
     private void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -70,6 +76,9 @@ public class UFO : MonoBehaviour
     private IEnumerator StartCooldown()
     {
         yield return new WaitForSeconds(startCooldown);
+
+        AudioManager.Instance.PlayBoss1Music();
+
         moveCoroutine = StartCoroutine(Move());
         attackCoroutine = StartCoroutine(Attack());
         StartCoroutine(End());
@@ -111,17 +120,15 @@ public class UFO : MonoBehaviour
             for (int i = 0; i < areaAttacks.Length; i++)
             {
                 Vector3 parentPos = lineRenderers[i].transform.parent.position;
-                lineRenderers[i].SetPosition(
-                    0,
-                    new Vector3(parentPos.x, parentPos.y + 1f, parentPos.z)
-                );
+                lineRenderers[i]
+                    .SetPosition(0, new Vector3(parentPos.x, parentPos.y + 1f, parentPos.z));
                 lineRenderers[i].SetPosition(1, areaAttacks[i].transform.position);
                 if (
                     Mathf.Approximately(
                         player.transform.position.x,
                         areaAttacks[i].transform.position.x
                     )
-                    && player.transform.position.y < 2.5f
+                    && player.transform.position.y < 1.75f
                 )
                 {
                     player.GetComponent<IDamagable>().TakeDamage(1);
@@ -133,6 +140,8 @@ public class UFO : MonoBehaviour
                         cameraShake.Shake(0.15f);
                 }
             }
+
+            audioSource.PlayOneShot(laserAttackClips[Random.Range(0, laserAttackClips.Length)]);
 
             yield return new WaitForSeconds(0.5f);
             ResetAttacks();

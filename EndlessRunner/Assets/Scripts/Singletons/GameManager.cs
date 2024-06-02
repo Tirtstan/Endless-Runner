@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    private AudioSource audioSource;
     public static event Action<int> OnStartTime;
 
     [Header("Components")]
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        audioSource = GetComponent<AudioSource>();
         player = Instantiate(playerPrefab, Vector3.forward, Quaternion.identity);
     }
 
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
         OnStartTime?.Invoke(startTime);
         for (int i = 0; i < startTime; i++)
         {
+            audioSource.Play();
             OnStartTime?.Invoke(startTime - i);
             yield return waitForOneSec;
         }
@@ -61,6 +64,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadSceneAsync(1);
+        LevelSpeedManager.Instance.CurrentLevelSpeed = 10f;
     }
 
     public GameObject GetPlayer() => player;

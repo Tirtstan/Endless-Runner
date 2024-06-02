@@ -20,6 +20,19 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField]
     private TMP_InputField userNameInputField;
 
+    [Header("Sliders")]
+    [SerializeField]
+    private Slider masterSlider;
+
+    [SerializeField]
+    private Slider musicSlider;
+
+    [SerializeField]
+    private Slider soundEffectsSlider;
+
+    [SerializeField]
+    private Slider userInterfaceSlider;
+
     [Header("Buttons")]
     [SerializeField]
     private Button signOutButton;
@@ -40,7 +53,12 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.onValueChanged.AddListener(OnResolutionValueChange);
         windowModeDropdown.onValueChanged.AddListener(OnWindowModeValueChange);
 
-        signOutButton.onClick.AddListener(() => AuthenticationService.Instance.SignOut(true));
+        masterSlider.onValueChanged.AddListener(OnMasterValueChange);
+        musicSlider.onValueChanged.AddListener(OnMusicValueChange);
+        soundEffectsSlider.onValueChanged.AddListener(OnSoundEffectsValueChange);
+        userInterfaceSlider.onValueChanged.AddListener(OnUserInterfaceValueChange);
+
+        signOutButton.onClick.AddListener(SignOut);
         applyButton.onClick.AddListener(Apply);
         resetButton.onClick.AddListener(Reset);
     }
@@ -80,6 +98,11 @@ public class OptionsMenu : MonoBehaviour
 
         windowModeDropdown.value = (int)OptionsManager.Instance.FullScreenMode;
         windowModeDropdown.RefreshShownValue();
+
+        masterSlider.value = OptionsManager.Instance.MasterVolume;
+        musicSlider.value = OptionsManager.Instance.MusicVolume;
+        soundEffectsSlider.value = OptionsManager.Instance.SoundEffectsVolume;
+        userInterfaceSlider.value = OptionsManager.Instance.UserInterfaceVolume;
 
         userNameInputField.text = AuthenticationService.Instance.PlayerName;
     }
@@ -122,6 +145,28 @@ public class OptionsMenu : MonoBehaviour
     private void OnWindowModeValueChange(int index) =>
         OptionsManager.Instance.FullScreenMode = (FullScreenMode)index;
 
+    private void OnMasterValueChange(float value) => OptionsManager.Instance.MasterVolume = value;
+
+    private void OnMusicValueChange(float value) => OptionsManager.Instance.MusicVolume = value;
+
+    private void OnSoundEffectsValueChange(float value) =>
+        OptionsManager.Instance.SoundEffectsVolume = value;
+
+    private void OnUserInterfaceValueChange(float value) =>
+        OptionsManager.Instance.UserInterfaceVolume = value;
+
+    private void SignOut()
+    {
+        try
+        {
+            AuthenticationService.Instance.SignOut(true);
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"Failed to sign out!: {e.Message}");
+        }
+    }
+
     private async void Apply()
     {
         OptionsManager.Instance.Apply();
@@ -139,7 +184,7 @@ public class OptionsMenu : MonoBehaviour
 
             await AuthenticationService.Instance.UpdatePlayerNameAsync(userNameInputField.text);
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.LogWarning($"Failed to update player name!: {e.Message}");
         }
