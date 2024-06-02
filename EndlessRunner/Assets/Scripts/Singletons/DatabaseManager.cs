@@ -50,6 +50,9 @@ public class DatabaseManager : MonoBehaviour
     {
         try
         {
+            if (AuthenticationService.Instance.IsSignedIn)
+                return;
+
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
             Debug.Log(
                 $"User signed in anonymously as {AuthenticationService.Instance.PlayerName} with ID: {AuthenticationService.Instance.PlayerId}"
