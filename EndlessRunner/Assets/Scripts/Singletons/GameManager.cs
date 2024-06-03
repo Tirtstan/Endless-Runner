@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
             yield return waitForOneSec;
         }
         OnStartTime?.Invoke(0);
+        AudioManager.Instance.ToggleHighPassFilter(false);
 
         Time.timeScale = 1;
     }

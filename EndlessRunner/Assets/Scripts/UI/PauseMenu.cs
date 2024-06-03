@@ -58,6 +58,7 @@ public class PauseMenu : MonoBehaviour
         {
             controlsText.gameObject.SetActive(false);
             menu.SetActive(true);
+            AudioManager.Instance.ToggleHighPassFilter(true);
             Time.timeScale = 0;
         }
     }

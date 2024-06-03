@@ -27,7 +27,7 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField]
     [Range(0, 2)]
     private float transitionTime = 0.75f;
-    private readonly WaitForSecondsRealtime wait = new(0.5f);
+    private readonly WaitForSecondsRealtime wait = new(0.4f);
 
     private void Awake()
     {

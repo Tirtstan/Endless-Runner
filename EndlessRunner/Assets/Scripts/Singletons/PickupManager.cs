@@ -99,11 +99,12 @@ public class PickupManager : MonoBehaviour
         OnPickupTime?.Invoke(currentPickupType, 0);
 
         isJetpackActive = false;
-        playerController.ToggleGravity(true);
+        ResetPickupEffects();
     }
 
     private IEnumerator StartLowGravity()
     {
+        AudioManager.Instance.ToggleLowPassFilter(true);
         playerController.ChangeGravity(gravityScale);
 
         for (int i = 0; i < lowGravityTime; i++)
@@ -113,7 +114,7 @@ public class PickupManager : MonoBehaviour
         }
         OnPickupTime?.Invoke(currentPickupType, 0);
 
-        playerController.ResetGravityMultiplier();
+        ResetPickupEffects();
     }
 
     private void Heal()
@@ -126,6 +127,8 @@ public class PickupManager : MonoBehaviour
     {
         StopAllCoroutines();
         playerController.ResetGravityMultiplier();
+        playerController.ToggleGravity(true);
+        AudioManager.Instance.ToggleLowPassFilter(false);
     }
 
     public GameObject GetRandomPickup() => pickupPrefabs[Random.Range(0, pickupPrefabs.Length)];

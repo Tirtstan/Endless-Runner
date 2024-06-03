@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
     private AudioSource audioSource1;
     private AudioSource audioSource2;
+    private AudioHighPassFilter audioHighPassFilter;
+    private AudioLowPassFilter audioLowPassFilter;
 
     [Header("Components")]
     [SerializeField]
@@ -31,6 +33,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     [Range(0.1f, 2)]
     private float transitionTime = 1.25f;
+    private int previousSceneIndex = -1;
 
     private void Awake()
     {
@@ -47,6 +50,10 @@ public class AudioManager : MonoBehaviour
 
         audioSource1 = GetComponent<AudioSource>();
         audioSource2 = gameObject.AddComponent<AudioSource>();
+        audioHighPassFilter = GetComponent<AudioHighPassFilter>();
+        audioLowPassFilter = GetComponent<AudioLowPassFilter>();
+        audioHighPassFilter.enabled = false;
+        audioLowPassFilter.enabled = false;
 
         audioSource2.outputAudioMixerGroup = audioSource1.outputAudioMixerGroup;
         audioSource2.priority = audioSource1.priority;
@@ -83,8 +90,12 @@ public class AudioManager : MonoBehaviour
         if (time > 0)
             return;
 
-        if (SceneManager.GetActiveScene().buildIndex >= 1)
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (sceneIndex >= 1 && sceneIndex != previousSceneIndex)
+        {
             ChangeMusic(gameplayMusic);
+            previousSceneIndex = sceneIndex;
+        }
     }
 
     private void ChangeMusic(AudioClip toClip)
@@ -96,6 +107,9 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource activeSource = audioSource1.isPlaying ? audioSource1 : audioSource2;
         AudioSource newSource = audioSource1.isPlaying ? audioSource2 : audioSource1;
+
+        if (activeSource.clip == toClip)
+            yield break;
 
         newSource.clip = toClip;
         newSource.volume = 0;
@@ -159,6 +173,10 @@ public class AudioManager : MonoBehaviour
         // ... (see Unity Audio: How to make a UI volume slider (the right way), 2018)
         audioMixer.SetFloat(audioGroupString, Mathf.Log10(volume) * 20);
     }
+
+    public void ToggleHighPassFilter(bool value) => audioHighPassFilter.enabled = value;
+
+    public void ToggleLowPassFilter(bool value) => audioLowPassFilter.enabled = value;
 
     private void OnDestroy()
     {
