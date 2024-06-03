@@ -176,20 +176,13 @@ public class PlayerController : MonoBehaviour
         shadow.localScale = new Vector3(shadowScale, originalShadowScale.y, shadowScale);
     }
 
-    public void ToggleGravity(bool value)
-    {
-        usingGravity = value;
-    }
+    public void ToggleGravity(bool value) => usingGravity = value;
 
-    public void ChangeGravity(float value)
-    {
-        gravityScaleMultiplier = value;
-    }
+    public void ChangeGravity(float value) => gravityScaleMultiplier = value;
 
-    public void ResetGravityMultiplier()
-    {
-        gravityScaleMultiplier = originalGravityScale;
-    }
+    public void ResetGravityMultiplier() => gravityScaleMultiplier = originalGravityScale;
+
+    public void ToggleCollider(bool value) => boxCollider.enabled = value;
 
     #region References
     /*

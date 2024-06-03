@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Configs")]
     [SerializeField]
-    [Range(0.1f, 2)]
+    [Range(0, 2)]
     private float transitionTime = 1.25f;
     private int previousSceneIndex = -1;
 
@@ -69,6 +69,15 @@ public class AudioManager : MonoBehaviour
         ChangeMusic(mainMenuMusic);
         GameManager.OnStartTime += OnStartTime;
         SceneManager.sceneLoaded += OnSceneLoaded;
+        PlayerHealth.OnPlayerHealthChanged += OnPlayerHealthChanged;
+    }
+
+    private void OnPlayerHealthChanged(int health)
+    {
+        if (health > 0)
+            return;
+
+        StartCoroutine(FadeAllMusicOut());
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -80,7 +89,7 @@ public class AudioManager : MonoBehaviour
                 ChangeMusic(mainMenuMusic);
                 break;
             case >= 1:
-                StartCoroutine(FadeAllAudioOut());
+                StartCoroutine(FadeAllMusicOut());
                 break;
         }
     }
@@ -127,7 +136,7 @@ public class AudioManager : MonoBehaviour
         activeSource.Stop();
     }
 
-    private IEnumerator FadeAllAudioOut()
+    private IEnumerator FadeAllMusicOut()
     {
         float transition = 0;
         while (transition < transitionTime)
@@ -181,6 +190,8 @@ public class AudioManager : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.OnStartTime -= OnStartTime;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        PlayerHealth.OnPlayerHealthChanged -= OnPlayerHealthChanged;
     }
 }
 

@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     [field: SerializeField]
     public int MaxHealth { get; set; } = 3;
+
+    [field: SerializeField]
     public int CurrentHealth { get; set; }
 
     private void Awake()

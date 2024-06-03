@@ -13,7 +13,7 @@ public class BossSpawner : MonoBehaviour
 
     [SerializeField]
     [Range(5, 30)]
-    private int scoreMulitpleCheck = 10;
+    private int scoreMultipleCheck = 10;
 
     [SerializeField]
     [Range(1, 20)]
@@ -34,7 +34,7 @@ public class BossSpawner : MonoBehaviour
         if (score < spawnScoreThreshold)
             return;
 
-        if (score % scoreMulitpleCheck == 0)
+        if (score % scoreMultipleCheck == 0)
         {
             int random = Random.Range(0, 100);
             if (random <= spawnChance)

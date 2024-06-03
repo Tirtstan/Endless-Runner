@@ -116,7 +116,7 @@ public class OptionsMenu : MonoBehaviour
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option =
-                $"{resolutions[i].width} x {resolutions[i].height}@{resolutions[i].refreshRateRatio.value:0.##}Hz";
+                $"{resolutions[i].width}x{resolutions[i].height}@{resolutions[i].refreshRateRatio.value:0.##}Hz";
             options.Add(option);
         }
 

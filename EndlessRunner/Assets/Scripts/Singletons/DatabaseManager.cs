@@ -100,7 +100,6 @@ public class DatabaseManager : MonoBehaviour
         SavePlayerMetrics();
     }
 
-    // Unity (s.a) demonstrates...
     private async void SavePlayerMetrics()
     {
         await LoadPlayerMetrics();
@@ -112,6 +111,7 @@ public class DatabaseManager : MonoBehaviour
         totalPlayerMetrics.LowGravityPickupAmount += sessionPlayerMetrics.LowGravityPickupAmount;
         totalPlayerMetrics.HealPickupAmount += sessionPlayerMetrics.HealPickupAmount;
 
+        // Unity (s.a) demonstrates...
         var playerData = new Dictionary<string, object>
         {
             { "Score", totalPlayerMetrics.Score },
