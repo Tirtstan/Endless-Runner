@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +26,7 @@ public class SceneTransitionManager : MonoBehaviour
     private AnimationCurve transitionCurve;
 
     [SerializeField]
-    [Range(1, 5)]
+    [Range(0, 2)]
     private float transitionTime = 1.5f;
 
     private void Awake()
@@ -59,23 +60,26 @@ public class SceneTransitionManager : MonoBehaviour
                 break;
         }
 
-        while (image.fillAmount < 1) // TODO
+        float elapsedTime = 0;
+        while (elapsedTime < transitionTime)
         {
-            image.fillAmount += Time.unscaledDeltaTime * transitionTime;
-            image.fillAmount = Mathf.Clamp01(image.fillAmount);
-            image.fillAmount = transitionCurve.Evaluate(image.fillAmount);
+            image.fillAmount = transitionCurve.Evaluate(elapsedTime / transitionTime);
+            elapsedTime += Time.unscaledDeltaTime;
             await Task.Yield();
         }
+        image.fillAmount = 1;
 
         scene.allowSceneActivation = true;
+        await Task.Delay(500); // prevents new scene freezing
 
-        while (image.fillAmount > 0)
+        elapsedTime = 0;
+        while (elapsedTime < transitionTime)
         {
-            image.fillAmount -= Time.unscaledDeltaTime * transitionTime;
-            image.fillAmount = Mathf.Clamp01(image.fillAmount);
-            image.fillAmount = transitionCurve.Evaluate(image.fillAmount);
+            image.fillAmount = 1 - transitionCurve.Evaluate(elapsedTime / transitionTime);
+            elapsedTime += Time.unscaledDeltaTime;
             await Task.Yield();
         }
+        image.fillAmount = 0;
 
         loaderCanvas.SetActive(false);
     }

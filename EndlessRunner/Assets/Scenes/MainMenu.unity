@@ -14792,41 +14792,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[0].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[1].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798151577969319179, guid: d43a0272de562174a830b9d67e79d147,
-        type: 3}
-      propertyPath: transitionCurve.m_Curve.Array.data[1].outSlope
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
