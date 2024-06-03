@@ -158,8 +158,7 @@ public class DatabaseManager : MonoBehaviour
                 totalPlayerMetrics.JetpackPickupAmount = jetpackPickupAmount.Value.GetAs<int>();
 
             if (playerData.TryGetValue("LowGravityPickupAmount", out var lowGravityPickupAmount))
-                totalPlayerMetrics.LowGravityPickupAmount =
-                    lowGravityPickupAmount.Value.GetAs<int>();
+                totalPlayerMetrics.LowGravityPickupAmount = lowGravityPickupAmount.Value.GetAs<int>();
 
             if (playerData.TryGetValue("HealPickupAmount", out var healPickupAmount))
                 totalPlayerMetrics.HealPickupAmount = healPickupAmount.Value.GetAs<int>();

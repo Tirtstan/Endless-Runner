@@ -40,8 +40,7 @@ public class ObstacleSpawner : MonoBehaviour
             }
 
             int rotationChance = Random.Range(0, 100);
-            Quaternion rotation =
-                rotationChance < 50 ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
+            Quaternion rotation = rotationChance < 50 ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
 
             GameObject obj = Instantiate(
                 ObstacleDatabase.Instance.GetRandomLanePrefab(),

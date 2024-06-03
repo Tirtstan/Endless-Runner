@@ -120,14 +120,11 @@ public class UFO : MonoBehaviour
             for (int i = 0; i < areaAttacks.Length; i++)
             {
                 Vector3 parentPos = lineRenderers[i].transform.parent.position;
-                lineRenderers[i]
-                    .SetPosition(0, new Vector3(parentPos.x, parentPos.y + 1f, parentPos.z));
+                lineRenderers[i].SetPosition(0, new Vector3(parentPos.x, parentPos.y + 1f, parentPos.z));
                 lineRenderers[i].SetPosition(1, areaAttacks[i].transform.position);
+
                 if (
-                    Mathf.Approximately(
-                        player.transform.position.x,
-                        areaAttacks[i].transform.position.x
-                    )
+                    Mathf.Abs(player.transform.position.x - areaAttacks[i].transform.position.x) <= 0.15f
                     && player.transform.position.y < 1.75f
                 )
                 {

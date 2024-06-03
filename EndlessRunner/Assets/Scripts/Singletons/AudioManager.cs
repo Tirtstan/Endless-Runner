@@ -33,7 +33,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     [Range(0, 2)]
     private float transitionTime = 1.25f;
-    private int previousSceneIndex = -1;
 
     private void Awake()
     {
@@ -100,11 +99,10 @@ public class AudioManager : MonoBehaviour
             return;
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (sceneIndex >= 1 && sceneIndex != previousSceneIndex)
-        {
+        if (sceneIndex >= 1)
             ChangeMusic(gameplayMusic);
-            previousSceneIndex = sceneIndex;
-        }
+
+        ToggleHighPassFilter(false);
     }
 
     private void ChangeMusic(AudioClip toClip)
@@ -118,7 +116,10 @@ public class AudioManager : MonoBehaviour
         AudioSource newSource = audioSource1.isPlaying ? audioSource2 : audioSource1;
 
         if (activeSource.clip == toClip)
+        {
+            activeSource.volume = 1;
             yield break;
+        }
 
         newSource.clip = toClip;
         newSource.volume = 0;

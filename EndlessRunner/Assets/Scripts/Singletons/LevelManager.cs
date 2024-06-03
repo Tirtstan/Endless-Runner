@@ -70,11 +70,7 @@ public class LevelManager : MonoBehaviour
 
         Vector3 lastLevel = spawnedLevels[^1].transform.position;
 
-        GameObject obj = Instantiate(
-            levelPrefab,
-            new Vector3(lastLevel.x, lastLevel.y, lastLevel.z + 52f),
-            Quaternion.identity
-        );
+        GameObject obj = Instantiate(levelPrefab, new Vector3(lastLevel.x, lastLevel.y, lastLevel.z + 52f), Quaternion.identity);
         obj.transform.SetParent(levelParent);
 
         spawnedLevels.Add(obj);

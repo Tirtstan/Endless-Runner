@@ -110,11 +110,7 @@ public class PlayerController : MonoBehaviour
                     originalColliderCenter.y * scaleMultiplier,
                     boxCollider.size.z
                 );
-                boxCollider.size = new Vector3(
-                    boxCollider.size.x,
-                    originalColliderSize.y * scaleMultiplier,
-                    boxCollider.size.z
-                );
+                boxCollider.size = new Vector3(boxCollider.size.x, originalColliderSize.y * scaleMultiplier, boxCollider.size.z);
             }
         }
 
@@ -143,10 +139,7 @@ public class PlayerController : MonoBehaviour
 
         if (usingGravity)
         {
-            currentGravityScale =
-                rb.velocity.y < 0
-                    ? gravityScaleMultiplier * gravityFallMultiplier
-                    : gravityScaleMultiplier;
+            currentGravityScale = rb.velocity.y < 0 ? gravityScaleMultiplier * gravityFallMultiplier : gravityScaleMultiplier;
             rb.AddForce(Gravity * currentGravityScale * Vector3.up, ForceMode.Acceleration);
         }
     }
@@ -168,11 +161,7 @@ public class PlayerController : MonoBehaviour
     {
         shadow.position = new Vector3(transform.position.x, 0.01f, transform.position.z);
 
-        float shadowScale = Mathf.Lerp(
-            originalShadowScale.x,
-            originalShadowScale.x * 0.8f,
-            transform.position.y
-        );
+        float shadowScale = Mathf.Lerp(originalShadowScale.x, originalShadowScale.x * 0.8f, transform.position.y);
         shadow.localScale = new Vector3(shadowScale, originalShadowScale.y, shadowScale);
     }
 

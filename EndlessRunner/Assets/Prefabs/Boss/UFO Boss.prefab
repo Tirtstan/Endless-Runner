@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3494298824268110578}
+  - component: {fileID: 6655773731097911938}
   - component: {fileID: 2393025849579769817}
   - component: {fileID: 904498268322822223}
-  - component: {fileID: 6655773731097911938}
   m_Layer: 0
   m_Name: UFO Boss
   m_TagString: Untagged
@@ -37,49 +37,6 @@ Transform:
   - {fileID: 8326602626773799641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2393025849579769817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2691753521013211749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22f3098841383e4e946c179b2f3ab0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  areaPrefab: {fileID: 4869567229864271939, guid: 8bfbd44c78ade4d4799cff40720fff76,
-    type: 3}
-  lineRenderers:
-  - {fileID: 5720372427457522463}
-  - {fileID: 7369917695031328776}
-  laserAttackClips:
-  - {fileID: 8300000, guid: d5e6f69f1b105db4f8e069c3e8153d65, type: 3}
-  - {fileID: 8300000, guid: 7fa7835571ad9924bb1956dd72d31886, type: 3}
-  - {fileID: 8300000, guid: 64bf87a471143794fb6f38ea4c9a5f16, type: 3}
-  speed: 0.5
-  yPosition: 5
-  zOffset: 30
-  startCooldown: 8
-  attackStartUp: 4
-  moveTimeRange: {x: 3, y: 7}
-  attackTimeRange: {x: 4, y: 9}
-  endTimeRange: {x: 35, y: 50}
---- !u!114 &904498268322822223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2691753521013211749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f204f4ac9f402864488696d2332226ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  amplitude: 0.2
 --- !u!82 &6655773731097911938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -177,6 +134,49 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2393025849579769817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691753521013211749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22f3098841383e4e946c179b2f3ab0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaPrefab: {fileID: 4869567229864271939, guid: 8bfbd44c78ade4d4799cff40720fff76,
+    type: 3}
+  lineRenderers:
+  - {fileID: 5720372427457522463}
+  - {fileID: 7369917695031328776}
+  laserAttackClips:
+  - {fileID: 8300000, guid: d5e6f69f1b105db4f8e069c3e8153d65, type: 3}
+  - {fileID: 8300000, guid: 7fa7835571ad9924bb1956dd72d31886, type: 3}
+  - {fileID: 8300000, guid: 64bf87a471143794fb6f38ea4c9a5f16, type: 3}
+  speed: 0.5
+  yPosition: 5
+  zOffset: 30
+  startCooldown: 8
+  attackStartUp: 4
+  moveTimeRange: {x: 3, y: 7}
+  attackTimeRange: {x: 4, y: 9}
+  endTimeRange: {x: 35, y: 50}
+--- !u!114 &904498268322822223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691753521013211749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f204f4ac9f402864488696d2332226ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  amplitude: 0.2
 --- !u!1 &8220145703033354537
 GameObject:
   m_ObjectHideFlags: 0

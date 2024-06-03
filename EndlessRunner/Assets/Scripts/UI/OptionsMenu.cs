@@ -92,8 +92,7 @@ public class OptionsMenu : MonoBehaviour
 
     private void LoadValues()
     {
-        resolutionDropdown.value =
-            Screen.resolutions.Length - OptionsManager.Instance.ResolutionIndex - 1;
+        resolutionDropdown.value = Screen.resolutions.Length - OptionsManager.Instance.ResolutionIndex - 1;
         resolutionDropdown.RefreshShownValue();
 
         windowModeDropdown.value = (int)OptionsManager.Instance.FullScreenMode;
@@ -115,8 +114,7 @@ public class OptionsMenu : MonoBehaviour
         List<string> options = new();
         for (int i = 0; i < resolutions.Length; i++)
         {
-            string option =
-                $"{resolutions[i].width}x{resolutions[i].height}@{resolutions[i].refreshRateRatio.value:0.##}Hz";
+            string option = $"{resolutions[i].width}x{resolutions[i].height}@{resolutions[i].refreshRateRatio.value:0.##}Hz";
             options.Add(option);
         }
 
@@ -130,30 +128,20 @@ public class OptionsMenu : MonoBehaviour
     private void FillWindowModeDropdown()
     {
         windowModeDropdown.ClearOptions();
-        List<string> fullScreenModes =
-            new()
-            {
-                "Exclusive Fullscreen",
-                "Borderless Windowed",
-                "Maximized Windowed",
-                "Windowed"
-            };
+        List<string> fullScreenModes = new() { "Exclusive Fullscreen", "Borderless Windowed", "Maximized Windowed", "Windowed" };
 
         windowModeDropdown.AddOptions(fullScreenModes);
     }
 
-    private void OnWindowModeValueChange(int index) =>
-        OptionsManager.Instance.FullScreenMode = (FullScreenMode)index;
+    private void OnWindowModeValueChange(int index) => OptionsManager.Instance.FullScreenMode = (FullScreenMode)index;
 
     private void OnMasterValueChange(float value) => OptionsManager.Instance.MasterVolume = value;
 
     private void OnMusicValueChange(float value) => OptionsManager.Instance.MusicVolume = value;
 
-    private void OnSoundEffectsValueChange(float value) =>
-        OptionsManager.Instance.SoundEffectsVolume = value;
+    private void OnSoundEffectsValueChange(float value) => OptionsManager.Instance.SoundEffectsVolume = value;
 
-    private void OnUserInterfaceValueChange(float value) =>
-        OptionsManager.Instance.UserInterfaceVolume = value;
+    private void OnUserInterfaceValueChange(float value) => OptionsManager.Instance.UserInterfaceVolume = value;
 
     private void SignOut()
     {
@@ -173,10 +161,7 @@ public class OptionsMenu : MonoBehaviour
 
         try
         {
-            if (
-                string.IsNullOrEmpty(userNameInputField.text)
-                || string.IsNullOrWhiteSpace(userNameInputField.text)
-            )
+            if (string.IsNullOrEmpty(userNameInputField.text) || string.IsNullOrWhiteSpace(userNameInputField.text))
                 return;
 
             if (userNameInputField.text == AuthenticationService.Instance.PlayerName)

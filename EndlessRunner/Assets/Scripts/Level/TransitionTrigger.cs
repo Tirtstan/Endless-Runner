@@ -12,9 +12,7 @@ public class TransitionTrigger : MonoBehaviour
     private int buildIndex = 1;
 
     [SerializeField]
-    private SceneTransitionManager.TransitionType transitionType = SceneTransitionManager
-        .TransitionType
-        .Top;
+    private SceneTransitionManager.TransitionType transitionType = SceneTransitionManager.TransitionType.Top;
 
     private void OnTriggerEnter(Collider other)
     {

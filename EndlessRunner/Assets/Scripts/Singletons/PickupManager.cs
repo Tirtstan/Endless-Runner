@@ -132,4 +132,9 @@ public class PickupManager : MonoBehaviour
     }
 
     public GameObject GetRandomPickup() => pickupPrefabs[Random.Range(0, pickupPrefabs.Length)];
+
+    private void OnDestroy()
+    {
+        ResetPickupEffects();
+    }
 }

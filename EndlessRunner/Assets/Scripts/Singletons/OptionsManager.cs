@@ -46,8 +46,7 @@ public class OptionsManager : MonoBehaviour
 
         for (int i = 0; i < resolutions.Length; i++)
         {
-            int result = resolutions[i]
-                .refreshRateRatio.value.CompareTo(currentResolution.refreshRateRatio.value);
+            int result = resolutions[i].refreshRateRatio.value.CompareTo(currentResolution.refreshRateRatio.value);
             if (
                 resolutions[i].width == currentResolution.width
                 && resolutions[i].height == currentResolution.height
@@ -74,12 +73,7 @@ public class OptionsManager : MonoBehaviour
     public void Apply()
     {
         Resolution resolution = Screen.resolutions[ResolutionIndex];
-        Screen.SetResolution(
-            resolution.width,
-            resolution.height,
-            FullScreenMode,
-            resolution.refreshRateRatio
-        );
+        Screen.SetResolution(resolution.width, resolution.height, FullScreenMode, resolution.refreshRateRatio);
 
         AudioManager.Instance.SetVolume(AudioGroup.Master, MasterVolume);
         AudioManager.Instance.SetVolume(AudioGroup.Music, MusicVolume);

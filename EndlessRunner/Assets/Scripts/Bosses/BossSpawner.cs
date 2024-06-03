@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossSpawner : MonoBehaviour
 {
@@ -40,18 +41,32 @@ public class BossSpawner : MonoBehaviour
             if (random <= spawnChance)
             {
                 spawnChance = 0;
-                int randomIndex = Random.Range(0, bossPrefabs.Length);
-                boss = Instantiate(
-                    bossPrefabs[randomIndex],
-                    new Vector3(1.5f, 5f, -10f),
-                    Quaternion.identity
-                );
+                int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+                switch (sceneIndex)
+                {
+                    case 1:
+                        SpawnBoss1();
+                        break;
+                    case 2:
+                        SpawnBoss2();
+                        break;
+                }
             }
             else
             {
                 spawnChance += spawnChanceIncrease;
             }
         }
+    }
+
+    private void SpawnBoss1()
+    {
+        boss = Instantiate(bossPrefabs[0], new Vector3(1.5f, 5f, -10f), Quaternion.identity);
+    }
+
+    private void SpawnBoss2()
+    {
+        boss = Instantiate(bossPrefabs[1]);
     }
 
     private void OnDestroy()

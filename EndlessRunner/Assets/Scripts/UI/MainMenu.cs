@@ -89,8 +89,7 @@ public class MainMenu : MonoBehaviour
         );
     }
 
-    private void OnPlayClick() =>
-        SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
+    private void OnPlayClick() => SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
 
     private void OnOptionsClick()
     {
@@ -124,8 +123,7 @@ public class MainMenu : MonoBehaviour
             string info = ".............";
             if (i < scoresResponse.Results.Count)
             {
-                info =
-                    $"{scoresResponse.Results[i].PlayerName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
+                info = $"{scoresResponse.Results[i].PlayerName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
                 if (scoresResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
                 {
                     info = "<u>" + info + "</u>";
@@ -141,9 +139,7 @@ public class MainMenu : MonoBehaviour
     // According to Unity (s.a) ...
     private async Task<int> GetPlayerHighScore()
     {
-        var info = await LeaderboardsService.Instance.GetPlayerScoreAsync(
-            DatabaseManager.LeaderboardId
-        );
+        var info = await LeaderboardsService.Instance.GetPlayerScoreAsync(DatabaseManager.LeaderboardId);
 
         return (int)info.Score;
     }
