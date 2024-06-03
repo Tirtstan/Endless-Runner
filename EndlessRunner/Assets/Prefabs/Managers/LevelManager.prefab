@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5268da355ee14d41a10aed1c0a4d598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPrefabs:
-  - {fileID: 8502656419886144226, guid: d53b6dbfcfcd10c479ef6cdab20cffcb, type: 3}
-  - {fileID: 8502656419886144226, guid: b804041bf399d864788f340e08c7613b, type: 3}
+  levelPrefabs: []
+  level2TransitionPrefab: {fileID: 8502656419886144226, guid: f517167152e2103448ec0063da8f4e27,
+    type: 3}
   levelParent: {fileID: 0}
-  difficultyIncreaseRate: 0.05
-  <CurrentLevelSpeed>k__BackingField: 10
