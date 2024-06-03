@@ -63,8 +63,9 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
         LevelSpeedManager.Instance.CurrentLevelSpeed = 10f;
+        DatabaseManager.Instance.ResetScore();
     }
 
     public GameObject GetPlayer() => player;

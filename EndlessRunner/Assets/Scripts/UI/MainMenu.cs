@@ -4,7 +4,6 @@ using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Leaderboards;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -77,6 +76,8 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         AuthenticationService.Instance.SignedIn += OnSignedIn;
+        if (AuthenticationService.Instance.IsSignedIn)
+            OnSignedIn();
     }
 
     private void Update()

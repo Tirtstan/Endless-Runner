@@ -81,14 +81,10 @@ public class OptionsManager : MonoBehaviour
             resolution.refreshRateRatio
         );
 
-        // ... (see Unity Audio: How to make a UI volume slider (the right way), 2018)
-        AudioManager.Instance.SetVolume(AudioGroups.Master, Mathf.Log10(MasterVolume) * 20);
-        AudioManager.Instance.SetVolume(AudioGroups.Music, Mathf.Log10(MusicVolume) * 20);
-        AudioManager.Instance.SetVolume(
-            AudioGroups.SoundEffects,
-            Mathf.Log10(SoundEffectsVolume) * 20
-        );
-        AudioManager.Instance.SetVolume(AudioGroups.UI, Mathf.Log10(UserInterfaceVolume) * 20);
+        AudioManager.Instance.SetVolume(AudioGroup.Master, MasterVolume);
+        AudioManager.Instance.SetVolume(AudioGroup.Music, MusicVolume);
+        AudioManager.Instance.SetVolume(AudioGroup.SoundEffects, SoundEffectsVolume);
+        AudioManager.Instance.SetVolume(AudioGroup.UI, UserInterfaceVolume);
 
         Save();
     }
@@ -121,11 +117,3 @@ public class OptionsManager : MonoBehaviour
         UserInterfaceVolume = PlayerPrefs.GetFloat(nameof(UserInterfaceVolume));
     }
 }
-
-#region References
-/*
-
-Unity Audio: How to make a UI volume slider (the right way). 2018. YouTube video, added by John Leonard French. [Online]. Available at: https://youtu.be/xNHSGMKtlv4 [Accessed 02 June 2024]
-
-*/
-#endregion

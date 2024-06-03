@@ -76,7 +76,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnMenuClick()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneTransitionManager.Instance.LoadScene(0, SceneTransitionManager.TransitionType.Top);
         Time.timeScale = 1;
     }
 

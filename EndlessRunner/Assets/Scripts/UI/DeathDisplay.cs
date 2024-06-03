@@ -2,7 +2,6 @@ using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Leaderboards;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DeathDisplay : MonoBehaviour
@@ -62,7 +61,7 @@ public class DeathDisplay : MonoBehaviour
 
     private void OnMenuClick()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneTransitionManager.Instance.LoadScene(0, SceneTransitionManager.TransitionType.Top);
         Time.timeScale = 1;
     }
 

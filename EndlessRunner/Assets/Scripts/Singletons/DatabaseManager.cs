@@ -208,6 +208,12 @@ public class DatabaseManager : MonoBehaviour
         OnScoreChange?.Invoke(sessionPlayerMetrics.Score);
     }
 
+    public void ResetScore()
+    {
+        sessionPlayerMetrics.Score = 0;
+        OnScoreChange?.Invoke(sessionPlayerMetrics.Score);
+    }
+
     private void OnDestroy()
     {
         EventManager.OnBossDefeated -= OnBossDefeated;

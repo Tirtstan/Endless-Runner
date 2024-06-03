@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -27,7 +26,8 @@ public class SceneTransitionManager : MonoBehaviour
 
     [SerializeField]
     [Range(0, 2)]
-    private float transitionTime = 1.5f;
+    private float transitionTime = 0.75f;
+    private readonly WaitForSecondsRealtime wait = new(0.5f);
 
     private void Awake()
     {
@@ -43,7 +43,12 @@ public class SceneTransitionManager : MonoBehaviour
         }
     }
 
-    public async void LoadScene(int buildIndex, TransitionType transitionType)
+    public void LoadScene(int buildIndex, TransitionType transitionType)
+    {
+        StartCoroutine(Transition(buildIndex, transitionType));
+    }
+
+    private IEnumerator Transition(int buildIndex, TransitionType transitionType)
     {
         image.fillAmount = 0;
         var scene = SceneManager.LoadSceneAsync(buildIndex);
@@ -65,19 +70,19 @@ public class SceneTransitionManager : MonoBehaviour
         {
             image.fillAmount = transitionCurve.Evaluate(elapsedTime / transitionTime);
             elapsedTime += Time.unscaledDeltaTime;
-            await Task.Yield();
+            yield return null;
         }
         image.fillAmount = 1;
 
         scene.allowSceneActivation = true;
-        await Task.Delay(500); // prevents new scene freezing
+        yield return wait; // prevents new scene freezing
 
         elapsedTime = 0;
         while (elapsedTime < transitionTime)
         {
             image.fillAmount = 1 - transitionCurve.Evaluate(elapsedTime / transitionTime);
             elapsedTime += Time.unscaledDeltaTime;
-            await Task.Yield();
+            yield return null;
         }
         image.fillAmount = 0;
 

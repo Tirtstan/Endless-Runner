@@ -73,7 +73,7 @@ public class AudioManager : MonoBehaviour
                 ChangeMusic(mainMenuMusic);
                 break;
             case >= 1:
-                ChangeMusic(gameplayMusic);
+                StartCoroutine(FadeAllAudioOut());
                 break;
         }
     }
@@ -82,6 +82,9 @@ public class AudioManager : MonoBehaviour
     {
         if (time > 0)
             return;
+
+        if (SceneManager.GetActiveScene().buildIndex >= 1)
+            ChangeMusic(gameplayMusic);
     }
 
     private void ChangeMusic(AudioClip toClip)
@@ -101,13 +104,25 @@ public class AudioManager : MonoBehaviour
         float transition = 0;
         while (transition < transitionTime)
         {
-            transition += Time.deltaTime;
+            transition += Time.unscaledDeltaTime;
             activeSource.volume = 1 - (transition / transitionTime);
             newSource.volume = transition / transitionTime;
             yield return null;
         }
 
         activeSource.Stop();
+    }
+
+    private IEnumerator FadeAllAudioOut()
+    {
+        float transition = 0;
+        while (transition < transitionTime)
+        {
+            transition += Time.unscaledDeltaTime;
+            audioSource1.volume = 1 - (transition / transitionTime);
+            audioSource2.volume = 1 - (transition / transitionTime);
+            yield return null;
+        }
     }
 
     public void PlayBoss1Music()
@@ -120,28 +135,29 @@ public class AudioManager : MonoBehaviour
         ChangeMusic(boss2Music);
     }
 
-    public void SetVolume(AudioGroups audioGroup, float volume)
+    public void SetVolume(AudioGroup audioGroup, float volume)
     {
         string audioGroupString;
         switch (audioGroup)
         {
-            case AudioGroups.Master:
+            case AudioGroup.Master:
                 audioGroupString = "MasterVolume";
                 break;
-            case AudioGroups.Music:
+            case AudioGroup.Music:
                 audioGroupString = "MusicVolume";
                 break;
-            case AudioGroups.SoundEffects:
+            case AudioGroup.SoundEffects:
                 audioGroupString = "SoundEffectsVolume";
                 break;
-            case AudioGroups.UI:
+            case AudioGroup.UI:
                 audioGroupString = "UserInterfaceVolume";
                 break;
             default:
-                goto case AudioGroups.Master;
+                goto case AudioGroup.Master;
         }
 
-        audioMixer.SetFloat(audioGroupString, volume);
+        // ... (see Unity Audio: How to make a UI volume slider (the right way), 2018)
+        audioMixer.SetFloat(audioGroupString, Mathf.Log10(volume) * 20);
     }
 
     private void OnDestroy()
@@ -150,10 +166,18 @@ public class AudioManager : MonoBehaviour
     }
 }
 
-public enum AudioGroups
+public enum AudioGroup
 {
     Master = 0,
     Music = 1,
     SoundEffects = 2,
     UI = 3
 }
+
+#region References
+/*
+
+Unity Audio: How to make a UI volume slider (the right way). 2018. YouTube video, added by John Leonard French. [Online]. Available at: https://youtu.be/xNHSGMKtlv4 [Accessed 02 June 2024]
+
+*/
+#endregion

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class UndergroundTrigger : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class UndergroundTrigger : MonoBehaviour
 
     private IEnumerator SceneTransition()
     {
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadSceneAsync(2);
+        yield return new WaitForSeconds(0.25f);
+        SceneTransitionManager.Instance.LoadScene(2, SceneTransitionManager.TransitionType.Bottom);
     }
 }

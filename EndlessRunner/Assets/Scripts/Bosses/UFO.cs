@@ -75,9 +75,9 @@ public class UFO : MonoBehaviour
 
     private IEnumerator StartCooldown()
     {
-        yield return new WaitForSeconds(startCooldown);
-
+        yield return new WaitForSeconds(startCooldown / 2);
         AudioManager.Instance.PlayBoss1Music();
+        yield return new WaitForSeconds(startCooldown / 2);
 
         moveCoroutine = StartCoroutine(Move());
         attackCoroutine = StartCoroutine(Attack());
