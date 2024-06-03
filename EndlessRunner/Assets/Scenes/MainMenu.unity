@@ -1747,26 +1747,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Player: Player
 
-    Attempts: 9999
+    Attempts: 0
 
-    Score: 9999
+    Score: 0
 
-    Levels Beaten:
-    999
+    Levels Beaten: 0
 
-    Jumps: 99999
-
-
-    <color=#E94343>Jetpacks: 999</color>
-
-    <color=#67C5EC>Low
-    Gravity: 999</color>
-
-    <color=#67EC81>Heals: 999</color>
+    Jumps:
+    0
 
 
-    High Score:
-    9999'
+    <color=#E94343>Jetpacks: 0</color>
+
+    <color=#67C5EC>Low Gravity: 0</color>
+
+    <color=#67EC81>Heals:
+    0</color>
+
+
+    High Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8b8271044c2536419f338d0f1ac366b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 7083a1e4aa6ca8446841438c5c43f46b, type: 2}
@@ -3477,7 +3476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61, y: 24.5}
+  m_AnchoredPosition: {x: 61, y: 25}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880435742
@@ -4484,25 +4483,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1| <u>Player - <size=+0.5>999</size></u>
+  m_text: '1| .............
 
     2| .............
 
-    3|
-    .............
+    3| .............
 
     4| .............
 
-    5| .............
+    5|
+    .............
 
     6| .............
 
-    7|
-    .............
+    7| .............
 
     8| .............
 
-    9| .............
+    9|
+    .............
 
     10| .............'
   m_isRightToLeft: 0

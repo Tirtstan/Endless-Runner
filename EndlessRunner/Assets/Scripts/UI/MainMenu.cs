@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using TMPro;
 using Unity.Services.Authentication;
+using Unity.Services.Core;
 using Unity.Services.Leaderboards;
 using UnityEngine;
 using UnityEngine.UI;
@@ -103,49 +104,80 @@ public class MainMenu : MonoBehaviour
 
     private void OnStatsClick()
     {
+        if (UnityServices.State == ServicesInitializationState.Uninitialized)
+            DatabaseManager.Instance.Initialize();
+
         targetRot = statsPanelRot;
         OnSignedIn();
     }
 
+    private void OnSignedIn()
+    {
+        SetStats();
+        SetLeaderboard();
+    }
+
     // According to Unity (s.a) ...
-    private async void OnSignedIn()
+    private async void SetStats()
     {
         int highScore = await GetPlayerHighScore();
         statsText.text =
             $"Player: {AuthenticationService.Instance.PlayerName}\n"
             + $"{DatabaseManager.Instance.GetTotalPlayerMetrics()}\n"
             + $"\nHigh Score: {highScore}";
+    }
 
-        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(
-            DatabaseManager.LeaderboardId,
-            new GetScoresOptions { Offset = 0, Limit = 10 }
-        );
-
-        string output = "";
-        for (int i = 0; i < 10; i++)
+    // According to Unity (s.a) ...
+    private async void SetLeaderboard()
+    {
+        try
         {
-            string info = ".............";
-            if (i < scoresResponse.Results.Count)
+            var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(
+                DatabaseManager.LeaderboardId,
+                new GetScoresOptions { Offset = 0, Limit = 10 }
+            );
+
+            string output = "";
+            for (int i = 0; i < 10; i++)
             {
-                info = $"{scoresResponse.Results[i].PlayerName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
-                if (scoresResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
+                string info = ".............";
+                if (i < scoresResponse.Results.Count)
                 {
-                    info = "<u>" + info + "</u>";
+                    string name = scoresResponse.Results[i].PlayerName;
+                    string usingName = name.Length > 10 ? name.Substring(0, 10) + "..." : name;
+
+                    info = $"{usingName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
+                    if (scoresResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
+                    {
+                        info = "<u>" + info + "</u>";
+                    }
                 }
+
+                output += $"{i + 1}| {info}\n";
             }
 
-            output += $"{i + 1}| {info}\n";
+            highScoresText.text = output;
         }
-
-        highScoresText.text = output;
+        catch (Exception e)
+        {
+            Debug.LogWarning($"Failed to get scores!: {e.Message}");
+        }
     }
 
     // According to Unity (s.a) ...
     private async Task<int> GetPlayerHighScore()
     {
-        var info = await LeaderboardsService.Instance.GetPlayerScoreAsync(DatabaseManager.LeaderboardId);
+        try
+        {
+            var info = await LeaderboardsService.Instance.GetPlayerScoreAsync(DatabaseManager.LeaderboardId);
+            return (int)info.Score;
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"Failed to get player high score!: {e.Message}");
+        }
 
-        return (int)info.Score;
+        return 0;
     }
 
     private void OnExitClick() => Application.Quit();

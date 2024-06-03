@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using UnityEngine;
 
 public class DatabaseManager : MonoBehaviour
@@ -31,11 +32,21 @@ public class DatabaseManager : MonoBehaviour
         Initialize();
     }
 
-    private async void Initialize()
+    public async void Initialize()
     {
+        var options = new InitializationOptions();
+        string environment = "production";
+
+#if UNITY_EDITOR
+        environment = "experimental";
+        Debug.Log("Using experimental environment");
+#endif
+
+        options.SetEnvironmentName(environment);
+
         try
         {
-            await UnityServices.InitializeAsync();
+            await UnityServices.InitializeAsync(options);
             Debug.Log("Unity Services initialized successfully!");
 
             Login();
