@@ -14,6 +14,9 @@ public class UFO : MonoBehaviour
     [SerializeField]
     private AudioClip[] laserAttackClips;
 
+    [SerializeField]
+    private AudioClip entranceClip;
+
     [Header("UFO Configs")]
     [Header("Pacing & Position")]
     [SerializeField]
@@ -31,7 +34,7 @@ public class UFO : MonoBehaviour
     private float startCooldown = 8;
 
     [SerializeField]
-    [Range(3, 8)]
+    [Range(1, 8)]
     private float attackStartUp = 4;
 
     [SerializeField]
@@ -75,8 +78,10 @@ public class UFO : MonoBehaviour
 
     private IEnumerator StartCooldown()
     {
+        audioSource.PlayOneShot(entranceClip);
         yield return new WaitForSeconds(startCooldown / 2);
         AudioManager.Instance.PlayBoss1Music();
+        audioSource.Stop();
         yield return new WaitForSeconds(startCooldown / 2);
 
         moveCoroutine = StartCoroutine(Move());

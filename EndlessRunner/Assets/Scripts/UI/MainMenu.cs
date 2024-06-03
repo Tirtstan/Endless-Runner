@@ -89,7 +89,11 @@ public class MainMenu : MonoBehaviour
         );
     }
 
-    private void OnPlayClick() => SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
+    private void OnPlayClick()
+    {
+        SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
+        EventManager.Instance.InvokeAttempt();
+    }
 
     private void OnOptionsClick()
     {

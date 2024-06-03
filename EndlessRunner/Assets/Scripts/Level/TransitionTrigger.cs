@@ -19,7 +19,6 @@ public class TransitionTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(SceneTransition());
-            other.gameObject.GetComponent<PlayerController>().ToggleCollider(false);
         }
     }
 

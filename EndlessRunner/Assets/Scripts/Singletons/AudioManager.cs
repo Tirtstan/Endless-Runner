@@ -164,6 +164,7 @@ public class AudioManager : MonoBehaviour
         string audioGroupString;
         switch (audioGroup)
         {
+            default:
             case AudioGroup.Master:
                 audioGroupString = "MasterVolume";
                 break;
@@ -176,8 +177,6 @@ public class AudioManager : MonoBehaviour
             case AudioGroup.UI:
                 audioGroupString = "UserInterfaceVolume";
                 break;
-            default:
-                goto case AudioGroup.Master;
         }
 
         // ... (see Unity Audio: How to make a UI volume slider (the right way), 2018)

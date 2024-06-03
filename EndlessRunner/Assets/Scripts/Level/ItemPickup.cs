@@ -9,14 +9,25 @@ public class ItemPickup : MonoBehaviour
         Heal = 2
     }
 
+    [Header("Components")]
+    [SerializeField]
+    private AudioClip pickupClip;
+
     [Header("Config")]
     [SerializeField]
     private Type pickupType;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.Play();
             PickupManager.Instance.ActivatePickup(other, pickupType);
             switch (pickupType)
             {

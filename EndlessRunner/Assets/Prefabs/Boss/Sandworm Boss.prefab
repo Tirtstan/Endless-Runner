@@ -142,5 +142,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd332a6c03987c4ebecb925ddad663f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 4869567229864271939, guid: ad252675fba914f4492461400396db66,
+    type: 3}
+  areaPrefab: {fileID: 4869567229864271939, guid: 61a8b42f2d9ad4640a2971c0dc820ab9,
+    type: 3}
+  entranceClip: {fileID: 8300000, guid: eb3c6e978c9e2b14d938ddbf7bbe22d0, type: 3}
+  attackClip: {fileID: 8300000, guid: 471cb56c610df5b46adfbcdd22b4e503, type: 3}
+  fogStartDistance: 20
+  fogSpeed: 0.4
   startCooldown: 5
-  endTimeRange: {x: 35, y: 50}
+  attackStartUp: 4
+  attackDuration: 2.5
+  attackTimeRange: {x: 3, y: 6}
+  endTimeRange: {x: 30, y: 45}

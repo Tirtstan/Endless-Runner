@@ -155,6 +155,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5e6f69f1b105db4f8e069c3e8153d65, type: 3}
   - {fileID: 8300000, guid: 7fa7835571ad9924bb1956dd72d31886, type: 3}
   - {fileID: 8300000, guid: 64bf87a471143794fb6f38ea4c9a5f16, type: 3}
+  entranceClip: {fileID: 8300000, guid: 98ec60bceede37b4884981de56dc9bb5, type: 3}
   speed: 0.5
   yPosition: 5
   zOffset: 30

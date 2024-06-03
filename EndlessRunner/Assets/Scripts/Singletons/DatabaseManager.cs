@@ -80,6 +80,7 @@ public class DatabaseManager : MonoBehaviour
         EventManager.OnPickup1 += OnPickup1;
         EventManager.OnPickup2 += OnPickup2;
         EventManager.OnPickup3 += OnPickup3;
+        EventManager.OnAttempt += OnAttempt;
 
         PlayerController.OnPlayerJump += OnPlayerJump;
         PlayerHealth.OnPlayerHealthChanged += OnPlayerHealthChanged;
@@ -104,6 +105,7 @@ public class DatabaseManager : MonoBehaviour
     {
         await LoadPlayerMetrics();
 
+        totalPlayerMetrics.Attempts += sessionPlayerMetrics.Attempts;
         totalPlayerMetrics.Score += sessionPlayerMetrics.Score;
         totalPlayerMetrics.LevelsBeaten += sessionPlayerMetrics.LevelsBeaten;
         totalPlayerMetrics.Jumps += sessionPlayerMetrics.Jumps;
@@ -114,6 +116,7 @@ public class DatabaseManager : MonoBehaviour
         // Unity (s.a) demonstrates...
         var playerData = new Dictionary<string, object>
         {
+            { "Attempts", totalPlayerMetrics.Attempts },
             { "Score", totalPlayerMetrics.Score },
             { "LevelsBeaten", totalPlayerMetrics.LevelsBeaten },
             { "Jumps", totalPlayerMetrics.Jumps },
@@ -145,6 +148,9 @@ public class DatabaseManager : MonoBehaviour
                 return;
             }
 
+            if (playerData.TryGetValue("Attempts", out var attempts))
+                totalPlayerMetrics.Attempts = attempts.Value.GetAs<int>();
+
             if (playerData.TryGetValue("Score", out var score))
                 totalPlayerMetrics.Score = score.Value.GetAs<int>();
 
@@ -169,6 +175,11 @@ public class DatabaseManager : MonoBehaviour
         {
             Debug.LogWarning($"Failed to load player data!: {e.Message}");
         }
+    }
+
+    private void OnAttempt()
+    {
+        sessionPlayerMetrics.Attempts = 1;
     }
 
     private void OnPickup1()
@@ -219,6 +230,7 @@ public class DatabaseManager : MonoBehaviour
         EventManager.OnPickup1 -= OnPickup1;
         EventManager.OnPickup2 -= OnPickup2;
         EventManager.OnPickup3 -= OnPickup3;
+        EventManager.OnAttempt -= OnAttempt;
 
         PlayerController.OnPlayerJump -= OnPlayerJump;
         PlayerHealth.OnPlayerHealthChanged -= OnPlayerHealthChanged;
@@ -228,6 +240,7 @@ public class DatabaseManager : MonoBehaviour
 
     public struct PlayerMetrics
     {
+        public int Attempts { get; set; }
         public int Score { get; set; }
         public int LevelsBeaten { get; set; }
         public int Jumps { get; set; }
@@ -236,7 +249,7 @@ public class DatabaseManager : MonoBehaviour
         public int HealPickupAmount { get; set; }
 
         public override readonly string ToString() =>
-            $"Score: {Score}\nLevels Beaten: {LevelsBeaten}\nJumps: {Jumps}\n\n"
+            $"Attempts: {Attempts}\nScore: {Score}\nLevels Beaten: {LevelsBeaten}\nJumps: {Jumps}\n\n"
             + $"<color=#E94343>Jetpacks: {JetpackPickupAmount}</color>\n<color=#67C5EC>Low Gravity: {LowGravityPickupAmount}</color>\n<color=#67EC81>Heals: {HealPickupAmount}</color>";
     }
 }

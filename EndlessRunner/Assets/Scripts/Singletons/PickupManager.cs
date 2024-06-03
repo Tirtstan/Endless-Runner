@@ -126,8 +126,11 @@ public class PickupManager : MonoBehaviour
     private void ResetPickupEffects()
     {
         StopAllCoroutines();
-        playerController.ResetGravityMultiplier();
-        playerController.ToggleGravity(true);
+        if (playerController != null)
+        {
+            playerController.ResetGravityMultiplier();
+            playerController.ToggleGravity(true);
+        }
         AudioManager.Instance.ToggleLowPassFilter(false);
     }
 

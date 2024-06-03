@@ -1747,23 +1747,26 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Player: Player
 
+    Attempts: 9999
+
     Score: 9999
 
-    Levels Beaten: 999
+    Levels Beaten:
+    999
 
     Jumps: 99999
 
 
-    <color=#E94343>Jetpacks:
-    999</color>
+    <color=#E94343>Jetpacks: 999</color>
 
-    <color=#67C5EC>Low Gravity: 999</color>
+    <color=#67C5EC>Low
+    Gravity: 999</color>
 
-    <color=#67EC81>Heals:
-    999</color>
+    <color=#67EC81>Heals: 999</color>
 
 
-    High Score: 9999'
+    High Score:
+    9999'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8b8271044c2536419f338d0f1ac366b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 7083a1e4aa6ca8446841438c5c43f46b, type: 2}
@@ -8056,7 +8059,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984054322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8066,7 +8069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: 24.5}
+  m_AnchoredPosition: {x: 85, y: 25.4}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984054324

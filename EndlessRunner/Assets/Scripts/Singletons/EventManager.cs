@@ -4,6 +4,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
+    public static event Action OnAttempt;
     public static event Action OnPassObstacle;
     public static event Action OnBoss1Spawned; // ufo
     public static event Action OnBoss2Spawned; // sand worm
@@ -24,6 +25,8 @@ public class EventManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void InvokeAttempt() => OnAttempt?.Invoke();
 
     public void InvokePassObstacle() => OnPassObstacle?.Invoke();
 
