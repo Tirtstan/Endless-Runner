@@ -148,7 +148,7 @@ public class DatabaseManager : MonoBehaviour
     }
 
     // Unity (s.a) demonstrates...
-    private async Task LoadPlayerMetrics()
+    public async Task LoadPlayerMetrics()
     {
         try
         {
@@ -180,7 +180,7 @@ public class DatabaseManager : MonoBehaviour
             if (playerData.TryGetValue("HealPickupAmount", out var healPickupAmount))
                 totalPlayerMetrics.HealPickupAmount = healPickupAmount.Value.GetAs<int>();
 
-            Debug.Log("Player data loaded!");
+            Debug.Log("Player data loaded!\n" + totalPlayerMetrics.ToString());
         }
         catch (Exception e)
         {

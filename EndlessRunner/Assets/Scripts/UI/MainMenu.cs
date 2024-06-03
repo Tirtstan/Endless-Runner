@@ -111,9 +111,11 @@ public class MainMenu : MonoBehaviour
         OnSignedIn();
     }
 
-    private void OnSignedIn()
+    private async void OnSignedIn()
     {
         SetStats();
+
+        await DatabaseManager.Instance.LoadPlayerMetrics();
         SetLeaderboard();
     }
 
