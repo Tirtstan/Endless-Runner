@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,10 +22,12 @@ public class BossSpawner : MonoBehaviour
     private int spawnChanceIncrease = 5;
     private int spawnChance = 5;
     private GameObject boss;
+    private bool canSpawnBoss;
 
     private void Start()
     {
         DatabaseManager.OnScoreChange += OnScoreChange;
+        AudioManager.OnMusicChanged += OnMusicChanged;
     }
 
     private void OnScoreChange(int score)
@@ -41,14 +44,15 @@ public class BossSpawner : MonoBehaviour
             if (random <= spawnChance)
             {
                 spawnChance = 0;
-                int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-                switch (sceneIndex)
+                canSpawnBoss = true;
+                switch (SceneManager.GetActiveScene().buildIndex)
                 {
+                    default:
                     case 1:
-                        SpawnBoss1();
+                        AudioManager.Instance.ChangeCurrentMusic(GameplayMusic.Boss1);
                         break;
                     case 2:
-                        SpawnBoss2();
+                        AudioManager.Instance.ChangeCurrentMusic(GameplayMusic.Boss2);
                         break;
                 }
             }
@@ -57,6 +61,25 @@ public class BossSpawner : MonoBehaviour
                 spawnChance += spawnChanceIncrease;
             }
         }
+    }
+
+    private void OnMusicChanged()
+    {
+        if (!canSpawnBoss)
+            return;
+
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            default:
+            case 1:
+                SpawnBoss1();
+                break;
+            case 2:
+                SpawnBoss2();
+                break;
+        }
+
+        canSpawnBoss = false;
     }
 
     private void SpawnBoss1()
@@ -72,5 +95,6 @@ public class BossSpawner : MonoBehaviour
     private void OnDestroy()
     {
         DatabaseManager.OnScoreChange -= OnScoreChange;
+        AudioManager.OnMusicChanged -= OnMusicChanged;
     }
 }

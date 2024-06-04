@@ -6,6 +6,7 @@ using Unity.Services.CloudSave;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DatabaseManager : MonoBehaviour
 {
@@ -30,6 +31,14 @@ public class DatabaseManager : MonoBehaviour
         }
 
         Initialize();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0)
+            ResetSessionPlayerMetrics();
     }
 
     public async void Initialize()
@@ -39,7 +48,7 @@ public class DatabaseManager : MonoBehaviour
 
 #if UNITY_EDITOR
         environment = "experimental";
-        Debug.Log("Using experimental environment");
+        Debug.Log("Using experimental environment...");
 #endif
 
         options.SetEnvironmentName(environment);
@@ -145,6 +154,8 @@ public class DatabaseManager : MonoBehaviour
         {
             Debug.LogWarning($"Failed to save player data!: {e.Message}");
         }
+
+        ResetSessionPlayerMetrics();
     }
 
     // Unity (s.a) demonstrates...
@@ -188,6 +199,17 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
+    public void ResetSessionPlayerMetrics()
+    {
+        sessionPlayerMetrics.Attempts = 0;
+        sessionPlayerMetrics.Score = 0;
+        sessionPlayerMetrics.LevelsBeaten = 0;
+        sessionPlayerMetrics.Jumps = 0;
+        sessionPlayerMetrics.JetpackPickupAmount = 0;
+        sessionPlayerMetrics.LowGravityPickupAmount = 0;
+        sessionPlayerMetrics.HealPickupAmount = 0;
+    }
+
     private void OnAttempt()
     {
         sessionPlayerMetrics.Attempts = 1;
@@ -229,12 +251,6 @@ public class DatabaseManager : MonoBehaviour
         OnScoreChange?.Invoke(sessionPlayerMetrics.Score);
     }
 
-    public void ResetScore()
-    {
-        sessionPlayerMetrics.Score = 0;
-        OnScoreChange?.Invoke(sessionPlayerMetrics.Score);
-    }
-
     private void OnDestroy()
     {
         EventManager.OnBossDefeated -= OnBossDefeated;
@@ -247,6 +263,8 @@ public class DatabaseManager : MonoBehaviour
         PlayerHealth.OnPlayerHealthChanged -= OnPlayerHealthChanged;
 
         AuthenticationService.Instance.SignedIn -= OnSignedIn;
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public struct PlayerMetrics

@@ -46,6 +46,8 @@ public class UFO : MonoBehaviour
     [SerializeField]
     private Vector2 endTimeRange = new(40, 60);
 
+    [SerializeField]
+    private float bossDeathCooldown = 8f;
     private GameObject player;
     private CameraShake cameraShake;
     private AudioSource audioSource;
@@ -78,11 +80,9 @@ public class UFO : MonoBehaviour
 
     private IEnumerator StartCooldown()
     {
-        audioSource.PlayOneShot(entranceClip);
-        yield return new WaitForSeconds(startCooldown / 2);
-        AudioManager.Instance.PlayBoss1Music();
+        AudioManager.Instance.PlayFadeInClip(audioSource, 2f);
+        yield return new WaitForSeconds(startCooldown);
         audioSource.Stop();
-        yield return new WaitForSeconds(startCooldown / 2);
 
         moveCoroutine = StartCoroutine(Move());
         attackCoroutine = StartCoroutine(Attack());
@@ -160,7 +160,7 @@ public class UFO : MonoBehaviour
 
         EventManager.Instance.InvokeBossDefeated(1);
         xTarget = 80;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, bossDeathCooldown);
     }
 
     private float GetRandomLane()

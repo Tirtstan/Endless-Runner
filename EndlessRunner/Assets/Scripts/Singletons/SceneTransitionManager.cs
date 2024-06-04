@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -41,6 +42,14 @@ public class SceneTransitionManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0)
+            Time.timeScale = 1;
     }
 
     public void LoadScene(int buildIndex, TransitionType transitionType)
@@ -87,5 +96,10 @@ public class SceneTransitionManager : MonoBehaviour
         image.fillAmount = 0;
 
         loaderCanvas.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

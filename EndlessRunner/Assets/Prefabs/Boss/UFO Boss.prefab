@@ -48,7 +48,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4058288250681262798, guid: d3b8f3cdc3033e74bb9ef04ff926e402,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 98ec60bceede37b4884981de56dc9bb5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -164,6 +164,7 @@ MonoBehaviour:
   moveTimeRange: {x: 3, y: 7}
   attackTimeRange: {x: 4, y: 9}
   endTimeRange: {x: 35, y: 50}
+  bossDeathCooldown: 8
 --- !u!114 &904498268322822223
 MonoBehaviour:
   m_ObjectHideFlags: 0

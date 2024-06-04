@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     {
         SceneTransitionManager.Instance.LoadScene(1, SceneTransitionManager.TransitionType.Top);
         LevelSpeedManager.Instance.CurrentLevelSpeed = 10f;
-        DatabaseManager.Instance.ResetScore();
+        DatabaseManager.Instance.ResetSessionPlayerMetrics();
     }
 
     public GameObject GetPlayer() => player;
