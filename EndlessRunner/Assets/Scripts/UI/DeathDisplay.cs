@@ -55,14 +55,14 @@ public class DeathDisplay : MonoBehaviour
 
     private void OnRestartClick()
     {
-        GameManager.Instance.RestartGame();
         Time.timeScale = 1;
+        GameManager.Instance.RestartGame();
     }
 
     private void OnMenuClick()
     {
-        SceneTransitionManager.Instance.LoadScene(0, SceneTransitionManager.TransitionType.Top);
         Time.timeScale = 1;
+        SceneTransitionManager.Instance.LoadScene(0, SceneTransitionManager.TransitionType.Top);
     }
 
     private void OnExitClick()

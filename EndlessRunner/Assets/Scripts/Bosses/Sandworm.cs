@@ -42,6 +42,9 @@ public class Sandworm : MonoBehaviour
 
     [SerializeField]
     private Vector2 endTimeRange = new(25, 40);
+
+    [SerializeField]
+    private float bossDeathCooldown = 8f;
     private GameObject player;
     private CameraShake cameraShake;
     private AudioSource audioSource;
@@ -64,8 +67,7 @@ public class Sandworm : MonoBehaviour
 
     private IEnumerator StartCooldown()
     {
-        audioSource.volume = 1;
-        audioSource.PlayOneShot(entranceClip);
+        AudioManager.Instance.PlayFadeInClip(audioSource, 2f);
         cameraShake.Shake(startCooldown, 0.05f);
 
         float elapsedTime = 0;
@@ -81,7 +83,6 @@ public class Sandworm : MonoBehaviour
             yield return null;
         }
 
-        AudioManager.Instance.PlayBoss2Music();
         audioSource.Stop();
 
         attackCoroutine = StartCoroutine(Attack());
@@ -109,6 +110,7 @@ public class Sandworm : MonoBehaviour
                 new Vector3(lanePos, wallPrefab.transform.position.y, wallPrefab.transform.position.z),
                 Quaternion.identity
             );
+            cameraShake.Shake(0.5f);
 
             float elapsedTime = 0;
             while (elapsedTime < 4)
@@ -148,7 +150,7 @@ public class Sandworm : MonoBehaviour
         ResetAttacks();
 
         EventManager.Instance.InvokeBossDefeated(2);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, bossDeathCooldown);
     }
 
     private float GetRandomLane() // excludes the middle lane for balancing
