@@ -5,20 +5,14 @@ public class Sandworm : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField]
-    private GameObject wallPrefab;
-
-    [SerializeField]
     private GameObject areaPrefab;
 
     [Header("Audio")]
     [SerializeField]
-    private AudioClip entranceClip;
-
-    [SerializeField]
     private AudioClip attackClip;
 
     [Header("Configs")]
-    [Header("Pacing")]
+    [Header("Visuals")]
     [SerializeField]
     private float fogStartDistance = 20;
 
@@ -50,7 +44,6 @@ public class Sandworm : MonoBehaviour
     private AudioSource audioSource;
     private Coroutine attackCoroutine;
     private GameObject areaAttack;
-    private GameObject wall;
 
     private void Awake()
     {
@@ -101,42 +94,12 @@ public class Sandworm : MonoBehaviour
             );
 
             yield return new WaitForSeconds(attackStartUp);
-            audioSource.volume = 0.7f;
+            audioSource.volume = 0.5f;
             audioSource.PlayOneShot(attackClip);
             Destroy(areaAttack);
 
-            wall = Instantiate(
-                wallPrefab,
-                new Vector3(lanePos, wallPrefab.transform.position.y, wallPrefab.transform.position.z),
-                Quaternion.identity
-            );
-            cameraShake.Shake(0.5f);
-
-            float elapsedTime = 0;
-            while (elapsedTime < 4)
-            {
-                wall.transform.position = Vector3.Lerp(
-                    wall.transform.position,
-                    new Vector3(wall.transform.position.x, 5f, wall.transform.position.z),
-                    elapsedTime
-                );
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
+            EventManager.Instance.InvokeBoss2Attack(lanePos == -1.5f ? 0 : 1, attackDuration); // 0 is left, 1 is right
             yield return new WaitForSeconds(attackDuration);
-
-            elapsedTime = 0;
-            while (elapsedTime < 4)
-            {
-                wall.transform.position = Vector3.Lerp(
-                    wall.transform.position,
-                    new Vector3(wall.transform.position.x, -4f, wall.transform.position.z),
-                    elapsedTime
-                );
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
 
             ResetAttacks();
             yield return new WaitForSeconds(Random.Range(attackTimeRange.x, attackTimeRange.y));
@@ -153,25 +116,12 @@ public class Sandworm : MonoBehaviour
         Destroy(gameObject, bossDeathCooldown);
     }
 
-    private float GetRandomLane() // excludes the middle lane for balancing
-    {
-        int random = Random.Range(0, 2);
-        switch (random)
-        {
-            default:
-            case 0:
-                return -1.5f;
-            case 1:
-                return 1.5f;
-        }
-    }
+    // excludes the middle lane for balancing
+    private float GetRandomLane() => Random.Range(0, 2) == 0 ? -1.5f : 1.5f;
 
     private void ResetAttacks()
     {
         if (areaAttack != null)
             Destroy(areaAttack);
-
-        if (wall != null)
-            Destroy(wall);
     }
 }
