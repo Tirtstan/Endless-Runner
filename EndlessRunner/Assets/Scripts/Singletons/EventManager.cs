@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     public static event Action OnPickup1;
     public static event Action OnPickup2;
     public static event Action OnPickup3;
+    public static event Action<float, float> OnBoss2Attack;
     public static event Action<int> OnBossDefeated;
 
     private void Awake()
@@ -39,6 +40,8 @@ public class EventManager : MonoBehaviour
     public void InvokePickup2() => OnPickup2?.Invoke();
 
     public void InvokePickup3() => OnPickup3?.Invoke();
+
+    public void InvokeBoss2Attack(float laneId, float duration) => OnBoss2Attack?.Invoke(laneId, duration);
 
     public void InvokeBossDefeated(int bossId) => OnBossDefeated?.Invoke(bossId);
 }

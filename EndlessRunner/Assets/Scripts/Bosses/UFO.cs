@@ -14,9 +14,6 @@ public class UFO : MonoBehaviour
     [SerializeField]
     private AudioClip[] laserAttackClips;
 
-    [SerializeField]
-    private AudioClip entranceClip;
-
     [Header("UFO Configs")]
     [Header("Pacing & Position")]
     [SerializeField]
