@@ -148,7 +148,12 @@ public class MainMenu : MonoBehaviour
                     string name = scoresResponse.Results[i].PlayerName;
                     string usingName = name.Length > 10 ? name.Substring(0, 10) + "..." : name;
 
-                    info = $"{usingName} - <size=+0.5>{scoresResponse.Results[i].Score}</size>";
+                    int score = Mathf.Clamp((int)scoresResponse.Results[i].Score, 0, 100000);
+                    string scoreDisplay = score.ToString();
+                    if (score >= 100000)
+                        scoreDisplay = "99999+";
+
+                    info = $"{usingName} - <size=+0.5>{scoreDisplay}</size>";
                     if (scoresResponse.Results[i].PlayerId == AuthenticationService.Instance.PlayerId)
                     {
                         info = "<u>" + info + "</u>";
