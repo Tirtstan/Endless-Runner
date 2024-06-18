@@ -24,6 +24,7 @@ public class OptionsManager : MonoBehaviour
             return;
         }
 
+        Random.InitState(System.DateTime.Now.Millisecond);
         QualitySettings.vSyncCount = 1;
     }
 
